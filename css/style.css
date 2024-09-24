@@ -129,3 +129,45 @@ a.btn--full {
 .logo {
   height: 6.4rem;
 }
+
+.section-feature {
+  margin-top: 9.6rem;
+}
+
+.heading-secondary {
+  text-align: center;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 1.05;
+  color: #0e9b4b;
+  margin-bottom: 10rem;
+}
+.feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9.6rem;
+  align-items: center;
+  padding: 0 3.2rem;
+}
+
+article {
+  margin-bottom: 14.6rem;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 3.6rem;
+}
+
+.feature-description {
+  font-size: 1.8rem;
+  line-height: 2;
+  letter-spacing: -0.5px;
+  margin-bottom: 4.8rem;
+}
+
+.mella-img {
+  height: 44rem;
+}
