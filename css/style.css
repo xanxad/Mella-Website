@@ -333,3 +333,123 @@ article {
 .contact p {
   margin-bottom: 2.4rem;
 }
+
+/* login page*/
+
+.login-img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 9.6rem 0 6.4rem 0;
+}
+
+.login-img-box img {
+  width: 20rem;
+}
+
+.form-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-primary-heading {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+.login-secondary-heading {
+  font-size: 2.4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensures form takes full width if needed */
+  padding: 2rem; /* Adds space inside the form */
+}
+
+form label {
+  text-align: left;
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: 0.5rem;
+}
+
+form label {
+  font-size: 1.4rem;
+}
+form input {
+  width: 100%;
+  max-width: 40rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+form input::placeholder {
+  color: #888;
+}
+
+.button-container {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  max-width: 40rem;
+  gap: 10rem;
+}
+
+button {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.submit-button {
+  background-color: #0e9b4b;
+  color: #fff;
+  width: 30%; /* Adjust width to fit the container */
+}
+
+.submit-button:hover {
+  background-color: #0a6d35;
+}
+
+.forget-password-button {
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #ccc;
+
+  width: 50%;
+}
+
+.forget-password-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+.button-link {
+  text-decoration: none;
+  background-color: transparent;
+  color: #333;
+  max-width: 40rem;
+  margin-top: 2.4rem;
+  font-size: 1.8rem;
+  margin-left: 26rem;
+}
+
+.button-link:hover {
+  background-color: #0e9b4b;
+  color: #fff;
+}
