@@ -15,13 +15,21 @@
   </head>
   <body>
     <header class="header">
-      <a href="#">
-        <img
-          src="../img/logo-mella-removebg-preview.png"
-          class="logo"
-          alt="mella logo"
-        />
-      </a>
+      <div class="header-left">
+        <a href="#">
+          <img
+            src="../img/logo-mella-removebg-preview.png"
+            class="logo"
+            alt="mella logo"
+          />
+        </a>
+        <form class="search-form" action="#" method="get">
+          <input type="search" name="search" placeholder="Search products..." class="search-input">
+          <button type="submit" class="search-button">
+            <img src="../img/search.svg" alt="Search" class="search-icon">
+          </button>
+        </form>
+      </div>
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a href="#" class="main-nav-link">Home</a></li>
@@ -29,6 +37,8 @@
           <li><a href="#" class="main-nav-link">Cart</a></li>
         </ul>
       </nav>
+
+      
     </header>
 
     <main>
