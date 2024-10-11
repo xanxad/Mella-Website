@@ -476,17 +476,30 @@ button:hover {
 
 .product-item,
 .service-item {
+  position: relative;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
   text-align: center;
-  width: 15rem;
+  width: 20rem;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.product-image,
-.service-image {
+.product-item:hover,
+.service-item:hover {
+  transform: scale(1.05);
+}
+
+.product-item img,
+.service-item img {
   max-width: 100%;
   border-radius: 0.8rem;
   padding: 3.6rem 0;
-  width: 300px; /* Set a fixed width */
-  height: 300px;
+  margin-bottom: 1rem;
+
+  height: 20rem;
+  width: 20rem;
 }
 
 .product-name:link,
@@ -523,7 +536,7 @@ button:hover {
 }
 
 .product-rating {
-  color: #ffa500; /* Use a star color similar to the image */
+  color: #ffa500;
   margin-top: 1.6rem;
 }
 
@@ -858,4 +871,441 @@ button:hover {
   font-size: 1.2rem;
   color: #000;
   font-weight: bold;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: url("../img/background-image.png") no-repeat center center;
+  background-size: cover;
+  padding: 3.6rem;
+
+  color: #f8f8fd;
+  height: 100vh;
+  margin-bottom: 4.8rem;
+}
+
+.main-content-writings {
+  max-width: 50%;
+}
+
+.main-content-writings h2 {
+  font-size: 8.8rem;
+}
+
+.right-section {
+  display: flex;
+  padding-right: 8rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.featured-text {
+  font-size: 3.8rem;
+  margin-bottom: 2rem;
+}
+
+.product-card {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+  backdrop-filter: blur(10px); /* Adds a blurred effect */
+  padding: 2rem;
+  border-radius: 1.5rem; /* More rounded corners */
+  text-align: center;
+  color: #f8f8fd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for 3D effect */
+}
+
+.product-card img {
+  width: 10rem; /* Adjust size to fit */
+  margin-bottom: 1rem; /* Spacing between image and text */
+}
+
+.product-card a {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  color: #333;
+  text-decoration: none;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card a:hover {
+  color: #0a6d35;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin: 0;
+  padding-top: 0.8rem;
+}
+
+.more-products-btn {
+  margin-top: 2rem;
+  background-color: #0e9b4b;
+  color: #ffffff;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.more-products-btn:hover,
+.more-products-btn:active {
+  background-color: #0a6d35;
+}
+
+.category-section {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 120rem;
+  margin: auto;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+.category-icon {
+  width: 1rem;
+  height: 4rem;
+  background-color: #0e9b4b;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+}
+
+.category-title {
+  font-size: 1.6rem;
+  color: #0e9b4b;
+}
+
+.browse-title {
+  font-size: 3.6rem;
+  margin: 1.6rem 0 2rem;
+  color: #0e9b4b;
+}
+
+.category-cards {
+  display: flex;
+  justify-content: center;
+
+  gap: 2rem;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+.card {
+  flex: 1;
+  background-color: #f7f7f7;
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.active {
+  background-color: #0e9b4b;
+  color: #ffffff;
+  border: none;
+}
+
+.card img {
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.navigation-arrows {
+  margin-top: 2rem;
+}
+
+.arrow {
+  cursor: pointer;
+  font-size: 3.6rem;
+  margin: 0 1rem;
+  color: #333;
+}
+
+.arrow:hover {
+  color: #0a6d35;
+}
+
+.best-selling-section {
+  padding: 20px;
+  background-color: #f8f8f8;
+  margin-top: 6.4rem;
+}
+
+.section-header-market {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-all-button {
+  background-color: #0e9b4b;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.view-all-button:hover {
+  background-color: #0a6d35;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-left: 10rem;
+  justify-items: center; /* Center the items within the grid cells */
+  width: 100%; /* Make sure the grid takes full width */
+  max-width: 1200px; /* Optional: set a max-width for the grid */
+}
+
+.price {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  margin-top: 1.6rem;
+}
+
+.current-price {
+  color: #333;
+  font-weight: bold;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #ffa500;
+}
+
+.stars {
+  margin-right: 5px;
+}
+
+.reviews {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 5px;
+}
+.product-icons {
+  position: absolute;
+  top: 10px; /* Distance from top */
+  right: 10px; /* Distance from right */
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Space between the icons */
+}
+
+.heart-icon,
+.view-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.heart-icon:hover,
+.view-icon:hover {
+  background-color: #f5f5f5; /* Add hover effect */
+}
+
+.why-choose-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
+}
+
+.text-section-commerce {
+  flex: 1;
+  padding-right: 5rem;
+}
+
+/* Text Section Styling */
+.text-section-commerce h2 {
+  font-size: 6.4rem;
+  color: #0a6d35;
+  font-weight: 600;
+}
+
+.text-section-commerce p {
+  font-size: 2rem;
+  color: #333;
+  margin: 2rem 0;
+  line-height: 1.4;
+}
+
+/* Card Styling */
+
+.cards-section {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4.8rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.card-commerce {
+  background-color: #4f604e;
+  padding: 3rem;
+  border-radius: 2rem;
+  text-align: center;
+  flex-basis: 30%;
+  position: relative;
+
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.card-commerce img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.card-commerce h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.icon-commerce {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Darker Card Styling */
+.black-card {
+  background-color: #1d1d1d;
+}
+
+.card-commerce:hover {
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Staggered positioning */
+.card-commerce:nth-child(2) {
+  transform: translateY(-3rem) scale(1.05);
+}
+
+.card-commerce:nth-child(2):hover {
+  transform: scale(1.05);
+}
+
+.card-commerce:nth-child(3) {
+  transform: translateY(3rem);
+}
+
+.card-commerce:nth-child(3):hover {
+  transform: scale(1.05);
+}
+
+.new-arrival {
+  padding: 2rem;
+  position: relative;
+  margin-bottom: 6.4rem;
+}
+
+.product-grid-featured {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.product-item-featured {
+  background-color: #f5f5f5;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-item-featured:hover {
+  transform: scale(1.05);
+}
+
+.product-item-featured.large {
+  grid-column: span 2;
+  grid-row: span 3;
+}
+
+.product-item-featured.medium {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+.product-item-featured img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-item-featured:not(.large) {
+  height: 20rem; /* Adjust this value to your preference */
+}
+
+.product-info-featured {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.product-info-featured h3 {
+  margin: 0 0 1rem 0;
+}
+
+.product-info-featured p {
+  margin: 0 0 1.5rem 0;
+}
+
+.shop-now {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.shop-now:hover {
+  background-color: #0a6d35;
 }
