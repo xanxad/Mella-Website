@@ -1844,7 +1844,7 @@ button:hover {
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
-.job-type {
+.job-types {
   background-color: #e5e7eb;
   color: #374151;
   padding: 0.3rem 0.3rem;
@@ -1995,4 +1995,94 @@ button:hover {
 .testimonial:hover {
   transform: scale(1.1);
   transition: all 0.3s;
+}
+
+.job-title-section {
+  display: flex;
+  align-items: center;
+}
+
+.section-title-details {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.details-p {
+  font-size: 2rem;
+  color: #0e9b4b;
+}
+
+.apply-button {
+  background-color: #0e9b4b;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.apply-button:hover {
+  background-color: #0a6d35;
+}
+.job-details {
+  display: flex;
+  gap: 2rem;
+}
+.left-column {
+  flex: 2;
+}
+.right-column {
+  flex: 1;
+}
+.section-details {
+  margin-bottom: 2rem;
+}
+
+.job-overview {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.overview-item {
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.overview-item-p1 {
+  font-size: 1.2;
+  color: #666666;
+}
+
+.overview-item-p2 {
+  font-size: 1.4rem;
+}
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+}
+.share-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  height: 3rem;
+}
+.benefits-list,
+.requirements-list,
+.desirable-list {
+  padding-left: 2rem;
+}
+
+.job-description-p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.related-jobs {
+  margin: 9.6rem 3.6rem;
+}
+.related-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.8rem;
 }
