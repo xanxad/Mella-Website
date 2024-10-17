@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Mella</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="#">
+          <img
+            src="../img/logo-mella-removebg-preview.png"
+            class="logo"
+            alt="mella logo"
+          />
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="#" class="main-nav-link">Home</a></li>
+          <li><a href="#" class="main-nav-link">Find a job</a></li>
+          <li><a href="#" class="main-nav-link">profile</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="form-container">
+        <h2 class="heading-secondary">Post a New Job</h2>
+        <p class="form-description">
+          Fill in the details below to create a job posting.
+        </p>
+        <form class="job-posting-form">
+          <div class="form-group">
+            <label for="job-title">Job title</label>
+            <input type="text" id="job-title" placeholder="Enter job title" />
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="job-category">Job Category</label>
+              <select id="job-category">
+                <option value="">Select job category</option>
+                <option value="graphics & design">Graphics & Design</option>
+                <option value="code & programing">Code & Programing</option>
+                <option value="account & finance">Account & Finance</option>
+                <option value="digital marketing">Digital Marketing</option>
+                <option value="health & care">Health & Care</option>
+                <option value="video & animation">Video & Animation</option>
+                <option value="data science">Data Science</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="job-type">Job Type</label>
+              <select id="job-type">
+                <option value="">Select job type</option>
+                <option value="full-time">Full-Time</option>
+                <option value="part-time">Part-Time</option>
+                <option value="internship">Internship</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Enter job location" />
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="job-slots">Job Slots</label>
+              <input
+                type="number"
+                id="job-slots"
+                placeholder="Number of vacancies"
+              />
+            </div>
+            <div class="form-group">
+              <label for="salary">Expected Salary</label>
+              <input type="text" id="salary" placeholder="Salary Range" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="job-description">Job Description</label>
+            <div class="editor-toolbar">
+              <button type="button">B</button>
+              <button type="button">I</button>
+              <button type="button">U</button>
+              <button type="button">A</button>
+              <button type="button">≡</button>
+              <button type="button">•</button>
+              <button type="button">1.</button>
+              <button type="button">⇱</button>
+              <button type="button">⇲</button>
+              <button type="button">↶</button>
+              <button type="button">↷</button>
+            </div>
+            <textarea id="job-description" placeholder="Description"></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Post a Job</button>
+        </form>
+      </section>
+    </main>
+  </body>
+
+  <footer class="section-footer">
+    <div class="container grid--5-cols">
+      <div class="logo-col">
+        <a href="#" class="footer-logo">
+          <img
+            src="../img/logo-mella-removebg-preview.png"
+            class="logo"
+            alt="mella logo"
+          />
+        </a>
+        <ul class="social-links">
+          <li>
+            <a href="#"
+              ><img src="../img/Social.png" alt="" class="footer-link"
+            /></a>
+          </li>
+        </ul>
+        <p class="copyright">
+          Copyright &copy; 2024 by Mella Inc. All rights reserved
+        </p>
+      </div>
+      <div class="address-col">
+        <p class="footer-heading">Contact us</p>
+
+        <address class="contact">
+          <p>
+            Address: Megenaga behind Admas University, Addis Ababa, Ethiopia
+          </p>
+          <p>
+            <a href="tel:+251935344627" class="footer-link">+251935344627</a>
+            <br />
+            <a href="mailto:spacetechet@gmail.com" class="footer-link"
+              >spacetechet@gmail.com</a
+            >
+          </p>
+        </address>
+      </div>
+      <nav class="nav-col">
+        <p class="footer-heading">Account</p>
+        <ul class="footer-nav">
+          <li><a href="#" class="footer-link">Create account</a></li>
+          <li><a href="#" class="footer-link">Sign in</a></li>
+          <li><a href="#" class="footer-link">IOS app</a></li>
+          <li><a href="#" class="footer-link">Androind app</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-col">
+        <p class="footer-heading">Company</p>
+        <ul class="footer-nav">
+          <li><a href="#" class="footer-link">E-commerce</a></li>
+          <li><a href="#" class="footer-link">Job portal</a></li>
+          <li><a href="#" class="footer-link">Services</a></li>
+          <li><a href="#" class="footer-link">Emergency Services</a></li>
+        </ul>
+      </nav>
+      <nav class="nav-col">
+        <p class="footer-heading">Resources</p>
+        <ul class="footer-nav">
+          <li><a href="#" class="footer-link">About us</a></li>
+          <li><a href="#" class="footer-link">Help center</a></li>
+          <li><a href="#" class="footer-link">Privacy & terms</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+</html>
