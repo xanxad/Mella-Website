@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>checkout</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="#">
+          <img
+            src="../img/logo-mella-removebg-preview.png"
+            class="logo"
+            alt="mella logo"
+          />
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="#" class="main-nav-link">Home</a></li>
+          <li><a href="#" class="main-nav-link">Wishlist</a></li>
+          <li><a href="#" class="main-nav-link">Market</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="checkout-section">
+        <h1 class="heading-tertiary">Billing Details</h1>
+        <div class="content-wrapper">
+          <div class="form-Container-checkout">
+            <div class="form-group-checkout">
+              <label for="First_Name">First Name</label>
+              <input
+                type="text"
+                class="First_Name"
+                placeholder="your first name"
+                required
+              />
+            </div>
+            <div class="form-group-checkout">
+              <label for="email">Last Name</label>
+              <input
+                type="text"
+                class="Last_Name"
+                placeholder="your last name"
+                required
+              />
+            </div>
+            <div class="form-group-checkout">
+              <label for="Street_Address">Street Address</label>
+              <input
+                type="text"
+                class="Street_Address"
+                placeholder="address"
+                required
+              />
+            </div>
+            <div class="form-group-checkout">
+              <label for="Apartment">house/Apartment, floor, etc. </label>
+              <input
+                type="text"
+                class="Apartment"
+                placeholder="house/apartment"
+                required
+              />
+            </div>
+            <div class="form-group-checkout">
+              <label for="Town">Town/City</label>
+              <input type="text" class="Town" placeholder="city" required />
+            </div>
+            <div class="form-group-checkout">
+              <label for="Phone_Number">Phone Number</label>
+              <input
+                type="tel"
+                class="Phone_Number"
+                placeholder="+251-________"
+                required
+              />
+            </div>
+            <div class="form-group-checkout">
+              <label for="Email_Address">Email Address</label>
+              <input
+                type="email"
+                class="Email_Address"
+                placeholder="@example.com"
+                required
+              />
+            </div>
+            <div class="checkout-group">
+              <input class="checkbox" type="checkbox" /><span class="save"
+                >Save this information for faster check-out next time</span
+              >
+            </div>
+          </div>
+          <div class="checkout-summary">
+            <div class="product-1">
+              <div class="product-1-group">
+                <img src="../img/small-gamepad.png" alt=" Gamepad" />
+                <p>Gamepad</p>
+              </div>
+              <p>$650</p>
+            </div>
+            <div class="product-1">
+              <div class="product-1-group">
+                <img src="../img/LCD Monitor.png" alt="LCD Monitor" />
+                <p>LCS Monitor</p>
+              </div>
+              <p>$110</p>
+            </div>
+            <div class="price">
+              <div class="pricing-info">
+                <p>Subtotal:</p>
+                <p>$1750</p>
+              </div>
+              <div class="pricing-info">
+                <p>Shipping:</p>
+                <p>Free</p>
+              </div>
+              <div class="pricing-info">
+                <p>Total:</p>
+                <p>$1750</p>
+              </div>
+              <div class="radio">
+                <input type="checkbox" class="save" /><span
+                  >Cash on delivery</span
+                >
+              </div>
+              <div class="checkout-buttons">
+                <button class="Placeorder">Place Order</button>
+                <div class="Coupon">
+                  <input type="text" placeholder="Coupon Code" />
+                  <button>
+                    <span>
+                      <svg
+                        width="22"
+                        height="22"
+                        viewBox="0 0 22 22"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M11 0.500061L9.14937 2.35069L16.4731 9.68756H0.5V12.3126H16.4731L9.14937 19.6494L11 21.5001L21.5 11.0001L11 0.500061Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="section-footer">
+      <div class="container grid--5-cols">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              src="../img/logo-mella-removebg-preview.png"
+              class="logo"
+              alt="mella logo"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><img src="../img/Social.png" alt="" class="footer-link"
+              /></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; 2024 by Mella Inc. All rights reserved
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+
+          <address class="contact">
+            <p>
+              Address: Megenaga behind Admas University, Addis Ababa, Ethiopia
+            </p>
+            <p>
+              <a href="tel:+251935344627" class="footer-link">+251935344627</a>
+              <br />
+              <a href="mailto:spacetechet@gmail.com" class="footer-link"
+                >spacetechet@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">Create account</a></li>
+            <li><a href="#" class="footer-link">Sign in</a></li>
+            <li><a href="#" class="footer-link">IOS app</a></li>
+            <li><a href="#" class="footer-link">Androind app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">E-commerce</a></li>
+            <li><a href="#" class="footer-link">Job portal</a></li>
+            <li><a href="#" class="footer-link">Services</a></li>
+            <li><a href="#" class="footer-link">Emergency Services</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">About us</a></li>
+            <li><a href="#" class="footer-link">Help center</a></li>
+            <li><a href="#" class="footer-link">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

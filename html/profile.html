@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Signup</title>
+  </head>
+  <body>
+    <section class="login-img-box">
+      <img src="../img/logo-mella.jpg" alt="" />
+    </section>
+    <section class="form-box">
+      <h1 class="login-primary-heading">Profile Information</h1>
+    </section>
+
+    <form action="">
+      <!-- Profile Picture Upload -->
+      <label for="profile-picture">Profile Picture</label>
+      <input
+        type="file"
+        id="profile-picture"
+        name="profile-picture"
+        accept="image/*"
+        required
+      />
+      <!-- Professional Title -->
+      <label for="professional-title">Professional Title</label>
+      <input
+        type="text"
+        id="professional-title"
+        name="professional-title"
+        placeholder="e.g., Graphic Designer, Writer"
+        required
+      />
+      <!-- Location -->
+      <label for="city">City</label>
+      <input type="text" id="city" name="city" required />
+
+      <label for="country">Country</label>
+      <input type="text" id="country" name="country" required />
+
+      <label for="CV/Resume">Upload CV/Resume</label>
+      <input
+        type="file"
+        id="CV/Resume"
+        name="CV/Resume"
+        accept=".pdf,.docx,.doc,.txt"
+        required
+      />
+      <!-- LinkedIn or Portfolio URL -->
+
+      <label for="portfolio-url">LinkedIn or Portfolio URL (optional)</label>
+      <input
+        type="url"
+        id="portfolio-url"
+        name="portfolio-url"
+        placeholder="https://example.com"
+      />
+
+      <label for="certificates">Certificates</label>
+      <input
+        type="file"
+        id="certificates"
+        name="certificates"
+        accept=".pdf,.docx,.doc,.txt"
+      />
+
+      <h2>Select Your Skills</h2>
+      <p>Drag your skills from the list on the left to the box on the right.</p>
+      <div class="skills-container">
+        <!-- Skills List -->
+        <div class="skills-list" id="skills-list">
+          <p draggable="true">Graphic Design</p>
+          <p draggable="true">Web Development</p>
+          <p draggable="true">Writing</p>
+          <p draggable="true">Marketing</p>
+          <p draggable="true">Data Analysis</p>
+          <p draggable="true">Photography</p>
+          <p draggable="true">Video Editing</p>
+          <p draggable="true">UI/UX Design</p>
+          <p draggable="true">SEO Optimization</p>
+          <p draggable="true">Content Creation</p>
+          <p draggable="true">Social Media Management</p>
+          <p draggable="true">Translation & Localization</p>
+          <p draggable="true">Software Development</p>
+          <p draggable="true">Accounting & Bookkeeping</p>
+          <p draggable="true">Customer Support</p>
+        </div>
+
+        <!-- Selectevd Skills -->
+        <div class="selected-skills" id="selected-skills">
+          <p>Drop your selected skills here</p>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="job-description">Describe Yourself</label>
+        <div class="editor-toolbar">
+          <button type="button">B</button>
+          <button type="button">I</button>
+          <button type="button">U</button>
+          <button type="button">A</button>
+          <button type="button">≡</button>
+          <button type="button">•</button>
+          <button type="button">1.</button>
+          <button type="button">⇱</button>
+          <button type="button">⇲</button>
+          <button type="button">↶</button>
+          <button type="button">↷</button>
+        </div>
+        <textarea id="job-description" placeholder="Description"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <input class="save-profile" type="submit" value="Save Profile" />
+    </form>
+
+    <script>
+      const skills = document.querySelectorAll(".skills-list p");
+      const skillsList = document.getElementById("skills-list");
+      const selectedSkills = document.getElementById("selected-skills");
+
+      // Add drag events to all skills
+      skills.forEach((skill) => {
+        skill.addEventListener("dragstart", dragStart);
+        skill.addEventListener("dragend", dragEnd);
+      });
+
+      // Allow drop on the selected skills box
+      selectedSkills.addEventListener("dragover", dragOver);
+      selectedSkills.addEventListener("drop", drop);
+
+      function dragStart(e) {
+        e.dataTransfer.setData("text", e.target.innerText);
+        e.target.classList.add("dragging");
+      }
+
+      function dragEnd(e) {
+        e.target.classList.remove("dragging");
+      }
+
+      function dragOver(e) {
+        e.preventDefault(); // Necessary to allow dropping
+        selectedSkills.classList.add("drag-over");
+      }
+
+      function drop(e) {
+        e.preventDefault();
+        const skillName = e.dataTransfer.getData("text");
+
+        // Remove placeholder text if present
+        if (
+          selectedSkills.querySelector("p").innerText ===
+          "Drop your selected skills here"
+        ) {
+          selectedSkills.innerHTML = "";
+        }
+
+        // Add the skill to the selected skills box
+        const newSkill = document.createElement("p");
+        newSkill.innerText = skillName;
+        newSkill.draggable = true;
+
+        // Reattach drag events to the new element
+        newSkill.addEventListener("dragstart", dragStart);
+        newSkill.addEventListener("dragend", dragEnd);
+
+        selectedSkills.appendChild(newSkill);
+        selectedSkills.classList.remove("drag-over");
+      }
+    </script>
+  </body>
+</html>
