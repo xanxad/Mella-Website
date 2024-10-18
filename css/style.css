@@ -1859,7 +1859,8 @@ button > .right-arrow {
   background-color: #0a6d35;
 }
 
-.job-search-container {
+.job-search-container,
+.service-search-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2559,4 +2560,233 @@ textarea {
 }
 .submit-btn:hover {
   background-color: #0a6d35;
+}
+
+/*service homepage*/
+
+.ad-container {
+  display: flex;
+  align-items: center;
+  background-color: #2d735d;
+  color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-width: 80rem;
+  margin: 9.6rem auto;
+  box-shadow: 0 2px 1rem rgba(0, 0, 0, 0.1);
+}
+
+.text-section-card {
+  flex: 1;
+  padding: 4rem;
+  position: relative;
+  background-color: #2d735d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.text-section-card h2 {
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+.image-section-card {
+  flex: 2;
+  overflow: hidden;
+}
+
+.image-section-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects-container {
+  max-width: 120rem;
+  margin: 9.6rem auto;
+  padding: 2rem;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1.6rem;
+  text-align: center;
+}
+
+.project-info h3 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.project-info p {
+  margin: 5px 0 0;
+  font-size: 1.4rem;
+  color: #777;
+}
+
+.satisfaction-section {
+  margin: 9.6rem auto;
+  padding: 4rem;
+  text-align: center;
+  background-color: #f8f8fd;
+}
+
+.satisfaction-section h2 {
+  font-size: 2.8rem;
+  color: #0e9b4b;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.satisfaction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.satisfaction-card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.satisfaction-card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.satisfaction-card h3 {
+  font-size: 1.8rem;
+  color: #2d735d;
+  margin-bottom: 1rem;
+}
+
+.satisfaction-card p {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.satisfaction-card strong {
+  color: #2d735d;
+}
+
+.services-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: center;
+  margin-bottom: 4.8rem;
+}
+
+.services-categories button {
+  border: 1px solid #b0b0b0;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.4rem;
+}
+
+.services-categories button:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.see-all {
+  text-decoration: none;
+  color: #0e9b4b;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 9.6rem;
+
+  transition: color 0.3s ease;
+}
+
+.see-all:hover {
+  color: #0a6d35;
+}
+
+.service-testimonial-container {
+  width: 80%;
+  text-align: center;
+  margin: 9.6rem auto;
+}
+
+.service-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-testimonial {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.service-testimonial:hover {
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.service-testimonial h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-testimonial p {
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  font-size: 1.6rem;
+}
+
+.service-testimonial a {
+  text-decoration: none;
+  color: #0e9b4b;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.service-testimonial a:hover {
+  color: #0a6d35;
 }
