@@ -11,6 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="../js/script.js"></script>
     <title>Mella</title>
   </head>
   <body>
@@ -38,14 +41,19 @@
         </ul>
       </nav>
 
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+
       
     </header>
 
     <main>
-      <section class="main-content">
+      <section class="main-content section-hero">
         <div class="main-content-writings">
           <h2>
-            Make a room comfortable & <br />
+            Make a room comfortable & 
             elegant
           </h2>
         </div>
@@ -69,39 +77,40 @@
           <span class="category-icon"></span>
           <h2 class="category-title">Categories</h2>
        </div>
-      <h3 class="browse-title">Browse By Category</h3>
-      <div class="category-cards">
-          <div class="card"> 
-              <img src="../img/smartphone.svg" alt="Phones">
-              <p>Phones</p>
+        <h3 class="browse-title">Browse By Category</h3>
+       <div class="category-carousel">
+         <div class="category-cards">
+            <div class="card">
+                <img src="../img/smartphone.svg" alt="Phones">
+                <p>Phones</p>
+            </div>
+            <div class="card">
+                <img src="../img/computer.svg" alt="Computers">
+                <p>Computers</p>
+            </div>
+            <div class="card">
+                <img src="../img/furniture.svg" alt="Furniture">
+                <p>Furnitures</p>
+            </div>
+            <div class="card active">
+                <img src="../img/photo_camera.svg" alt="Camera">
+                <p>Cameras</p>
+            </div>
+            <div class="card">
+                <img src="../img/headphones.svg" alt="HeadPhones">
+                <p>HeadPhones</p>
+            </div>
+            <div class="card">
+                <img src="../img/clothes.svg" alt="Cloth">
+                <p>Cloths</p>
+            </div>
+         
           </div>
-          <div class="card"> 
-              <img src="../img/computer.svg" alt="Computers">
-              <p>Computers</p>
-          </div>
-          <div class="card"> 
-              <img src="../img/furniture.svg" alt="Furniture">
-              <p>Furnitures</p>
-          </div>
-          <div class="card active"> 
-              <img src="../img/photo_camera.svg" alt="Camera">
-              <p>Cameras</p>
-          </div>
-          <div class="card"> 
-              <img src="../img/headphones.svg" alt="HeadPhones">
-              <p>HeadPhones</p>
-          </div>
-          <div class="card"> 
-              <img src="../img/clothes.svg" alt="Cloth">
-              <p>Cloths</p>
-          </div>
-
-          
-      </div>
-      <div class="navigation-arrows">
-          <span class="arrow left-arrow">&#8592;</span>
-          <span class="arrow right-arrow">&#8594;</span>
-      </div>
+       </div>
+       <div class="navigation-arrows">
+          <span class="arrow-market left-arrow">&#8592;</span>
+          <span class="arrow-market right-arrow">&#8594;</span>
+       </div>
       </section>
 
       <section class="best-selling-section">
@@ -114,81 +123,83 @@
             <a href="#" class="view-all-button">View All</a>
         </div>
     
-        <div class="products-grid">
-            <div class="product-item">
-              <div class="product-icons">
-                <span class="heart-icon">🤍</span> 
-                <span class="view-icon">👁️</span> 
-             </div>
-                <img src="../img/north-coat.png" alt="The North Coat">
-                <a href="#" class="product-name">The North Coat</a>
-                <div class="price">
-                    <span class="current-price">$260</span>
-                    
-                </div>
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="reviews">(65)</span>
-                </div>
-            </div>
-            <div class="product-item">
-              <div class="product-icons">
-                <span class="heart-icon">🤍</span> 
-                <span class="view-icon">👁️</span> 
-             </div>
-                <img src="../img/gucci bag.png" alt="Gucci Duffle Bag">
-                <a href="#" class="product-name">Gucci Duffle Bag</a>
-                <div class="price">
-                    <span class="current-price">$960</span>
-                    
-                </div>
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="reviews">(65)</span>
-                </div>
-            </div>
-            <div class="product-item">
-              <div class="product-icons">
-                <span class="heart-icon">🤍</span> 
-                <span class="view-icon">👁️</span> 
-             </div>
-                <img src="../img/cpu cooler.png" alt="RGB Liquid CPU Cooler">
-                <a href="#" class="product-name">Liquid CPU Cooler</a>
-                <div class="price">
-                    <span class="current-price">$160</span>
-                    
-                </div>
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="reviews">(65)</span>
-                </div>
-            </div>
-            <div class="product-item">
-              <div class="product-icons">
-                 <span class="heart-icon">🤍</span> 
-                 <span class="view-icon">👁️</span> 
+        <div class="product-wrapper">
+          <div class="products-grid">
+              <div class="product-item">
+                <div class="product-icons">
+                  <span class="heart-icon">🤍</span>
+                  <span class="view-icon">👁️</span>
+               </div>
+                  <img src="../img/north-coat.png" alt="The North Coat">
+                  <a href="#" class="product-name">The North Coat</a>
+                  <div class="price">
+                      <span class="current-price">$260</span>
+          
+                  </div>
+                  <div class="rating">
+                      <span class="stars">★★★★★</span>
+                      <span class="reviews">(65)</span>
+                  </div>
               </div>
-              <img src="../img/bookshelf.png" alt="bookshelf">
-                <a href="#" class="product-name">Small BookShelf</a>
-                <div class="price">
-                    <span class="current-price">$360</span>
+              <div class="product-item">
+                <div class="product-icons">
+                  <span class="heart-icon">🤍</span>
+                  <span class="view-icon">👁️</span>
+               </div>
+                  <img src="../img/gucci bag.png" alt="Gucci Duffle Bag">
+                  <a href="#" class="product-name">Gucci Duffle Bag</a>
+                  <div class="price">
+                      <span class="current-price">$960</span>
+          
+                  </div>
+                  <div class="rating">
+                      <span class="stars">★★★★★</span>
+                      <span class="reviews">(65)</span>
+                  </div>
+              </div>
+              <div class="product-item">
+                <div class="product-icons">
+                  <span class="heart-icon">🤍</span>
+                  <span class="view-icon">👁️</span>
+               </div>
+                  <img src="../img/cpu cooler.png" alt="RGB Liquid CPU Cooler">
+                  <a href="#" class="product-name">Liquid CPU Cooler</a>
+                  <div class="price">
+                      <span class="current-price">$160</span>
+          
+                  </div>
+                  <div class="rating">
+                      <span class="stars">★★★★★</span>
+                      <span class="reviews">(65)</span>
+                  </div>
+              </div>
+              <div class="product-item">
+                <div class="product-icons">
+                   <span class="heart-icon">🤍</span>
+                   <span class="view-icon">👁️</span>
                 </div>
-                <div class="rating">
-                    <span class="stars">★★★★★</span>
-                    <span class="reviews">(65)</span>
-                </div>
-            </div>
+                <img src="../img/bookshelf.png" alt="bookshelf">
+                  <a href="#" class="product-name">Small BookShelf</a>
+                  <div class="price">
+                      <span class="current-price">$360</span>
+                  </div>
+                  <div class="rating">
+                      <span class="stars">★★★★★</span>
+                      <span class="reviews">(65)</span>
+                  </div>
+              </div>
+          </div>
         </div>
     </section>
 
     <section class="why-choose-us">
       <div class="text-section-commerce">
         <h2>Why choose us</h2>
-        <p>Our commitment to excellence sets us apart. We offer free  shipping on all orders, <br> making your shopping experience hassle-free. In the unlikely event  that <br> you're not satisfied, our easy refund policy ensures a smooth process. <br> We pride ourselves on being a reliable partner in your shopping journey, <br> providing guaranteed products and services that you can trust. <br> Choose us for a seamless and satisfying experience every time.
+        <p>Our commitment to excellence sets us apart. We offer free  shipping on all orders,  making your shopping experience hassle-free. In the unlikely event  that you're not satisfied, our easy refund policy ensures a smooth process. We pride ourselves on being a reliable partner in your shopping journey, providing guaranteed products and services that you can trust. Choose us for a seamless and satisfying experience every time.
         </p>
         
       </div>
-      <div class="cards-section">
+      <div class="cards-section product-wrapper-commerce">
         <div class="card-commerce">
           <div class="icon-commerce">
             
@@ -291,7 +302,7 @@
             </li>
           </ul>
           <p class="copyright">
-            Copyright &copy; 2024 by Mella Inc. All rights reserved
+            Copyright &copy; <span class="year">2024</span> by Mella Inc. All rights reserved
           </p>
         </div>
         <div class="address-col">
@@ -338,5 +349,19 @@
         </nav>
       </div>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
   </body>
 </html>

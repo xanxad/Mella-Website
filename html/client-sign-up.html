@@ -11,6 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="../js/script.js"></script>
     <title>Signup</title>
   </head>
   <body>
@@ -94,9 +97,35 @@
         required
       />
 
+      <div class="first-checkbox">
+        <input type="checkbox" /><label
+          >Send me emails with tips on how to find talents that fit my
+          neeeds.</label
+        >
+      </div>
+      <div class="second-checkbox">
+        <input type="checkbox" /><label
+          >Yes, I understand and agree to the Mella Terms of Service including
+          the User Agreement and Privacy Policy.</label
+        >
+      </div>
+
       <div class="button-container">
         <button type="submit" class="submit-button">Sign up</button>
       </div>
     </form>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

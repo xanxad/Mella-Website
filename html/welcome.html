@@ -11,6 +11,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="../js/script.js"></script>
+
     <title>Mella</title>
   </head>
   <body>
@@ -25,28 +29,36 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a href="#" class="main-nav-link">About us</a></li>
-          <li><a href="#" class="main-nav-link">Sign up</a></li>
-          <li><a href="#" class="main-nav-link">Log in</a></li>
+          <li><a href="sign-up.html" class="main-nav-link">Sign up</a></li>
+          <li><a href="login.html" class="main-nav-link">Log in</a></li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
     <main>
       <section class="section-hero">
         <div class="hero">
           <div class="hero-text-box">
-            <h1 class="heading-primary">
+            <h1 data-aos="zoom-in-up" class="heading-primary">
               Find Services, Post Jobs, and Discover Products All in One Place.
             </h1>
-            <p class="hero-description">
+            <p data-aos="fade-up-left" class="hero-description">
               Your trusted one-stop platform for shopping, home services,
               skilled professionals, and fast emergency assistance.
             </p>
             <img src="../img/Vector-2.png" alt="" class="vector-img" />
             <img src="../img/Vector-3.png" alt="" class="vector-2-img" />
-            <a href="#" class="btn btn--full margin-right-sm">Get Started</a>
+            <a href="signup.html" class="btn btn--full margin-right-sm"
+              >Get Started</a
+            >
           </div>
           <div class="hero-img-box">
             <img
+              data-aos="zoom-in"
               src="../img/hero-img-removebg.png"
               alt="a person with a laptop navigating the internet"
               class="hero-img"
@@ -55,17 +67,17 @@
         </div>
       </section>
       <section class="section-feature">
-        <h2 class="heading-secondary">
+        <h2 data-aos="zoom-out" class="heading-secondary">
           Seamlessly connect service providers <br />
           with clients for efficient collaboration and growth.
         </h2>
         <article>
           <div class="feature">
             <div class="feature-text-box">
-              <h3 class="heading-tertiary">
+              <h3 data-aos="fade-right" class="heading-tertiary">
                 Easily post jobs and find the right talent for your needs.
               </h3>
-              <p class="feature-description">
+              <p data-aos="slide-up" class="feature-description">
                 Our platform streamlines and enhances the entire experience of
                 connecting service providers with clients, making it easier for
                 businesses and individuals to discover, communicate, and
@@ -76,7 +88,12 @@
               </p>
             </div>
             <div class="feature-img-box">
-              <img src="../img/mella-1.jpg" alt="" class="mella-img" />
+              <img
+                data-aos="zoom-out-left"
+                src="../img/mella-1.jpg"
+                alt=""
+                class="mella-img"
+              />
             </div>
           </div>
         </article>
@@ -84,29 +101,28 @@
         <article>
           <div class="feature">
             <div class="feature-img-box">
-              <img src="../img/mella-2.jpg" alt="" class="mella-img" />
+              <img
+                data-aos="zoom-out-right"
+                src="../img/mella-2.jpg"
+                alt=""
+                class="mella-img"
+              />
             </div>
 
             <div class="feature-text-box">
-              <h3 class="heading-tertiary">
+              <h3 data-aos="fade-left" class="heading-tertiary">
                 List your products effortlessly and reach a <br />
                 wider audience instantly.
               </h3>
-              <p class="feature-description">
+              <p data-aos="slide-up" class="feature-description">
                 Present your products or services in a compelling way to capture
-                <br />
                 the attention of potential buyers, drawing them in with detailed
-                <br />
                 descriptions, eye-catching visuals, and clear value
-                propositions. <br />
-                By effectively showcasing your offerings, you increase your
-                visibility, <br />
-                build credibility, and create opportunities for meaningful
-                connections <br />
-                with interested customers. This strategic approach not only
-                helps you <br />
-                attract more buyers but also fosters long-term growth for your
-                business <br />
+                propositions. By effectively showcasing your offerings, you
+                increase your visibility, build credibility, and create
+                opportunities for meaningful connections with interested
+                customers. This strategic approach not only helps you attract
+                more buyers but also fosters long-term growth for your business
                 by expanding your reach and enhancing customer engagement.
               </p>
             </div>
@@ -116,11 +132,11 @@
         <article>
           <div class="feature">
             <div class="feature-text-box">
-              <h3 class="heading-tertiary">
+              <h3 data-aos="fade-right" class="heading-tertiary">
                 Discover a user-friendly interface designed for both clients and
                 service providers.
               </h3>
-              <p class="feature-description">
+              <p data-aos="slide-up" class="feature-description">
                 Enjoy a smooth and intuitive browsing experience with seamless
                 navigation designed to help you effortlessly explore our
                 platform. Our interface is equipped with powerful and efficient
@@ -132,7 +148,12 @@
               </p>
             </div>
             <div class="feature-img-box">
-              <img src="../img/mella-3.jpg" alt="" class="mella-img" />
+              <img
+                data-aos="zoom-out-left"
+                src="../img/mella-3.jpg"
+                alt=""
+                class="mella-img"
+              />
             </div>
           </div>
         </article>
@@ -140,11 +161,13 @@
 
       <section class="section-opportunites">
         <div class="opp-text-box">
-          <h2 class="opp-heading">Unlock New Opportunities</h2>
-          <h3 class="heading-tertiary">
+          <h2 data-aos="fade-up-right" class="opp-heading">
+            Unlock New Opportunities
+          </h2>
+          <h3 data-aos="fade-right" class="heading-tertiary">
             Connect, Collaborate, and Grow with Our Platform
           </h3>
-          <p class="opp-description">
+          <p data-aos="slide-up" class="opp-description">
             Our platform bridges the gap between service providers and clients,
             making it easier than ever to find the right match for your needs.
             With streamlined job postings and product listings, both parties can
@@ -155,19 +178,23 @@
         </div>
 
         <div class="opp-img-box">
-          <img src="../img/mella-info.jpg" alt="" class="opp-img" />
+          <img
+            data-aos="zoom-out-down"
+            src="../img/mella-info.jpg"
+            alt=""
+            class="opp-img"
+          />
         </div>
       </section>
 
-      <section class="section-steps">
+      <section data-aos="slide-right" class="section-steps">
         <h2 class="steps-heading">
-          Your Gateway to Services and <br />
-          Opportunities
+          Your Gateway to Services and Opportunities
         </h2>
         <p class="steps-description">
           Discover how easy it is to connect with service providers or post
-          jobs. Our platform <br />
-          simplifies the process, making it accessible for everyone.
+          jobs. Our platform simplifies the process, making it accessible for
+          everyone.
         </p>
         <div class="steps-box">
           <div class="step-1">
@@ -187,8 +214,7 @@
               Services and Jobs
             </h3>
             <p class="steps-paragraph">
-              Browse through a wide range of listings tailored to <br />
-              your needs.
+              Browse through a wide range of listings tailored to your needs.
             </p>
           </div>
 
@@ -199,16 +225,16 @@
               Service Request
             </h3>
             <p class="steps-paragraph">
-              Easily submit your job or service request to <br />
-              connect with providers.
+              Easily submit your job or service request to connect with
+              providers.
             </p>
           </div>
         </div>
-        <a href="#" class="btn btn--signup margin-sm">Sign up</a>
+        <a href="signup.html" class="btn btn--signup margin-sm">Sign up</a>
       </section>
     </main>
 
-    <footer class="section-footer">
+    <footer data-aos="flip-down" class="section-footer">
       <div class="container grid--5-cols">
         <div class="logo-col">
           <a href="#" class="footer-logo">
@@ -226,7 +252,8 @@
             </li>
           </ul>
           <p class="copyright">
-            Copyright &copy; 2024 by Mella Inc. All rights reserved
+            Copyright &copy; <span class="year">2024</span> by Mella Inc. All
+            rights reserved
           </p>
         </div>
         <div class="address-col">
@@ -248,10 +275,12 @@
         <nav class="nav-col">
           <p class="footer-heading">Account</p>
           <ul class="footer-nav">
-            <li><a href="#" class="footer-link">Create account</a></li>
-            <li><a href="#" class="footer-link">Sign in</a></li>
+            <li>
+              <a href="signup.html" class="footer-link">Create account</a>
+            </li>
+            <li><a href="login.html" class="footer-link">Sign in</a></li>
             <li><a href="#" class="footer-link">IOS app</a></li>
-            <li><a href="#" class="footer-link">Androind app</a></li>
+            <li><a href="#" class="footer-link">Android app</a></li>
           </ul>
         </nav>
         <nav class="nav-col">
@@ -273,5 +302,18 @@
         </nav>
       </div>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

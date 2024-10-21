@@ -11,6 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="../js/script.js"></script>
     <title>Mella</title>
   </head>
   <body>
@@ -31,22 +34,27 @@
           <li><a href="#" class="main-nav-link">profile</a></li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
     <section class="container">
-      <div class="job-header">
+      <div class="job-header-detail">
         <div class="job-title-section">
-          <div class="company-logo">
-            <img src="../img/google-icon.svg" alt="" />
-          </div>
-          <div>
-            <div class="heading-primary">Senior UX Designer</div>
-
-            <span class="job-type">FULL TIME</span>
-          </div>
+          <div class="heading-primary">Senior UX Designer</div>
+          
         </div>
-        <button class="apply-button">Apply Now →</button>
+
+        
+        <div class="apply-button"><button >Apply Now →</button></div>
       </div>
-      <div class="job-details">
+      <div class="company-logo-details">
+        <img class="logo-details" src="../img/google-icon.svg" alt="Google icon" />
+        <span class="job-type">FULL TIME</span>
+      </div>
+      <div class="jobs-details">
         <div class="left-column">
           <div class="section-details">
             <div class="heading-tertiary">Job Description</div>
@@ -273,7 +281,7 @@
             </li>
           </ul>
           <p class="copyright">
-            Copyright &copy; 2024 by Mella Inc. All rights reserved
+            Copyright &copy; <span class="year">2024</span> by Mella Inc. All rights reserved
           </p>
         </div>
         <div class="address-col">
@@ -320,5 +328,18 @@
         </nav>
       </div>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -1,0 +1,821 @@
+/*landscape tablets, below 1200px
+
+1em = 16px, 1200/16 = 75em*/
+@media (max-width: 75em) {
+  html {
+    /*9px/16px *100 = 56.25%*/
+    font-size: 56.25%;
+  }
+
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+
+  .heading-secondary {
+    font-size: 3rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2rem;
+  }
+
+  .header {
+    padding: 0 3.2rem;
+  }
+
+  .hero {
+    gap: 4.8rem;
+  }
+
+  .vector-img,
+  .vector-2-img {
+    height: 70%;
+  }
+
+  .main-nav-list {
+    gap: 4rem;
+  }
+
+  .feature {
+    gap: 6.4rem;
+  }
+
+  .grid--5-cols {
+    column-gap: 6.4rem;
+    padding: 4.4rem 3.6rem;
+  }
+
+  .product-container,
+  .service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+
+    gap: 6.4rem;
+  }
+
+  .product-item,
+  .service-item {
+    width: 30rem;
+  }
+  .product-name,
+  .service-name {
+    font-size: 1.6rem; /* Adjust font size for smaller screens */
+    white-space: normal; /* Allow text wrapping if needed */
+  }
+
+  .popular-homepage-description {
+    font-size: 1.2rem;
+  }
+
+  .job-cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .job-location,
+  .job-description {
+    font-size: 1.4rem;
+  }
+
+  /*job detail*/
+
+  .job-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.4rem;
+  }
+
+  .services-text-content {
+    width: 50%;
+    height: 60%;
+  }
+
+  .services-text-content ul {
+    font-size: 1.4rem;
+  }
+
+  .image-section {
+    clip-path: polygon(0 0, 75% 0, 75% 100%, 0% 100%);
+  }
+
+  .text-section h2 {
+    font-size: 2.4rem;
+  }
+
+  /*e-commerce*/
+
+  .main-content-writings h2 {
+    font-size: 6.4rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  .text-section-commerce h2 {
+    font-size: 5.6rem;
+  }
+
+  .text-section-commerce p {
+    font-size: 1.8rem;
+  }
+
+  /*cart*/
+
+  .Cart-total {
+    width: 90%; /* Reduce width for smaller screens */
+    max-width: 60rem; /* Adjust max-width for smaller screens */
+  }
+
+  /*checkout*/
+
+  .checkout-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  /*job-portal*/
+
+  .suggestion {
+    font-size: 1.4rem;
+  }
+
+  .search-box {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping of the inputs and button */
+    gap: 1rem; /* Adjust spacing between inputs and button */
+  }
+
+  .search-box input {
+    flex: 1; /* Make inputs take up available space */
+    min-width: 0; /* Prevents inputs from growing too large */
+  }
+
+  .find-job-btn {
+    padding: 0.8rem 1.5rem; /* Reduce padding for smaller screens */
+    font-size: 1.4rem; /* Slightly smaller font */
+  }
+
+  .registration-container {
+    flex-direction: column;
+    padding: 4rem 2rem;
+  }
+
+  .registration-box {
+    width: 100%;
+    margin-bottom: 2rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .registration-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .registration-image img {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .registration-content h3 {
+    font-size: 2.4rem;
+  }
+
+  .registration-content p {
+    font-size: 1.8rem;
+  }
+
+  .vacancies {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  .job-salary {
+    font-size: 1.1rem;
+  }
+
+  /*service*/
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8rem;
+  }
+
+  .see-all {
+    padding: 4rem;
+  }
+
+  .service-testimonial h2 {
+    font-size: 1.6rem;
+  }
+
+  .service-testimonial p {
+    font-size: 1.4rem;
+  }
+}
+
+/* tablets, below 884px*/
+@media (max-width: 55.25em) {
+  html {
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 1rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+
+  .margin-right-sm {
+    margin-left: 10rem;
+  }
+
+  .vector-img,
+  .vector-2-img {
+    height: 50%;
+  }
+
+  .heading-tertiary {
+    font-size: 1.6rem;
+  }
+
+  .feature-description {
+    margin-bottom: 2.4rem;
+    font-size: 1.6rem;
+  }
+
+  .opp-heading {
+    font-size: 3rem;
+  }
+
+  .opp-description {
+    font-size: 1.6rem;
+  }
+
+  .steps-heading {
+    font-size: 4rem;
+  }
+
+  .steps-description {
+    font-size: 1.6rem;
+  }
+
+  .steps-box {
+    gap: 3.6rem;
+  }
+
+  .steps-paragraph {
+    font-size: 1.4rem;
+  }
+
+  .grid--5-cols {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 5.6rem;
+  }
+
+  .section-footer {
+    padding: 9.6rem 2.4rem;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.2rem;
+  }
+
+  /*mobile navigation*/
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 20;
+  }
+
+  .main-nav {
+    background-color: rgb(255, 255, 255, 0.9);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    /*hide the navigation*/
+
+    /*1. hide it visually*/
+    opacity: 0;
+
+    /*2. make it unaccessible to mouse and keyboard*/
+
+    pointer-events: none;
+
+    /*hide it from screen readers*/
+
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  .popular-homepage-description {
+    font-size: 1.5rem;
+  }
+
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.8rem;
+  }
+
+  .solution-item {
+    width: 32rem;
+  }
+
+  /*e-commerce*/
+  .text-section-commerce h2 {
+    font-size: 4rem;
+  }
+
+  /*checkout*/
+
+  .save {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    flex: 0 0 calc(33.333% - 15px);
+  }
+
+  /*job portal*/
+
+  .job-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.8rem;
+  }
+
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4.8rem;
+  }
+
+  .job-salary {
+    font-size: 1.4rem;
+  }
+
+  .list-testimonial {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-columns: calc(50% - 0.5rem);
+    gap: 4.8rem; /* Space between grid items */
+  }
+
+  .service-testimonial h2 {
+    font-size: 1.4rem;
+  }
+
+  .service-testimonial p {
+    font-size: 1.2rem;
+  }
+}
+
+/* small tablets, below 700px*/
+@media (max-width: 44em) {
+  .opp-heading {
+    font-size: 2.4rem;
+  }
+
+  .grid--5-cols {
+    grid-template-columns: repeat(6, 1fr);
+    /*column-gap: 4.4rem;
+    padding: 4.4rem 1.4rem;*/
+  }
+
+  .logo-col,
+  .address-col {
+    grid-column: span 3;
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .steps-description {
+    font-size: 2rem;
+  }
+
+  .steps-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items for a better look */
+    gap: 2.4rem;
+  }
+
+  .steps-paragraph {
+    font-size: 1.8rem;
+    text-align: start;
+  }
+
+  .mella-services-section {
+    padding: 0;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    max-width: 100%; /* Ensure full width */
+    border-radius: 0;
+  }
+
+  .services-text-content {
+    position: relative; /* Remove absolute positioning */
+    width: 90%; /* Adjust width to fit the screen */
+    margin-bottom: 2rem; /* Add some space between the text and the image */
+    transform: none; /* Reset transform */
+    top: auto; /* Reset top positioning */
+    height: auto; /* Adjust height to fit content */
+  }
+
+  .services-image {
+    width: 100%; /* Make the image section full width */
+  }
+
+  .services-image img {
+    width: 100%; /* Ensure the image fits its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .solution-item {
+    width: 28rem;
+  }
+
+  /*e-commerce*/
+  .main-content-writings h2 {
+    font-size: 5rem;
+  }
+
+  .why-choose-us {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+
+  .card-commerce {
+    width: 24rem;
+  }
+
+  .text-section-commerce h2 {
+    font-size: 6.4rem;
+  }
+
+  .text-section-commerce p {
+    font-size: 2.4rem;
+  }
+
+  /*cart*/
+
+  .cart-product-container {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .Cart-header,
+  .Cart-item {
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+
+  .Cart-header h3,
+  .Cart-item .item p,
+  .price,
+  .subtotal-price {
+    font-size: 0.9rem;
+  }
+
+  .Cart-item .item img {
+    width: 5rem;
+  }
+
+  .Cart-item input[type="number"] {
+    width: 5rem;
+    padding: 0.5rem;
+  }
+
+  /*checkout*/
+
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10rem;
+  }
+
+  .product-1 {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  /*job-portal*/
+
+  .vacancies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    justify-items: center;
+  }
+
+  .column p {
+    font-size: 1.6rem; /* Slightly smaller font for small screens */
+    margin-bottom: 2rem; /* Reduce margin to fit content neatly */
+  }
+
+  .workflow {
+    gap: 0.5rem;
+  }
+
+  .step h2 {
+    font-size: 1.2rem;
+  }
+
+  .step p {
+    font-size: 1.2rem;
+  }
+
+  .job-salary {
+    font-size: 1rem;
+  }
+
+  /*job details*/
+
+  .jobs-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .overview-item-p1 {
+    font-size: 1.6;
+  }
+
+  .overview-item-p2 {
+    font-size: 1.4rem;
+  }
+
+  /*service*/
+
+  .ad-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem 4rem;
+  }
+
+  .text-section-card h2 {
+    font-size: 3rem;
+  }
+
+  .satisfaction-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+  }
+
+  .service-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.6rem;
+  }
+}
+
+/* phones, below 544px*/
+@media (max-width: 34em) {
+  .vector-img,
+  .vector-2-img {
+    height: 40%;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center items for a better look */
+    gap: 2.4rem; /* Add some space between text and image */
+  }
+
+  /* Ensure that text always appears before the image */
+  .feature-text-box {
+    order: 1; /* Text should always come first */
+  }
+
+  .feature-img-box {
+    order: 2; /* Image should always come second */
+  }
+
+  article {
+    margin-bottom: 6.4rem;
+  }
+
+  .heading-secondary {
+    font-size: 2.4rem;
+    margin-bottom: 6.4rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2rem;
+  }
+
+  .feature-description {
+    font-size: 1.8rem;
+  }
+
+  .section-opportunites {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items for a better look */
+    gap: 2.4rem;
+  }
+
+  .opp-heading {
+    font-size: 3rem;
+  }
+
+  .opp-description {
+    font-size: 1.8rem;
+  }
+
+  .btn--signup a {
+    margin-left: 10rem;
+  }
+
+  .login-secondary-heading {
+    font-size: 1.8rem;
+  }
+
+  .button-link {
+    font-size: 1.6rem;
+  }
+
+  .product-container,
+  .service-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+
+    gap: 4.8rem;
+  }
+
+  .section-header h2 {
+    font-size: 3.6rem;
+  }
+
+  .show-all-jobs {
+    font-size: 1.4rem;
+  }
+
+  .job-cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3.6rem;
+  }
+
+  .emergency-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-section {
+    clip-path: polygon(0% 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .text-section h2 {
+    font-size: 2rem;
+  }
+
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /*e-commerce*/
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+
+  .cards-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+
+  /*jobportal*/
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-img-box {
+    margin-top: 2rem;
+  }
+
+  .hero-text-box {
+    margin-bottom: 2rem;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .job-categories {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .form-description {
+    font-size: 2rem;
+  }
+
+  /*service*/
+
+  .search-box input[type="text"] {
+    padding: 1rem;
+    width: 16rem;
+  }
+
+  .text-section-card h2 {
+    font-size: 1.8rem;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.6rem;
+  }
+
+  .service-testimonials-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4.8rem;
+  }
+
+  .satisfaction-section h2 {
+    font-size: 2.6rem;
+  }
+}

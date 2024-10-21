@@ -11,6 +11,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="../js/script.js"></script>
     <title>Mella</title>
   </head>
   <body>
@@ -31,63 +34,77 @@
           <li><a href="#" class="main-nav-link">profile</a></li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
     <main>
-      <div class="job-search-container">
-        <div class="search-content">
-          <h1>Find a job that suits your interest & skills.</h1>
-          <p class="search-content-description">
-            Explore a wide variety of job opportunities tailored to your skills
-            and preferences. Start your journey to find the perfect role that
-            matches your passion and expertise.
-          </p>
-          <div class="search-box">
-            <input type="text" placeholder="Job title, Keyword..." />
-            <input type="text" placeholder="Your Location" />
-            <button class="find-job-btn">Find Job</button>
+      <section class="section-hero">
+        <div class="hero">
+          <div class="hero-text-box">
+            <h1 data-aos="zoom-in-up" class="heading-primary">
+              Find a job that suits your interest & skills.
+            </h1>
+            <p data-aos="fade-up-left" class="hero-description">
+              Explore a wide variety of job opportunities tailored to your
+              skills and preferences. Start your journey to find the perfect
+              role that matches your passion and expertise.
+            </p>
+            <div class="search-box">
+              <input type="text" placeholder="Job title, Keyword..." />
+              <input type="text" placeholder="Your Location" />
+              <button class="find-job-btn">Find Job</button>
+            </div>
+            <p class="suggestion">
+              Suggestion: Designer, Programming, Digital Marketing, Video,
+              Animation.
+            </p>
           </div>
-          <p class="suggestion">
-            Suggestion: Designer, Programming,
-            <span class="highlight">Digital Marketing</span>, Video, Animation.
-          </p>
-        </div>
-        <div class="illustration">
-          <img
-            src="../img/Work in progress-cuate.svg"
-            alt="Job search illustration"
-          />
-        </div>
-      </div>
-      <div class="stats-container">
-        <div class="stats-box">
-          <div class="jobs-icon">
-            <img src="../img/brief-case.svg" alt="Brief Case Icon" />
+          <div class="hero-img-box">
+            <img
+              data-aos="zoom-in"
+              src="../img/Work in progress-cuate.svg"
+              alt="Job search illustration"
+              class="hero-img"
+            />
           </div>
-          <h2>75324</h2>
-          <p>Live Job</p>
         </div>
-        <div class="stats-box">
-          <div class="jobs-icon">
-            <img src="../img/company-buildings.svg" alt="Companies Icon" />
+      </section>
+
+      <section>
+        <div class="stats-container container">
+          <div class="stats-box">
+            <div class="jobs-icon">
+              <img src="../img/brief-case.svg" alt="Brief Case Icon" />
+            </div>
+            <h2>75324</h2>
+            <p>Live Job</p>
           </div>
-          <h2>459</h2>
-          <p>Companies</p>
-        </div>
-        <div class="stats-box">
-          <div class="jobs-icon">
-            <img src="../img/candidates.svg" alt="Candidates Icon" />
+          <div class="stats-box">
+            <div class="jobs-icon">
+              <img src="../img/company-buildings.svg" alt="Companies Icon" />
+            </div>
+            <h2>459</h2>
+            <p>Companies</p>
           </div>
-          <h2>10,416</h2>
-          <p>Candidates</p>
-        </div>
-        <div class="stats-box">
-          <div class="jobs-icon">
-            <img src="../img/brief-case.svg" alt="Brief Case Icon" />
+          <div class="stats-box">
+            <div class="jobs-icon">
+              <img src="../img/candidates.svg" alt="Candidates Icon" />
+            </div>
+            <h2>10,416</h2>
+            <p>Candidates</p>
           </div>
-          <h2>532</h2>
-          <p>New Jobs</p>
+          <div class="stats-box">
+            <div class="jobs-icon">
+              <img src="../img/brief-case.svg" alt="Brief Case Icon" />
+            </div>
+            <h2>532</h2>
+            <p>New Jobs</p>
+          </div>
         </div>
-      </div>
+      </section>
 
       <section class="registration-container">
         <div class="registration-box candidate">
@@ -111,7 +128,7 @@
               Discover a new perspective, find top talent, and make a difference
               with your company. Join us now.
             </p>
-            <button class="register-button">Register Now &rarr;</button>
+            <button class="register-button">Become a Client &rarr;</button>
           </div>
           <div class="registration-image">
             <img src="../img/employers.jpg" alt="Employer Image" />
@@ -129,7 +146,7 @@
               >
             </p>
             <p>
-              <a href="#"> Maxillofacial Surgeons</a><br /><span
+              <a href="#">Maxillofacial Surgeons</a><br /><span
                 >74 Open Positions</span
               >
             </p>
@@ -147,16 +164,14 @@
               >
             </p>
             <p>
-              <a href="#">>Management Analysis</a><br /><span
+              <a href="#">Management Analysis</a><br /><span
                 >93 Open Positions</span
               >
             </p>
           </div>
           <div class="column">
             <p>
-              <a href="#"> Obstetricians-Gynecologists</a><br /><span
-                >4 Open Positions</span
-              >
+              <a href="#">Gynecologists</a><br /><span>4 Open Positions</span>
             </p>
             <p>
               <a href="#">Psychiatrists</a><br /><span>18 Open Positions</span>
@@ -173,7 +188,7 @@
               <a href="#">Data Scientist</a><br /><span>28 Open Positions</span>
             </p>
             <p>
-              <a href="#"> Operations Research Analysis </a><br /><span
+              <a href="#">Research Analysis </a><br /><span
                 >18 Open Positions</span
               >
             </p>
@@ -190,7 +205,8 @@
             </div>
             <h2>Create account</h2>
             <p>
-              Aliquam facilisis egestas sapien, nec tempor leo tristique at.
+              create a personalized profile to showcase your skills and
+              experience.
             </p>
           </div>
           <div class="arrow">
@@ -211,7 +227,8 @@
             </div>
             <h2>Upload CV/Resume</h2>
             <p>
-              Curabitur sit amet maximus ligula. Nam a nulla ante. Nam sodales.
+              Upload your resume to help employers quickly understand your
+              qualifications.
             </p>
           </div>
           <div class="arrow">
@@ -231,7 +248,7 @@
               <img src="../img/search-jobs.svg" alt="Find Job" />
             </div>
             <h2>Find suitable job</h2>
-            <p>Phasellus quis eleifend ex. Morbi nec fringilla nibh.</p>
+            <p>Browse through job listings that match your skills.</p>
           </div>
           <div class="arrow">
             <svg viewBox="0 0 120 50" xmlns="http://www.w3.org/2000/svg">
@@ -251,8 +268,7 @@
             </div>
             <h2>Apply job</h2>
             <p>
-              Curabitur sit amet maximus ligula. Nam a nulla ante, Nam sodales
-              purus.
+              Submit your application and follow up on your job status easily.
             </p>
           </div>
         </div>
@@ -342,7 +358,7 @@
         </div>
       </section>
 
-      <section class="jon-featured container">
+      <section class="job-featured">
         <div class="job-header">
           <h2>Featured job</h2>
           <a href="#" class="view-all">View All →</a>
@@ -481,88 +497,112 @@
       </section>
 
       <section class="testimonial-section">
-        <h2 class="heading-secondary">Clients Testimonial</h2>
+        <h2 class="heading-secondary clients-testimonial">
+          Clients Testimonial
+        </h2>
         <div class="testimonial-carousel">
-          <button class="nav-button prev">&#8249;</button>
-          <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">
-              "Working with this team has been an absolute game-changer for our
-              product design process. Their innovative approach and attention to
-              detail have significantly improved our user experience. The
-              collaborative environment they foster made every step of the
-              project enjoyable and productive. I can't recommend them highly
-              enough!"
-            </p>
-            <div class="client-info">
-              <img
-                src="../img/robert-fox.png"
-                alt="Robert Fox"
-                class="client-image"
-              />
-              <div class="client-details">
-                <div class="client-name">Robert Fox</div>
-                <div class="client-position">UI/UX Designer</div>
+          <div class="list-testimonial">
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "Working with this team has been an absolute game-changer for
+                our product design process. Their innovative approach and
+                attention to detail have significantly improved our user
+                experience. The collaborative environment they foster made every
+                step of the project enjoyable and productive. I can't recommend
+                them highly enough!"
+              </p>
+              <div class="client-info">
+                <img
+                  src="../img/robert-fox.png"
+                  alt="Robert Fox"
+                  class="client-image"
+                />
+                <div class="client-details">
+                  <div class="client-name">Robert Fox</div>
+                  <div class="client-position">UI/UX Designer</div>
+                </div>
               </div>
+              <div class="quote">"</div>
             </div>
-            <div class="quote">"</div>
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "I've collaborated with many agencies over the years, but none
+                have matched the level of creativity and professionalism I've
+                experienced here. They don't just meet expectations; they
+                consistently exceed them. Their ability to translate our brand
+                vision into compelling visual narratives has been instrumental
+                in our recent marketing success."
+              </p>
+              <div class="client-info">
+                <img
+                  src="../img/bessie cooper.png"
+                  alt="Bessie Cooper"
+                  class="client-image"
+                />
+                <div class="client-details">
+                  <div class="client-name">Bessie Cooper</div>
+                  <div class="client-position">Creative Director</div>
+                </div>
+              </div>
+              <div class="quote">"</div>
+            </div>
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "As a photographer, I'm always looking for ways to showcase my
+                work effectively online. This team not only created a stunning
+                portfolio website for me but also provided invaluable insights
+                on digital marketing. Their holistic approach to web design and
+                SEO has dramatically increased my online visibility and client
+                inquiries. I'm thoroughly impressed and grateful for their
+                expertise!"
+              </p>
+              <div class="client-info">
+                <img
+                  src="../img/jane cooper.png"
+                  alt="Jane Cooper"
+                  class="client-image"
+                />
+                <div class="client-details">
+                  <div class="client-name">Jane Cooper</div>
+                  <div class="client-position">Photographer</div>
+                </div>
+              </div>
+              <div class="quote">"</div>
+            </div>
+
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "As a content-creator, I'm always looking for ways to showcase
+                my work effectively online. This team not only created a
+                stunning portfolio website for me but also provided invaluable
+                insights on digital marketing. Their holistic approach to web
+                design and SEO has dramatically increased my online visibility
+                and client inquiries. I'm thoroughly impressed and grateful for
+                their expertise!"
+              </p>
+              <div class="client-info">
+                <img
+                  src="../img/jane cooper.png"
+                  alt="Jane Cooper"
+                  class="client-image"
+                />
+                <div class="client-details">
+                  <div class="client-name">dawit Cooper</div>
+                  <div class="client-position">content-creator</div>
+                </div>
+              </div>
+              <div class="quote">"</div>
+            </div>
           </div>
 
-          <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">
-              "I've collaborated with many agencies over the years, but none
-              have matched the level of creativity and professionalism I've
-              experienced here. They don't just meet expectations; they
-              consistently exceed them. Their ability to translate our brand
-              vision into compelling visual narratives has been instrumental in
-              our recent marketing success."
-            </p>
-            <div class="client-info">
-              <img
-                src="../img/bessie cooper.png"
-                alt="Bessie Cooper"
-                class="client-image"
-              />
-              <div class="client-details">
-                <div class="client-name">Bessie Cooper</div>
-                <div class="client-position">Creative Director</div>
-              </div>
-            </div>
-            <div class="quote">"</div>
+          <div class="navigation-arrows">
+            <button class="nav-button prev">&#8249;</button>
+            <button class="nav-button next">&#8250;</button>
           </div>
-          <div class="testimonial">
-            <div class="stars">★★★★★</div>
-            <p class="testimonial-text">
-              "As a photographer, I'm always looking for ways to showcase my
-              work effectively online. This team not only created a stunning
-              portfolio website for me but also provided invaluable insights on
-              digital marketing. Their holistic approach to web design and SEO
-              has dramatically increased my online visibility and client
-              inquiries. I'm thoroughly impressed and grateful for their
-              expertise!"
-            </p>
-            <div class="client-info">
-              <img
-                src="../img/jane cooper.png"
-                alt="Jane Cooper"
-                class="client-image"
-              />
-              <div class="client-details">
-                <div class="client-name">Jane Cooper</div>
-                <div class="client-position">Photographer</div>
-              </div>
-            </div>
-            <div class="quote">"</div>
-          </div>
-
-          <button class="nav-button next">&#8250;</button>
-        </div>
-        <div class="carousel-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
         </div>
       </section>
     </main>
@@ -585,7 +625,8 @@
             </li>
           </ul>
           <p class="copyright">
-            Copyright &copy; 2024 by Mella Inc. All rights reserved
+            Copyright &copy; <span class="year">2024</span> by Mella Inc. All
+            rights reserved
           </p>
         </div>
         <div class="address-col">
@@ -632,5 +673,73 @@
         </nav>
       </div>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const testimonialContainer =
+          document.querySelector(".list-testimonial");
+        const testimonials = document.querySelectorAll(".testimonial");
+        const prevButton = document.querySelector(".navigation-arrows .prev");
+        const nextButton = document.querySelector(".navigation-arrows .next");
+
+        let currentIndex = 0;
+
+        function getVisibleTestimonials() {
+          return window.innerWidth <= 884 ? 2 : 3;
+        }
+
+        function updateTestimonials() {
+          const visibleCount = getVisibleTestimonials();
+          testimonials.forEach((testimonial, index) => {
+            if (index >= currentIndex && index < currentIndex + visibleCount) {
+              testimonial.style.display = "block";
+            } else {
+              testimonial.style.display = "none";
+            }
+          });
+
+          prevButton.disabled = currentIndex === 0;
+          nextButton.disabled =
+            currentIndex >= testimonials.length - visibleCount;
+        }
+
+        function handleResize() {
+          currentIndex = 0;
+          updateTestimonials();
+        }
+
+        nextButton.addEventListener("click", () => {
+          const visibleCount = getVisibleTestimonials();
+          if (currentIndex < testimonials.length - visibleCount) {
+            currentIndex++;
+            updateTestimonials();
+          }
+        });
+
+        prevButton.addEventListener("click", () => {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateTestimonials();
+          }
+        });
+
+        window.addEventListener("resize", handleResize);
+
+        updateTestimonials();
+      });
+    </script>
   </body>
 </html>
