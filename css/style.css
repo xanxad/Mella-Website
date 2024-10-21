@@ -565,7 +565,7 @@ button:hover {
 .submit-button {
   background-color: #0e9b4b;
   color: #fff;
-  width: 30%; /* Adjust width to fit the container */
+  /* Adjust width to fit the container */
 }
 
 .submit-button:hover {
@@ -869,6 +869,10 @@ button:hover {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.Checkout-buttons a {
+  text-decoration: none;
 }
 
 button > .right-arrow {
@@ -2163,11 +2167,11 @@ button > .right-arrow {
   padding: 2rem;
   width: 48%;
   transition: transform 0.3s;
-  /* margin: 0 auto;*/
 }
 
 .registration-box:hover {
-  transform: translateY(-0.5rem);
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .candidate {
@@ -2404,6 +2408,11 @@ button > .right-arrow {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.job-title a {
+  text-decoration: none;
+  color: white;
 }
 .job-details {
   display: flex;

@@ -29,9 +29,16 @@
       </div>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="#" class="main-nav-link">Home</a></li>
-          <li><a href="#" class="main-nav-link">Find a job</a></li>
-          <li><a href="#" class="main-nav-link">profile</a></li>
+          <li><a href="homepage.html" class="main-nav-link">Home</a></li>
+          <li><a href="#" class="main-nav-link">Browse Jobs</a></li>
+          <li>
+            <a href="job-posting.html" class="main-nav-link">Post Jobs</a>
+          </li>
+          <li><a href="" class="main-nav-link">My Profile</a></li>
+          <li>
+            <a href="profile.html" class="main-nav-link">beome a candidate</a>
+          </li>
+          <li><a href="#" class="main-nav-link">Support</a></li>
         </ul>
       </nav>
 
@@ -74,7 +81,7 @@
       </section>
 
       <section>
-        <div class="stats-container container">
+        <div data-aos="slide-right" class="stats-container container">
           <div class="stats-box">
             <div class="jobs-icon">
               <img src="../img/brief-case.svg" alt="Brief Case Icon" />
@@ -107,28 +114,34 @@
       </section>
 
       <section class="registration-container">
-        <div class="registration-box candidate">
+        <div data-aos="flip-right" class="registration-box candidate">
           <div class="registration-content">
             <h3>Become a Candidate</h3>
             <p>
               Join our network to discover new job opportunities that match your
               skills and career aspirations.
             </p>
-            <button class="register-button">Register Now &rarr;</button>
+            <a href="profile.html"
+              ><button class="register-button">Register Now &rarr;</button></a
+            >
           </div>
           <div class="registration-image">
             <img src="../img/job-picture.jpg" alt="Candidate Image" />
           </div>
         </div>
 
-        <div class="registration-box employer">
+        <div data-aos="flip-right" class="registration-box employer">
           <div class="registration-content">
             <h3>Become an Employer</h3>
             <p>
               Discover a new perspective, find top talent, and make a difference
               with your company. Join us now.
             </p>
-            <button class="register-button">Become a Client &rarr;</button>
+            <a href="client-log-in.html"
+              ><button class="register-button">
+                Become a Client &rarr;
+              </button></a
+            >
           </div>
           <div class="registration-image">
             <img src="../img/employers.jpg" alt="Employer Image" />
@@ -138,7 +151,7 @@
 
       <section class="container">
         <h1 class="heading-secondary">Most Popular Vacancies</h1>
-        <div class="vacancies">
+        <div data-aos="zoom-in-up" class="vacancies">
           <div class="column">
             <p>
               <a href="#">Anesthesiologists</a><br /><span
@@ -198,7 +211,7 @@
 
       <section class="workflow-container">
         <h2 class="heading-secondary">How jobportal work</h2>
-        <div class="workflow">
+        <div data-aos="fade-down-left" class="workflow">
           <div class="step">
             <div class="icon-circle">
               <img src="../img/account.svg" alt="Create Account" />
@@ -279,7 +292,7 @@
           <h2>Popular category</h2>
           <a href="#" class="view-all">View All →</a>
         </div>
-        <div class="job-categories">
+        <div data-aos="slide-up" class="job-categories">
           <div class="job-category">
             <div class="job-category-icon">
               <img src="../img/brush.svg" alt="Graphics & Design icon" />
@@ -363,7 +376,7 @@
           <h2>Featured job</h2>
           <a href="#" class="view-all">View All →</a>
         </div>
-        <div class="jobs-grid">
+        <div data-aos="zoom-out" class="jobs-grid">
           <div class="job-card">
             <div class="job-title">Technical Support Specialist</div>
             <div class="job-details">
@@ -473,7 +486,9 @@
           </div>
 
           <div class="job-card featured">
-            <div class="job-title">Senior UX Designer</div>
+            <div class="job-title">
+              <a href="job-detail.html">Senior UX Designer</a>
+            </div>
             <div class="job-details">
               <span class="job-types">FULL-TIME</span>
               <span class="job-salary">Salary: $100,000 - $120,000</span>
@@ -500,7 +515,7 @@
         <h2 class="heading-secondary clients-testimonial">
           Clients Testimonial
         </h2>
-        <div class="testimonial-carousel">
+        <div data-aos="fade-up" class="testimonial-carousel">
           <div class="list-testimonial">
             <div class="testimonial">
               <div class="stars">★★★★★</div>
@@ -576,13 +591,15 @@
             <div class="testimonial">
               <div class="stars">★★★★★</div>
               <p class="testimonial-text">
-                "As a content-creator, I'm always looking for ways to showcase
-                my work effectively online. This team not only created a
-                stunning portfolio website for me but also provided invaluable
-                insights on digital marketing. Their holistic approach to web
-                design and SEO has dramatically increased my online visibility
-                and client inquiries. I'm thoroughly impressed and grateful for
-                their expertise!"
+                "As a social media manager, I’m always seeking innovative ways
+                to engage audiences and grow online communities. This team not
+                only elevated my brand with a visually captivating strategy but
+                also offered deep insights into audience behavior and content
+                trends. Their expertise in platform algorithms, paid campaigns,
+                and analytics has significantly boosted my reach and follower
+                engagement. Thanks to their efforts, I’ve seen measurable growth
+                across all channels. I couldn’t be more pleased with their
+                professionalism and results!"
               </p>
               <div class="client-info">
                 <img
@@ -591,8 +608,62 @@
                   class="client-image"
                 />
                 <div class="client-details">
-                  <div class="client-name">dawit Cooper</div>
-                  <div class="client-position">content-creator</div>
+                  <div class="client-name">dawit tibibu</div>
+                  <div class="client-position">Social-media Manager</div>
+                </div>
+              </div>
+              <div class="quote">"</div>
+            </div>
+
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "As a project manager, staying on top of multiple moving parts
+                can be challenging. This team’s exceptional communication and
+                organizational skills made collaboration seamless from start to
+                finish. Their ability to break down complex tasks into
+                actionable milestones ensured our project stayed on track and
+                within budget. The transparency they maintained throughout the
+                process fostered trust and confidence. I highly recommend them
+                for their professionalism and commitment to delivering
+                outstanding results."
+              </p>
+              <div class="client-info">
+                <img
+                  src="../img/bessie cooper.png"
+                  alt="Bessie Cooper"
+                  class="client-image"
+                />
+                <div class="client-details">
+                  <div class="client-name">Mulualem Mulgeta</div>
+                  <div class="client-position">Project Manager</div>
+                </div>
+              </div>
+              <div class="quote">"</div>
+            </div>
+
+            <div class="testimonial">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text">
+                "As a front-end programmer, I’m passionate about crafting
+                responsive and user-friendly interfaces, but this team’s design
+                and development approach took things to the next level. They
+                provided invaluable insights into UI/UX trends and optimized my
+                code for performance and accessibility. Their attention to
+                detail ensured every animation and interaction felt smooth and
+                intuitive across all devices. Working with them has been a
+                fantastic learning experience, and I look forward to future
+                collaborations!"
+              </p>
+              <div class="client-info">
+                <img
+                  src="../img/bessie cooper.png"
+                  alt="Bessie Cooper"
+                  class="client-image"
+                />
+                <div class="client-details">
+                  <div class="client-name">Eden Solomon</div>
+                  <div class="client-position">Front-end Developer</div>
                 </div>
               </div>
               <div class="quote">"</div>
@@ -607,7 +678,7 @@
       </section>
     </main>
 
-    <footer class="section-footer">
+    <footer data-aos="flip-down" class="section-footer">
       <div class="container grid--5-cols">
         <div class="logo-col">
           <a href="#" class="footer-logo">
@@ -648,8 +719,10 @@
         <nav class="nav-col">
           <p class="footer-heading">Account</p>
           <ul class="footer-nav">
-            <li><a href="#" class="footer-link">Create account</a></li>
-            <li><a href="#" class="footer-link">Sign in</a></li>
+            <li>
+              <a href="signup.html" class="footer-link">Create account</a>
+            </li>
+            <li><a href="login.html" class="footer-link">Sign in</a></li>
             <li><a href="#" class="footer-link">IOS app</a></li>
             <li><a href="#" class="footer-link">Androind app</a></li>
           </ul>
@@ -657,10 +730,18 @@
         <nav class="nav-col">
           <p class="footer-heading">Company</p>
           <ul class="footer-nav">
-            <li><a href="#" class="footer-link">E-commerce</a></li>
-            <li><a href="#" class="footer-link">Job portal</a></li>
-            <li><a href="#" class="footer-link">Services</a></li>
-            <li><a href="#" class="footer-link">Emergency Services</a></li>
+            <li>
+              <a href="e-commerce.html" class="footer-link">E-commerce</a>
+            </li>
+            <li>
+              <a href="job-portal.html" class="footer-link">Job portal</a>
+            </li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li>
+              <a href="emergency.html" class="footer-link"
+                >Emergency Services</a
+              >
+            </li>
           </ul>
         </nav>
         <nav class="nav-col">
