@@ -1456,6 +1456,10 @@ button > .right-arrow {
   font-size: 8.8rem;
 }
 
+.trending-writing {
+  display: none;
+}
+
 .right-section {
   display: flex;
   padding-right: 8rem;
@@ -1479,7 +1483,7 @@ button > .right-arrow {
 }
 
 .product-card img {
-  width: 10rem; /* Adjust size to fit */
+  width: 14rem; /* Adjust size to fit */
   margin-bottom: 1rem; /* Spacing between image and text */
 }
 
@@ -1502,6 +1506,7 @@ button > .right-arrow {
   font-size: 1rem;
   margin: 0;
   padding-top: 0.8rem;
+  color: #e73c17;
 }
 
 .more-products-btn {
@@ -1517,6 +1522,10 @@ button > .right-arrow {
 .more-products-btn:hover,
 .more-products-btn:active {
   background-color: #0a6d35;
+}
+
+.more-products-btn-small {
+  display: none;
 }
 
 .category-section {

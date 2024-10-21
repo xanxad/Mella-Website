@@ -503,6 +503,10 @@
     width: 24rem;
   }
 
+  .text-section-commerce {
+    padding-right: 0;
+  }
+
   .text-section-commerce h2 {
     font-size: 6.4rem;
   }
@@ -736,6 +740,73 @@
 
   /*e-commerce*/
 
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-content-writings {
+    max-width: 100%;
+    padding-top: 10rem;
+  }
+
+  .main-content-writings h2 {
+    font-size: 9rem;
+  }
+
+  .trending-writing {
+    display: block;
+    padding-top: 14rem;
+    font-size: 5.6rem;
+  }
+
+  .right-section {
+    display: flex;
+
+    flex-direction: row;
+    gap: 2rem;
+    padding-left: 3.6rem;
+  }
+
+  .featured-text {
+    display: none;
+  }
+
+  .product-card {
+    padding: 1rem;
+  }
+
+  .product-card a {
+    font-size: 1.4rem;
+  }
+
+  .product-card p {
+    font-size: 1.4rem;
+  }
+
+  .product-card img {
+    width: 18rem;
+  }
+
+  .more-products-btn {
+    display: none;
+  }
+
+  .more-products-btn-small {
+    display: block;
+    text-decoration: none;
+    background-color: #0e9b4b;
+    color: #fff;
+  }
+
+  .more-products-btn-small:hover {
+    background-color: #0a6d35;
+  }
+
+  .main-content-writings h2 {
+    font-size: 2.4rem;
+  }
+
   .products-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -746,6 +817,14 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 6rem;
+  }
+
+  .text-section-commerce h2 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  .text-section-commerce p {
   }
 
   /*jobportal*/
