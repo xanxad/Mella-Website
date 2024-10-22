@@ -1374,6 +1374,10 @@ button > .right-arrow {
   align-items: center;
 }
 
+.solutions-grid a {
+  text-decoration: none;
+}
+
 .solution-item {
   background-color: #f4e7d6;
   padding: 2rem;
@@ -2577,6 +2581,12 @@ button > .right-arrow {
   right: -4rem;
 }
 
+.nav-button.prev.emergency {
+  left: -2rem;
+}
+.nav-button.next.emergency {
+  right: -2rem;
+}
 .navigation-arrows .prev:disabled,
 .navigation-arrows .next:disabled {
   opacity: 0.5; /* Reduce opacity to show it's disabled */
@@ -3006,4 +3016,189 @@ textarea {
 
 .service-testimonial a:hover {
   color: #0a6d35;
+}
+
+/*emergency*/
+
+.how-it-works-section {
+  margin: 9.6rem 0;
+}
+.how-it-works {
+  border: 0.2rem solid #0a6d35;
+  padding: 2rem;
+  max-width: 100rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.how-it-works h2 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+
+  display: inline-block;
+  padding: 0 1rem;
+  border: 0.2rem solid black;
+}
+
+/* Steps container */
+.steps-container-emergency {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* Individual step block */
+.step-emergency {
+  text-align: center;
+  flex: 1;
+}
+
+/* Step number circle */
+.step-number-emergency {
+  width: 7rem;
+  height: 7rem;
+  background-color: #118f31;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1rem auto;
+}
+
+/* Step title */
+.step-emergency h3 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Step description */
+.step-emergency p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.emergency-contacts-section {
+  padding: 3rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  margin-bottom: 9.6rem;
+}
+
+.emergency-contacts-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.contact-card {
+  background-color: #fff;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover {
+  transform: scale(1.05);
+  transition: all 0.3;
+}
+
+.contact-card h3 {
+  font-size: 1.8rem;
+  color: #e73c17;
+  margin-bottom: 1rem;
+}
+
+.contact-card p {
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.contact-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  text-decoration: underline;
+}
+
+.testimonials-section-emergency {
+  padding: 3rem;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-bottom: 9.6rem;
+}
+
+.testimonials-section-emergency h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid-emergency {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 12rem;
+}
+
+.testimonial-card-emergency {
+  background-color: #fff;
+  padding: 2rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card-emergency p {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial-card-emergency h4 {
+  font-size: 1.6rem;
+  color: #007bff;
+}
+
+.faq-section {
+  padding: 3rem;
+  background-color: #f9f9f9;
+  text-align: left;
+  margin-bottom: 9.8rem;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  margin-bottom: 2rem;
+}
+
+.faq-item h3 {
+  font-size: 1.8rem;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.faq-item p {
+  font-size: 1.4rem;
+  color: #333;
 }

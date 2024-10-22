@@ -228,6 +228,14 @@
   .service-testimonial p {
     font-size: 1.4rem;
   }
+
+  /*emergency*/
+
+  .testimonial-grid-emergency {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12rem;
+  }
 }
 
 /* tablets, below 884px*/
@@ -423,6 +431,13 @@
 
   .service-testimonial p {
     font-size: 1.2rem;
+  }
+  /*emergency*/
+
+  .testimonial-grid-emergency {
+    display: grid;
+
+    gap: 18rem;
   }
 }
 
@@ -903,5 +918,11 @@
 
   .satisfaction-section h2 {
     font-size: 2.6rem;
+  }
+  /*emergency*/
+  .testimonial-grid-emergency {
+    display: grid;
+
+    gap: 10rem;
   }
 }
