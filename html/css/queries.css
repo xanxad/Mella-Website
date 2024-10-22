@@ -78,6 +78,16 @@
     font-size: 1.4rem;
   }
 
+  .wishlist-section {
+    padding: 6.4rem;
+  }
+
+  .wishlist-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    gap: 10rem;
+  }
+
   /*job detail*/
 
   .job-overview {
@@ -822,9 +832,6 @@
   .text-section-commerce h2 {
     font-size: 4rem;
     text-align: center;
-  }
-
-  .text-section-commerce p {
   }
 
   /*jobportal*/
