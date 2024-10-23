@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <script defer src="./js/script.js"></script>
+    <title>Police Emergency Services</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <img
+          src="./img/logo-mella-removebg-preview.png"
+          class="logo"
+          alt="Mella logo"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="homepage.html" class="main-nav-link">Homepage</a></li>
+          <li><a href="#" class="main-nav-link">Services</a></li>
+          <li><a href="#" class="main-nav-link">Support</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <!-- Emergency Services Card -->
+      <div class="emergency-card">
+        <h3>Police Emergency Services</h3>
+        <p>Select your emergency option below:</p>
+
+        <!-- Police Service Options -->
+        <div class="service-options">
+          <div
+            class="option-card"
+            id="station-option"
+            onclick="findPoliceStation()"
+          >
+            <h4>Find Police Station</h4>
+            <p>Locate nearest police stations based on your location.</p>
+          </div>
+
+          <div
+            class="option-card"
+            id="emergency-option"
+            onclick="reportEmergency()"
+          >
+            <h4>Report Emergency</h4>
+            <p>Report an emergency and track police response.</p>
+          </div>
+
+          <div
+            class="option-card"
+            id="incident-option"
+            onclick="reportIncident()"
+          >
+            <h4>Report Incident</h4>
+            <p>File a non-emergency incident report.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Incident Report Form -->
+      <div id="incident-form" class="incident-form" style="display: none">
+        <h3>Report an Incident</h3>
+        <form id="report-form">
+          <select id="incident-type" required>
+            <option value="">Select Incident Type</option>
+            <option value="theft">Theft</option>
+            <option value="vandalism">Vandalism</option>
+            <option value="suspicious">Suspicious Activity</option>
+            <option value="noise">Noise Complaint</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea
+            id="incident-description"
+            placeholder="Describe the incident..."
+            required
+          ></textarea>
+          <button type="submit">Submit Report</button>
+        </form>
+      </div>
+
+      <!-- Police Station List -->
+      <div id="station-list" class="station-list" style="display: none">
+        <h3>Nearby Police Stations</h3>
+        <ul id="station-list-items"></ul>
+      </div>
+
+      <!-- Map Container -->
+      <div id="map"></div>
+
+      <!-- Emergency Response Tracking -->
+      <div
+        id="response-tracking"
+        class="response-tracking"
+        style="display: none"
+      ></div>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+
+      let map = L.map("map").setView([51.505, -0.09], 13);
+      let userMarker, routeControl;
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+
+      // Function to hide all sections
+      function hideAllSections() {
+        document.getElementById("incident-form").style.display = "none";
+        document.getElementById("station-list").style.display = "none";
+        document.getElementById("response-tracking").style.display = "none";
+      }
+
+      function findPoliceStation() {
+        hideAllSections(); // Hide previous content
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const lat = position.coords.latitude;
+              const lon = position.coords.longitude;
+
+              userMarker = L.marker([lat, lon])
+                .addTo(map)
+                .bindPopup("Your Location")
+                .openPopup();
+              map.setView([lat, lon], 14);
+
+              fetchNearbyStations(lat, lon);
+            },
+            (error) => alert("Error: " + error.message)
+          );
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function fetchNearbyStations(lat, lon) {
+        const url = `https://overpass-api.de/api/interpreter?data=[out:json];node["amenity"="police"](around:5000,${lat},${lon});out;`;
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const stations = data.elements;
+            displayStations(stations, lat, lon);
+          })
+          .catch((error) => {
+            console.error("Error fetching police stations:", error);
+            document.getElementById(
+              "station-list-items"
+            ).innerHTML = `<li>Error loading police stations: ${error.message}</li>`;
+          });
+      }
+
+      function displayStations(stations, userLat, userLon) {
+        const list = document.getElementById("station-list-items");
+        list.innerHTML = "";
+        document.getElementById("station-list").style.display = "block";
+
+        if (stations.length === 0) {
+          list.innerHTML = "<li>No police stations found nearby.</li>";
+          return;
+        }
+
+        stations.forEach((station) => {
+          const name = station.tags.name || "Police Station";
+          const lat = station.lat;
+          const lon = station.lon;
+
+          const marker = L.marker([lat, lon]).addTo(map).bindPopup(name);
+
+          const listItem = document.createElement("li");
+          listItem.textContent = name;
+
+          const button = document.createElement("button");
+          button.textContent = "Show Route";
+          button.onclick = () => drawRoute(lat, lon);
+
+          listItem.appendChild(button);
+          list.appendChild(listItem);
+        });
+      }
+
+      function drawRoute(stationLat, stationLon) {
+        if (routeControl) {
+          map.removeControl(routeControl);
+        }
+
+        routeControl = L.Routing.control({
+          waypoints: [userMarker.getLatLng(), L.latLng(stationLat, stationLon)],
+          routeWhileDragging: true,
+          router: L.Routing.osrmv1({
+            serviceUrl: "https://router.project-osrm.org/route/v1",
+          }),
+          lineOptions: {
+            styles: [{ color: "blue", weight: 4 }],
+          },
+        }).addTo(map);
+      }
+
+      function reportEmergency() {
+        hideAllSections(); // Hide previous content
+        const responseTracking = document.getElementById("response-tracking");
+        responseTracking.style.display = "block";
+        responseTracking.innerHTML = `
+          <h3>Emergency Reported</h3>
+          <p>Emergency services have been notified of your location.</p>
+          <p>Expected response time: 5-10 minutes</p>
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            Response team dispatched
+          </div>
+        `;
+      }
+
+      function reportIncident() {
+        hideAllSections(); // Hide previous content
+        document.getElementById("incident-form").style.display = "block";
+        document
+          .getElementById("report-form")
+          .addEventListener("submit", function (e) {
+            e.preventDefault();
+            const type = document.getElementById("incident-type").value;
+            const description = document.getElementById(
+              "incident-description"
+            ).value;
+
+            alert(
+              "Incident report submitted successfully. Reference number: " +
+                Math.random().toString(36).substr(2, 9).toUpperCase()
+            );
+
+            this.reset();
+            document.getElementById("incident-form").style.display = "none";
+          });
+      }
+    </script>
+  </body>
+</html>

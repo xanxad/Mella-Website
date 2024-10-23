@@ -3202,3 +3202,336 @@ textarea {
   font-size: 1.4rem;
   color: #333;
 }
+
+/*mediacal emergency*/
+
+/* Ambulance Card */
+.ambulance-card,
+.emergency-card {
+  background: linear-gradient(135deg, #ff9900, #ffcc00);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 6rem;
+}
+
+.ambulance-card,
+.emergency-card h3 {
+  color: #333;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.ambulance-card,
+.emergency-card p {
+  color: #555;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* Service Options */
+.service-options {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.option-card {
+  background-color: #e73c17;
+  color: #ffffff;
+  padding: 2rem;
+  width: 28rem;
+  height: 16rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(231, 60, 23, 0.2);
+}
+
+.option-card h4 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.option-card p {
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.option-card:hover {
+  background-color: #0e9b4b;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(14, 155, 75, 0.3);
+}
+
+/* Hospital List */
+.hospital-list,
+.station-list {
+  background: linear-gradient(to right, #f0f9ff, #e73c17);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: none;
+}
+
+.hospital-list,
+.station-list h3 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.hospital-list,
+.station-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hospital-list,
+.station-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #eee;
+  font-size: 1.6rem;
+}
+
+.hospital-list,
+.station-list li:last-child {
+  border-bottom: none;
+}
+
+.hospital-list,
+.station-list button {
+  background-color: #b93012;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: background-color 0.3s ease;
+}
+
+.hospital-list,
+.station-list button:hover {
+  background-color: #d03615;
+}
+
+/* Map Container */
+#map {
+  height: 70vh;
+  width: 100%;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ambulance Tracking */
+.ambulance-tracking {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: none;
+  font-size: 1.6rem;
+}
+
+/*security emergency*/
+
+/* Update content section styles to ensure they're hidden by default */
+.content-section {
+  display: none;
+}
+/* Incident Report Form Container */
+.incident-form {
+  display: none;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.incident-form h3 {
+  color: #1a237e;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 1rem;
+}
+
+/* Form Elements */
+#report-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+#incident-type {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#incident-type:focus {
+  outline: none;
+  border-color: #1a237e;
+  box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+}
+
+#incident-description {
+  width: 100%;
+  min-height: 150px;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  background-color: #f8f9fa;
+  color: #333;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#incident-description:focus {
+  outline: none;
+  border-color: #1a237e;
+  box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+}
+
+/* Submit Button */
+#report-form button {
+  background-color: #e73c17;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  align-self: center;
+}
+
+#report-form button:hover {
+  background-color: #d03615;
+  transform: translateY(-1px);
+}
+
+#report-form button:active {
+  transform: translateY(0);
+}
+
+/* Form Validation Styles */
+#incident-type:invalid,
+#incident-description:invalid {
+  border-color: #dc3545;
+}
+
+/* Required Field Indicator */
+.required-field::after {
+  content: "*";
+  color: #dc3545;
+  margin-left: 4px;
+}
+
+/* Status Message Styles */
+.status-message {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  display: none;
+}
+
+.status-message.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+.status-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
+}
+
+/* Animation for Form Appearance */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.incident-form {
+  animation: slideIn 0.3s ease-out;
+}
+
+/* Loading State Styles */
+.loading {
+  position: relative;
+  pointer-events: none;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+
+.loading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  border: 2px solid #1a237e;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

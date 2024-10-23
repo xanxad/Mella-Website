@@ -654,6 +654,36 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 3.6rem;
   }
+
+  /*emergency service*/
+
+  /*security emergency*/
+
+  .incident-form {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .incident-form h3 {
+    font-size: 1.5rem;
+  }
+
+  #incident-type,
+  #incident-description {
+    font-size: 0.95rem;
+  }
+
+  #report-form button {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .service-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* phones, below 544px*/

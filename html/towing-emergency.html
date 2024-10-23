@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Leaflet CSS (without integrity and crossorigin) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <!-- Leaflet Routing Machine CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <script defer src="./js/script.js"></script>
+    <title>Towing Services</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <img
+          src="./img/logo-mella-removebg-preview.png"
+          class="logo"
+          alt="mella logo"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="homepage.html" class="main-nav-link">Homepage</a></li>
+          <li><a href="#" class="main-nav-link">Services</a></li>
+          <li><a href="#" class="main-nav-link">Support</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <!-- Towing Service Card -->
+      <div class="emergency-card">
+        <h3>Towing Services</h3>
+        <p>Select your preferred option below:</p>
+
+        <!-- Towing Service Options -->
+        <div class="service-options">
+          <div
+            class="option-card"
+            id="towing-option"
+            onclick="findTowingService()"
+          >
+            <h4>Find Nearby Towing Service</h4>
+            <p>Locate nearby towing services based on your location.</p>
+          </div>
+
+          <div
+            class="option-card"
+            id="request-towing-option"
+            onclick="requestTowing()"
+          >
+            <h4>Request Towing Assistance</h4>
+            <p>Request towing assistance and track its arrival.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder for displaying nearby towing services -->
+      <div id="towing-list" class="towing-list">
+        <h3>Nearby Towing Services</h3>
+        <ul id="towing-list-items"></ul>
+      </div>
+
+      <!-- Add the map container with proper ID and dimensions -->
+      <div id="map"></div>
+
+      <!-- Placeholder for displaying real-time towing service tracking -->
+      <div id="towing-tracking" class="towing-tracking"></div>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      let map = L.map("map").setView([51.505, -0.09], 13);
+      let userMarker, routeControl;
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+
+      function findTowingService() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const lat = position.coords.latitude;
+              const lon = position.coords.longitude;
+
+              userMarker = L.marker([lat, lon])
+                .addTo(map)
+                .bindPopup("You are here")
+                .openPopup();
+              map.setView([lat, lon], 14);
+
+              fetchNearbyTowing(lat, lon);
+            },
+            (error) => alert("Error: " + error.message)
+          );
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function fetchNearbyTowing(lat, lon) {
+        const url = `https://overpass-api.de/api/interpreter?data=[out:json];node["amenity"="towing_service"](around:5000,${lat},${lon});out;`;
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const towingServices = data.elements;
+            displayTowingServices(towingServices, lat, lon);
+          })
+          .catch((error) => {
+            console.error("Error fetching towing services:", error);
+            document.getElementById(
+              "towing-list-items"
+            ).innerHTML = `<li>Error loading towing services: ${error.message}</li>`;
+          });
+      }
+
+      function displayTowingServices(towingServices, userLat, userLon) {
+        const list = document.getElementById("towing-list-items");
+        list.innerHTML = "";
+        document.getElementById("towing-list").style.display = "block";
+
+        if (towingServices.length === 0) {
+          list.innerHTML = "<li>No towing services found nearby.</li>";
+          return;
+        }
+
+        towingServices.forEach((service) => {
+          const name = service.tags.name || "Unnamed Towing Service";
+          const lat = service.lat;
+          const lon = service.lon;
+
+          const marker = L.marker([lat, lon]).addTo(map).bindPopup(name);
+
+          const listItem = document.createElement("li");
+          listItem.textContent = name;
+
+          const button = document.createElement("button");
+          button.textContent = "Show Route";
+          button.onclick = () => drawRoute(lat, lon);
+
+          listItem.appendChild(button);
+          list.appendChild(listItem);
+        });
+      }
+
+      function drawRoute(towingLat, towingLon) {
+        if (routeControl) {
+          map.removeControl(routeControl);
+        }
+
+        routeControl = L.Routing.control({
+          waypoints: [userMarker.getLatLng(), L.latLng(towingLat, towingLon)],
+          routeWhileDragging: true,
+          router: L.Routing.osrmv1({
+            serviceUrl: "https://router.project-osrm.org/route/v1",
+          }),
+          lineOptions: {
+            styles: [{ color: "red", weight: 4 }],
+          },
+        }).addTo(map);
+      }
+
+      function requestTowing() {
+        alert("Request Towing Assistance feature is under development.");
+        // Additional functionality can be added here for real-time tracking.
+      }
+    </script>
+  </body>
+</html>

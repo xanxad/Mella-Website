@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script defer src="./js/script.js"></script>
+    <title>Fire Emergency Services</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <img
+          src="./img/logo-mella-removebg-preview.png"
+          class="logo"
+          alt="mella logo"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="homepage.html" class="main-nav-link">Homepage</a></li>
+          <li><a href="#" class="main-nav-link">services</a></li>
+          <li><a href="#" class="main-nav-link">support</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <!-- Fire Emergency Card -->
+      <div class="emergency-card">
+        <h3>Fire Emergency Services</h3>
+        <p>Select your preferred option below:</p>
+
+        <!-- Fire Station and Call Firefighter Options -->
+        <div class="service-options">
+          <div
+            class="option-card"
+            id="firestation-option"
+            onclick="findFireStation()"
+          >
+            <h4>Find Fire Station</h4>
+            <p>Locate nearby fire stations based on your location.</p>
+          </div>
+
+          <div
+            class="option-card"
+            id="firefighter-option"
+            onclick="callFireServices()"
+          >
+            <h4>Call Fire Services</h4>
+            <p>
+              Request immediate firefighter assistance and track its arrival.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder for displaying nearby fire stations -->
+      <div id="firestation-list" class="firestation-list">
+        <h3>Nearby Fire Stations</h3>
+        <ul id="firestation-list-items"></ul>
+      </div>
+
+      <!-- Add the map container with proper ID and dimensions -->
+      <div id="map"></div>
+
+      <!-- Placeholder for displaying real-time firefighter tracking -->
+      <div id="firefighter-tracking" class="firefighter-tracking"></div>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      let map = L.map("map").setView([51.505, -0.09], 13);
+      let userMarker, routeControl;
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+
+      function findFireStation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const lat = position.coords.latitude;
+              const lon = position.coords.longitude;
+
+              userMarker = L.marker([lat, lon])
+                .addTo(map)
+                .bindPopup("You are here")
+                .openPopup();
+              map.setView([lat, lon], 14);
+
+              fetchNearbyFireStations(lat, lon);
+            },
+            (error) => alert("Error: " + error.message)
+          );
+        } else {
+          alert("Geolocation is not supported by this browser.");
+        }
+      }
+
+      function fetchNearbyFireStations(lat, lon) {
+        const url = `https://overpass-api.de/api/interpreter?data=[out:json];node["amenity"="fire_station"](around:5000,${lat},${lon});out;`;
+
+        fetch(url)
+          .then((response) => response.json())
+          .then((data) => {
+            const fireStations = data.elements;
+            displayFireStations(fireStations, lat, lon);
+          })
+          .catch((error) => {
+            console.error("Error fetching fire stations:", error);
+            document.getElementById(
+              "firestation-list-items"
+            ).innerHTML = `<li>Error loading fire stations: ${error.message}</li>`;
+          });
+      }
+
+      function displayFireStations(fireStations, userLat, userLon) {
+        const list = document.getElementById("firestation-list-items");
+        list.innerHTML = "";
+        document.getElementById("firestation-list").style.display = "block";
+
+        if (fireStations.length === 0) {
+          list.innerHTML = "<li>No fire stations found nearby.</li>";
+          return;
+        }
+
+        fireStations.forEach((fireStation) => {
+          const name = fireStation.tags.name || "Unnamed Fire Station";
+          const lat = fireStation.lat;
+          const lon = fireStation.lon;
+
+          const marker = L.marker([lat, lon]).addTo(map).bindPopup(name);
+
+          const listItem = document.createElement("li");
+          listItem.textContent = name;
+
+          const button = document.createElement("button");
+          button.textContent = "Show Route";
+          button.onclick = () => drawRouteToFireStation(lat, lon);
+
+          listItem.appendChild(button);
+          list.appendChild(listItem);
+        });
+      }
+
+      function drawRouteToFireStation(fireStationLat, fireStationLon) {
+        if (routeControl) {
+          map.removeControl(routeControl);
+        }
+
+        routeControl = L.Routing.control({
+          waypoints: [
+            userMarker.getLatLng(),
+            L.latLng(fireStationLat, fireStationLon),
+          ],
+          routeWhileDragging: true,
+          router: L.Routing.osrmv1({
+            serviceUrl: "https://router.project-osrm.org/route/v1",
+          }),
+          lineOptions: {
+            styles: [{ color: "red", weight: 4 }],
+          },
+        }).addTo(map);
+      }
+
+      function callFireServices() {
+        alert("Fire services have been contacted. Help is on the way!");
+        // Additional functionality for tracking fire services can be added here.
+      }
+    </script>
+  </body>
+</html>

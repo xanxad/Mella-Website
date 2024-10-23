@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Leaflet CSS (without integrity and crossorigin) -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <!-- Leaflet Routing Machine CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <!-- Leaflet Routing Machine JS -->
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+    <script defer src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#">
+        <img
+          src="./img/logo-mella-removebg-preview.png"
+          class="logo"
+          alt="mella logo"
+        />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="homepage.html" class="main-nav-link">Homepage</a></li>
+
+          <li><a href="#" class="main-nav-link">services</a></li>
+          <li><a href="#" class="main-nav-link">support</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <!-- Legal Services Card -->
+      <div class="ambulance-card">
+        <h3>Legal Services</h3>
+        <p>Choose your preferred option below:</p>
+
+        <!-- Legal Services Options -->
+        <div class="service-options">
+          <div class="option-card" id="lawyer-option" onclick="findLawyers()">
+            <h4>Find Law Office</h4>
+            <p>Locate nearby law offices based on your location.</p>
+          </div>
+
+          <div
+            class="option-card"
+            id="consultation-option"
+            onclick="requestConsultation()"
+          >
+            <h4>Request Consultation</h4>
+            <p>Schedule a consultation with a legal professional.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Placeholder for displaying nearby law offices -->
+      <div id="lawyer-list" class="hospital-list">
+        <h3>Nearby Law Offices</h3>
+        <ul id="lawyer-list-items"></ul>
+      </div>
+
+      <!-- Map container -->
+      <div id="map"></div>
+
+      <!-- Consultation request status -->
+      <div id="consultation-status" class="ambulance-tracking"></div>
+    </main>
+
+    <footer data-aos="flip-down" class="section-footer">
+      <div class="container grid--5-cols">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              src="./img/logo-mella-removebg-preview.png"
+              class="logo"
+              alt="mella logo"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><img src="./img/Social.png" alt="" class="footer-link"
+              /></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; <span class="year">2024</span> by Mella Inc. All
+            rights reserved
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+
+          <address class="contact">
+            <p>
+              Address: Megenaga behind Admas University, Addis Ababa, Ethiopia
+            </p>
+            <p>
+              <a href="tel:+251935344627" class="footer-link">+251935344627</a>
+              <br />
+              <a href="mailto:spacetechet@gmail.com" class="footer-link"
+                >spacetechet@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li>
+              <a href="signup.html" class="footer-link">Create account</a>
+            </li>
+            <li><a href="login.html" class="footer-link">Sign in</a></li>
+            <li><a href="#" class="footer-link">IOS app</a></li>
+            <li><a href="#" class="footer-link">Android app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li>
+              <a href="e-commerce.html" class="footer-link">E-commerce</a>
+            </li>
+            <li>
+              <a href="job-portal.html" class="footer-link">Job portal</a>
+            </li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li>
+              <a href="emergency.html" class="footer-link"
+                >Emergency Services</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">About us</a></li>
+            <li><a href="#" class="footer-link">Help center</a></li>
+            <li><a href="#" class="footer-link">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+</script>
+
+<script>
+  let map = L.map("map").setView([51.505, -0.09], 13);
+  let userMarker, routeControl;
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution: "© OpenStreetMap",
+  }).addTo(map);
+
+  function findLawyers() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const lat = position.coords.latitude;
+          const lon = position.coords.longitude;
+
+          userMarker = L.marker([lat, lon])
+            .addTo(map)
+            .bindPopup("You are here")
+            .openPopup();
+          map.setView([lat, lon], 14);
+
+          fetchNearbyLawyers(lat, lon);
+        },
+        (error) => alert("Error: " + error.message)
+      );
+    } else {
+      alert("Geolocation is not supported by this browser.");
+    }
+  }
+
+  function fetchNearbyLawyers(lat, lon) {
+    // Using Overpass API to find law offices (office=lawyer OR amenity=lawyers)
+    const url = `https://overpass-api.de/api/interpreter?data=[out:json];(node["office"="lawyer"](around:5000,${lat},${lon});node["amenity"="lawyers"](around:5000,${lat},${lon}););out;`;
+
+    fetch(url)
+      .then((response) => response.json())
+      .then((data) => {
+        const lawyers = data.elements;
+        displayLawyers(lawyers, lat, lon);
+      })
+      .catch((error) => {
+        console.error("Error fetching law offices:", error);
+        document.getElementById(
+          "lawyer-list-items"
+        ).innerHTML = `<li>Error loading law offices: ${error.message}</li>`;
+      });
+  }
+
+  function displayLawyers(lawyers, userLat, userLon) {
+    const list = document.getElementById("lawyer-list-items");
+    list.innerHTML = "";
+    document.getElementById("lawyer-list").style.display = "block";
+
+    if (lawyers.length === 0) {
+      list.innerHTML = "<li>No law offices found nearby.</li>";
+      return;
+    }
+
+    lawyers.forEach((lawyer) => {
+      const name = lawyer.tags.name || "Unnamed Law Office";
+      const specialization = lawyer.tags.law || "General Practice";
+      const lat = lawyer.lat;
+      const lon = lawyer.lon;
+
+      const marker = L.marker([lat, lon])
+        .addTo(map)
+        .bindPopup(`${name}<br>Specialization: ${specialization}`);
+
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `
+        <div>
+          <strong>${name}</strong>
+          ${specialization ? `<br><small>Specialization: ${specialization}</small>` : ''}
+        </div>
+      `;
+
+      const button = document.createElement("button");
+      button.textContent = "Show Route";
+      button.onclick = () => drawRoute(lat, lon);
+
+      listItem.appendChild(button);
+      list.appendChild(listItem);
+    });
+  }
+
+  function drawRoute(lawyerLat, lawyerLon) {
+    if (routeControl) {
+      map.removeControl(routeControl);
+    }
+
+    routeControl = L.Routing.control({
+      waypoints: [
+        userMarker.getLatLng(),
+        L.latLng(lawyerLat, lawyerLon),
+      ],
+      routeWhileDragging: true,
+      router: L.Routing.osrmv1({
+        serviceUrl: "https://router.project-osrm.org/route/v1",
+      }),
+      lineOptions: {
+        styles: [{ color: "blue", weight: 4 }],
+      },
+    }).addTo(map);
+  }
+
+  function requestConsultation() {
+    const consultationStatus = document.getElementById("consultation-status");
+    consultationStatus.style.display = "block";
+    consultationStatus.innerHTML = `
+      <h3>Consultation Request</h3>
+      <p>Please call our service center to schedule a consultation:</p>
+      <p><strong>Phone:</strong> +1-XXX-XXX-XXXX</p>
+      <p>Available Monday to Friday, 9:00 AM - 5:00 PM</p>
+    `;
+  }
+</script>
+  </body>
+</html>
