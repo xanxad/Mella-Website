@@ -50,7 +50,7 @@
             <h3>Quantity</h3>
             <h3>Subtotal</h3>
           </div>
-          <div class="Cart-item">
+          <div class="Cart-item" data-id="1">
             <div class="item">
               <svg
                 width="25"
@@ -58,6 +58,7 @@
                 viewBox="0 0 25 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                class="remove-item"
               >
                 <circle cx="12.5" cy="12" r="9" fill="#DB4444" />
                 <path
@@ -76,13 +77,14 @@
             <p class="price">$650</p>
           </div>
           <div class="Cart-item">
-            <div class="item">
+            <div class="item" data-id="2">
               <svg
                 width="25"
                 height="24"
                 viewBox="0 0 25 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                class="remove-item"
               >
                 <circle cx="12.5" cy="12" r="9" fill="#DB4444" />
                 <path
@@ -208,6 +210,40 @@
     <script>
       AOS.init();
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+  // Select all the remove icons (SVGs)
+  const removeIcons = document.querySelectorAll(".remove-item");
+
+  removeIcons.forEach((icon) => {
+    icon.addEventListener("click", function () {
+      // Find the parent cart item element
+      const cartItem = this.closest(".Cart-item");
+
+      // Remove the cart item from the DOM
+      cartItem.remove();
+
+      // Optionally, update the cart total after removing the item
+      updateCartTotal();
+    });
+  });
+
+  // Function to update the cart total (if needed)
+  function updateCartTotal() {
+    let total = 0;
+    document.querySelectorAll(".Cart-item").forEach((item) => {
+      const priceElement = item.querySelector(".price:last-of-type"); // Get the price of the item
+      const price = parseFloat(priceElement.textContent.replace("$", ""));
+      total += price;
+    });
+
+    // Update the cart total in the UI
+    document.querySelector(".Cart-total p:last-of-type").textContent = `$${total.toFixed(2)}`;
+  }
+});
+
+    </script>
 
   </body>
 </html>
+

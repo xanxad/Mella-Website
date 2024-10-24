@@ -1731,6 +1731,7 @@ button > .right-arrow {
   padding: 0.8rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .heart-icon:hover,
@@ -3212,7 +3213,7 @@ textarea {
   padding: 3rem;
   border-radius: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
   margin-top: 6rem;
 }
 
@@ -3251,7 +3252,7 @@ textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 4px 6px rgba(231, 60, 23, 0.2);
+  box-shadow: 0 0.4rem 0.6rem rgba(231, 60, 23, 0.2);
 }
 
 .option-card h4 {
@@ -3269,8 +3270,8 @@ textarea {
 
 .option-card:hover {
   background-color: #0e9b4b;
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(14, 155, 75, 0.3);
+  transform: translateY(-0.4rem);
+  box-shadow: 0 0.6rem 1.2rem rgba(14, 155, 75, 0.3);
 }
 
 /* Hospital List */
@@ -3280,7 +3281,7 @@ textarea {
   border-radius: 1rem;
   padding: 2rem;
   margin-top: 3rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
   display: none;
 }
 
@@ -3304,7 +3305,7 @@ textarea {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0.1rem solid #eee;
   font-size: 1.6rem;
 }
 
@@ -3336,7 +3337,7 @@ textarea {
   width: 100%;
   border-radius: 1rem;
   margin-top: 3rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
 }
 
 /* Ambulance Tracking */
@@ -3345,7 +3346,7 @@ textarea {
   border-radius: 1rem;
   padding: 2rem;
   margin-top: 3rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
   display: none;
   font-size: 1.6rem;
 }
@@ -3363,8 +3364,8 @@ textarea {
   margin: 2rem auto;
   padding: 2rem;
   background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
 }
 
 .incident-form h3 {
@@ -3372,7 +3373,7 @@ textarea {
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
   text-align: center;
-  border-bottom: 2px solid #e0e0e0;
+  border-bottom: 0.2rem solid #e0e0e0;
   padding-bottom: 1rem;
 }
 
@@ -3385,9 +3386,9 @@ textarea {
 
 #incident-type {
   width: 100%;
-  padding: 12px;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  padding: 1.2rem;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 0.6rem;
   font-size: 1rem;
   background-color: #f8f9fa;
   color: #333;
@@ -3397,15 +3398,15 @@ textarea {
 #incident-type:focus {
   outline: none;
   border-color: #1a237e;
-  box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+  box-shadow: 0 0 0 0.2rem rgba(26, 35, 126, 0.1);
 }
 
 #incident-description {
   width: 100%;
-  min-height: 150px;
-  padding: 12px;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
+  min-height: 15rem;
+  padding: 1.2rem;
+  border: 0.1rem solid #e0e0e0;
+  border-radius: 0.6rem;
   font-size: 1rem;
   font-family: inherit;
   resize: vertical;
@@ -3417,16 +3418,16 @@ textarea {
 #incident-description:focus {
   outline: none;
   border-color: #1a237e;
-  box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+  box-shadow: 0 0 0 0.2rem rgba(26, 35, 126, 0.1);
 }
 
 /* Submit Button */
 #report-form button {
   background-color: #e73c17;
   color: white;
-  padding: 12px 24px;
+  padding: 1.2rem 2.4rem;
   border: none;
-  border-radius: 6px;
+  border-radius: 0.6rem;
   font-size: 1rem;
   font-weight: 500;
   cursor: pointer;
@@ -3453,14 +3454,14 @@ textarea {
 .required-field::after {
   content: "*";
   color: #dc3545;
-  margin-left: 4px;
+  margin-left: 0.4rem;
 }
 
 /* Status Message Styles */
 .status-message {
   padding: 1rem;
   margin-top: 1rem;
-  border-radius: 6px;
+  border-radius: 0.6rem;
   text-align: center;
   display: none;
 }
@@ -3468,14 +3469,14 @@ textarea {
 .status-message.success {
   background-color: #d4edda;
   color: #155724;
-  border: 1px solid #c3e6cb;
+  border: 0.1rem solid #c3e6cb;
   display: block;
 }
 
 .status-message.error {
   background-color: #f8d7da;
   color: #721c24;
-  border: 1px solid #f5c6cb;
+  border: 0.1rem solid #f5c6cb;
   display: block;
 }
 
@@ -3483,7 +3484,7 @@ textarea {
 @keyframes slideIn {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(-2rem);
   }
   to {
     opacity: 1;
@@ -3512,7 +3513,7 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 6px;
+  border-radius: 0.6rem;
 }
 
 .loading::before {
@@ -3520,10 +3521,10 @@ textarea {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 24px;
-  height: 24px;
-  margin: -12px 0 0 -12px;
-  border: 2px solid #1a237e;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: -1.2rem 0 0 -1.2rem;
+  border: 0.2rem solid #1a237e;
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
@@ -3534,4 +3535,337 @@ textarea {
   to {
     transform: rotate(360deg);
   }
+}
+
+/*shop*/
+
+/* Banner Container */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  padding: 4rem;
+  height: 30rem;
+  position: relative;
+  color: white;
+  margin-top: 4.8rem;
+  margin-bottom: 9.6rem;
+}
+
+/* Banner Content */
+.content {
+  max-width: 50%;
+}
+
+.apple-logo {
+  width: 4rem;
+  margin-bottom: 1rem;
+}
+
+.banner h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.discount {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+}
+
+.discount span {
+  font-weight: bold;
+}
+
+.shop-now {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  background-color: #0e9b4b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2rem;
+  transition: background-color 0.3s;
+}
+
+.shop-now:hover {
+  background-color: #0a6d35;
+}
+
+/* Product Image */
+.product-image img {
+  width: 40rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.flash-sales {
+  width: 90%;
+  max-width: 120rem;
+  margin: 9.6rem auto;
+  text-align: center;
+}
+
+.flash-sales h2 {
+  font-size: 3.6rem;
+  color: #333;
+}
+
+.flash-sales h2 span {
+  color: #059669;
+}
+
+.flash-sales h1 {
+  color: #059669;
+  font-size: 3.6rem;
+}
+
+.countdown {
+  display: flex;
+  gap: 1rem;
+  margin-top: 4.8rem;
+  margin-bottom: 4.8rem;
+}
+
+.time-unit {
+  text-align: center;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.time-unit .number {
+  font-size: 1.5rem;
+}
+
+.time-unit .label {
+  font-size: 0.8rem;
+}
+
+.discount {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: #0e9b4b;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.price .original {
+  text-decoration: line-through;
+  color: #888;
+  margin-left: 0.5rem;
+}
+
+.price .current {
+  color: #e73c17;
+}
+
+.add-to-cart {
+  background-color: #e73c17;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.add-to-cart:hover {
+  background-color: #d03615;
+}
+
+.view-all-btn {
+  margin-top: 4.8rem;
+  padding: 1rem 2rem;
+  background-color: #0e9b4b;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.view-all-btn:hover {
+  background-color: #0a6d35;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.banner .countdown-timer {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.banner .time-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #000;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%; /* Makes the box a circle */
+  padding: 1rem;
+  margin-bottom: 3.6rem;
+}
+
+.banner .time-box .number {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.banner .time-box .label {
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+/*product-details*/
+
+.product-details-container {
+  display: flex;
+  gap: 3rem;
+  max-width: 120rem;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.product-details-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.8rem;
+}
+
+/* Product Details */
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-details h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.product-details .ratings {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.reviews {
+  color: #888;
+}
+
+.status {
+  color: green;
+  margin-left: auto;
+}
+
+.product-details .description {
+  color: #555;
+}
+
+.color-options {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.product-details .color {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 0.1rem solid #ddd;
+  cursor: pointer;
+}
+
+.product-details .color.red {
+  background-color: red;
+}
+
+.product-details .color.black {
+  background-color: black;
+}
+
+.size-options {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.size-btn {
+  padding: 0.5rem 1rem;
+  border: 0.1rem solid #ddd;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.size-btn.selected {
+  background-color: #ff5c5c;
+  color: #fff;
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quantity-control input {
+  width: 3rem;
+  text-align: center;
+}
+
+.product-details .buy-now {
+  background-color: #0e9b4b;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-details .buy-now:hover {
+  background-color: #0a6d35;
+}
+
+.wishlist {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.delivery-info {
+  margin-top: 2rem;
+  border-top: 0.1rem solid #ddd;
+  padding-top: 1rem;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  font-size: 1.5rem;
 }

@@ -684,6 +684,55 @@
     justify-content: center;
     align-items: center;
   }
+
+  /*shop*/
+
+  .banner {
+    flex-direction: column; /* Stack content vertically */
+    height: auto;
+    padding: 2rem;
+  }
+
+  .content {
+    max-width: 100%;
+    text-align: center; /* Center-align the content */
+  }
+
+  .product-image img {
+    width: 100%; /* Make the image responsive */
+    max-width: 400px; /* Add a max width for larger devices */
+    margin: 2rem auto;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .countdown-timer {
+    justify-content: center;
+    flex-wrap: wrap; /* Allow the time-boxes to wrap if needed */
+  }
+
+  .time-box {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .view-all-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  /*products-detail*/
+
+  .product-details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 /* phones, below 544px*/

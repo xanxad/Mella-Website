@@ -12,8 +12,9 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="./js/script.js"></script>
-    <title>Mella</title>
+    <title>Document</title>
   </head>
   <body>
     <header class="header">
@@ -39,82 +40,87 @@
       </div>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="e-commerce.html" class="main-nav-link">Home</a></li>
-
+          <li><a href="homepage.html" class="main-nav-link">Home</a></li>
+          <li><a href="shop.html" class="main-nav-link">shop</a></li>
+          <li><a href="wishlist.html" class="main-nav-link">Wishlist</a></li>
           <li><a href="cart.html" class="main-nav-link">Cart</a></li>
+          <li><a href="#" class="main-nav-link">help</a></li>
+          <li><a href="#" class="main-nav-link">account</a></li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
     <main>
-      <section class="wishlist-section">
-        <div class="wishlist-header">
-          <h2 class="wishlist-title">Wishlist</h2>
-          <a href="cart.html"
-            ><button class="move-all-btn">Move All To Cart</button></a
-          >
+      <section class="product-details-container">
+        <div class="product-details-image">
+          <img src="./img/gamepad-g-92.png" alt="Havic HV G-92 Gamepad" />
         </div>
 
-        <div class="wishlist-items">
-          <div class="wishlist-item">
-            <div class="wishlist-item-image">
-              <img src="./img/gucci-bag.png" alt="Gucci duffle bag" />
-            </div>
-            <h3 class="wishlist-item-title">Gucci duffle bag</h3>
-            <div class="wishlist-item-price">
-              <span class="current-price">$960</span>
-              <span class="original-price">$1160</span>
-            </div>
-            <a href="cart.html"
-              ><button class="add-to-cart-btn">Add To Cart</button></a
-            >
-            <button class="remove-btn">🗑️ remove</button>
+        <div class="product-details">
+          <h1>Havic HV G-92 Gamepad</h1>
+
+          <div class="ratings">
+            <span>⭐⭐⭐⭐☆</span>
+            <span class="reviews">(150 Reviews)</span>
+            <span class="status">In Stock</span>
           </div>
 
-          <div class="wishlist-item">
-            <div class="wishlist-item-image">
-              <img src="./img/cpu-cooler.png" alt="RGB liquid CPU Cooler" />
-            </div>
-            <h3 class="wishlist-item-title">RGB liquid CPU Cooler</h3>
-            <div class="wishlist-item-price">
-              <span class="current-price">$1960</span>
-            </div>
-            <a href="cart.html"
-              ><button class="add-to-cart-btn">Add To Cart</button></a
-            >
-            <button class="remove-btn">🗑️ remove</button>
+          <p class="price">$192.00</p>
+
+          <p class="description">
+            PlayStation 5 Controller Skin. High quality vinyl with air channel
+            adhesive for easy bubble-free install & mess-free removal.
+            Pressure-sensitive.
+          </p>
+
+          <div class="color-options">
+            <label>Colours:</label>
+            <span class="color red"></span>
+            <span class="color black"></span>
           </div>
 
-          <div class="wishlist-item">
-            <div class="wishlist-item-image">
-              <img src="./img/gamepad.png" alt="GP11 Shooter USB Gamepad" />
-            </div>
-            <h3 class="wishlist-item-title">GP11 Shooter USB Gamepad</h3>
-            <div class="wishlist-item-price">
-              <span class="current-price">$550</span>
-            </div>
-            <a href="cart.html"
-              ><button class="add-to-cart-btn">Add To Cart</button></a
-            >
-            <button class="remove-btn">🗑️ remove</button>
+          <div class="size-options">
+            <label>Size:</label>
+            <button class="size-btn">XS</button>
+            <button class="size-btn">S</button>
+            <button class="size-btn selected">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
           </div>
 
-          <div class="wishlist-item">
-            <div class="wishlist-item-image">
-              <img src="./img/jacket.png" alt="Quilted Satin Jacket" />
+          <div class="quantity-control">
+            <button class="decrease">-</button>
+            <input type="number" value="2" />
+            <button class="increase">+</button>
+            <button class="buy-now">Buy Now</button>
+            <button class="wishlist">❤️</button>
+          </div>
+
+          <div class="delivery-info">
+            <div class="info-block">
+              <i class="icon">🚚</i>
+              <div>
+                <strong>Free Delivery</strong>
+                <p>Enter your postal code for Delivery Availability</p>
+              </div>
             </div>
-            <h3 class="wishlist-item-title">Quilted Satin Jacket</h3>
-            <div class="wishlist-item-price">
-              <span class="current-price">$750</span>
+
+            <div class="info-block">
+              <i class="icon">🔄</i>
+              <div>
+                <strong>Return Delivery</strong>
+                <p>Free 30 Days Delivery Returns. <a href="#">Details</a></p>
+              </div>
             </div>
-            <a href="cart.html"
-              ><button class="add-to-cart-btn">Add To Cart</button></a
-            >
-            <button class="remove-btn">🗑️ remove</button>
           </div>
         </div>
       </section>
     </main>
-    <footer class="section-footer">
+    <footer data-aos="flip-down" class="section-footer">
       <div class="container grid--5-cols">
         <div class="logo-col">
           <a href="#" class="footer-logo">
@@ -132,7 +138,8 @@
             </li>
           </ul>
           <p class="copyright">
-            Copyright &copy; 2024 by Mella Inc. All rights reserved
+            Copyright &copy; <span class="year">2024</span> by Mella Inc. All
+            rights reserved
           </p>
         </div>
         <div class="address-col">
@@ -189,5 +196,17 @@
         </nav>
       </div>
     </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
