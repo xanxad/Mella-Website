@@ -3869,3 +3869,337 @@ textarea {
 .icon {
   font-size: 1.5rem;
 }
+
+/*job-browse*/
+
+.filter-container {
+  background-color: #f8f8fd;
+  padding: 3.6rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  max-width: 80rem;
+  margin: 9.6rem auto;
+}
+
+/* Search Bar Styling */
+.filter-container .search-bar {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.filter-container .search-bar input {
+  flex: 1;
+  padding: 1.2rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.4rem 0 0 0.4rem;
+}
+
+.filter-container .search-bar button {
+  padding: 1.2rem 2rem;
+  background-color: #0e9b4b;
+  color: white;
+  border: none;
+  border-radius: 0 0.4rem 0.4rem 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.filter-container .search-bar button:hover {
+  background-color: #0a6d35;
+}
+
+/* Filter Options Styling */
+.filter-container .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.filter-container .filter {
+  flex: 1 1 45%; /* Makes each filter take up half the row */
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-container .filter label {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.filter-container .filter input,
+.filter-container .filter select {
+  padding: 1rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.4rem;
+}
+
+/* Filter Button */
+.filter-container .filter-btn {
+  background-color: #0e9b4b;
+  color: white;
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  align-self: last baseline;
+  transition: background-color 0.3s;
+}
+
+.filter-container .filter-btn:hover {
+  background-color: #0a6d35;
+}
+
+/* Company Section */
+.company-section {
+  max-width: 120rem;
+  margin: 9.6rem auto;
+}
+
+/* Grid Layout for Cards */
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.6rem;
+}
+
+/* Company Card Styling */
+.company-card {
+  background-color: #fff;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.company-card:hover {
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+/* Company Header (Logo and Info) */
+.company-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.company-info-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Location Styling */
+.location {
+  font-size: 1.4rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.location-icon {
+  margin-right: 0.5rem;
+}
+
+/* Button Styling */
+.open-position-btn {
+  display: inline-block;
+  background-color: #e9f5ff;
+  color: #0a6d35;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.open-position-btn:hover {
+  background-color: #d4eaff;
+}
+
+/*about-us*/
+
+.about-us-hero img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.about-us-detail {
+  margin: 9.6rem auto;
+}
+
+.about-us-detail h2,
+.about-us-journey h2 {
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 600;
+  color: #0e9b4b;
+}
+
+.about-us-detail p,
+.about-us-journey p {
+  padding: 3.6rem 3.6rem;
+  line-height: 1.2;
+
+  font-size: 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.why-mella {
+  text-align: center;
+  width: 80%;
+  margin: 9.6rem auto;
+}
+
+.why-mella h2 {
+  font-size: 4rem;
+  color: #3a9a3a;
+  margin-bottom: 3rem;
+}
+
+/* Grid layout */
+.about-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.6rem;
+}
+
+/* Feature card styles */
+.about-feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0.2rem solid #000;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  transition: transform 0.2s;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.about-feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* Icon styles */
+.about-img {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #3a9a3a;
+}
+
+.about-feature-card p {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+/* Section container */
+.mission-vision-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4.8rem;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2.4rem;
+}
+
+.mission-card {
+  background-color: #3a9a3a;
+  border-radius: 1.2rem;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.mission-card h2 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.mission-card p {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  text-align: justify;
+}
+
+.mission-card ul {
+  list-style-position: inside;
+  padding: 0;
+}
+
+.mission-card li {
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+}
+
+.team-section {
+  text-align: center;
+  padding: 5rem 0;
+  background-color: white;
+  border: 0.2rem solid #e5e5e5;
+  border-radius: 1rem;
+  margin-top: 9.6rem;
+  margin-bottom: 9.6rem;
+}
+
+.team-section h2 {
+  font-size: 4rem;
+  color: #0e9b4b;
+  margin-bottom: 4rem;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.team-member {
+  text-align: center;
+  width: 25rem;
+}
+
+.team-member img {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-member p {
+  font-size: 1.6rem;
+  color: gray;
+}
+
+.join-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f8f8fd;
+  border: 0.2rem solid #e5e5e5;
+  border-radius: 1rem;
+  margin: 9.6rem;
+}
+
+.join-section h2 {
+  font-size: 4rem;
+  color: #0e9b4b;
+  margin-bottom: 2rem;
+}
+
+.join-section p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 2rem;
+}

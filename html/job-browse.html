@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="#">
+          <img
+            src="./img/logo-mella-removebg-preview.png"
+            class="logo"
+            alt="mella logo"
+          />
+        </a>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="homepage.html" class="main-nav-link">Home</a></li>
+
+          <li>
+            <a href="job-posting.html" class="main-nav-link">Post Jobs</a>
+          </li>
+          <li><a href="" class="main-nav-link">My Profile</a></li>
+          <li>
+            <a href="profile.html" class="main-nav-link">beome a candidate</a>
+          </li>
+          <li><a href="#" class="main-nav-link">Support</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+    <main>
+      <div class="filter-container">
+        <!-- Search Bar -->
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search by job title, keyword, or company..."
+          />
+          <button>Search</button>
+        </div>
+
+        <!-- Filter Options -->
+        <div class="filters">
+          <div class="filter">
+            <label for="location">Location</label>
+            <input
+              type="text"
+              id="location"
+              placeholder="Enter a city or remote"
+            />
+          </div>
+
+          <div class="filter">
+            <label for="category">Category</label>
+            <select id="category">
+              <option value="">All Categories</option>
+              <option value="it">IT & Software</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="education">Education</option>
+            </select>
+          </div>
+
+          <div class="filter">
+            <label for="job-type">Job Type</label>
+            <select id="job-type">
+              <option value="">Any Type</option>
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+              <option value="freelance">Freelance</option>
+              <option value="internship">Internship</option>
+            </select>
+          </div>
+
+          <div class="filter">
+            <label for="experience">Experience Level</label>
+            <select id="experience">
+              <option value="">Any Level</option>
+              <option value="entry">Entry Level</option>
+              <option value="mid">Mid Level</option>
+              <option value="senior">Senior Level</option>
+              <option value="manager">Manager</option>
+            </select>
+          </div>
+
+          <div class="filter">
+            <label for="posted-date">Posted Date</label>
+            <select id="posted-date">
+              <option value="">Any Time</option>
+              <option value="24">Last 24 hours</option>
+              <option value="7">Last 7 days</option>
+              <option value="30">Last 30 days</option>
+            </select>
+          </div>
+
+          <button class="filter-btn">Apply Filters</button>
+        </div>
+      </div>
+
+      <section class="job-popular-section container">
+        <div class="job-header">
+          <h2>Popular category</h2>
+          <a href="#" class="view-all">View All →</a>
+        </div>
+        <div data-aos="slide-up" class="job-categories">
+          <div class="job-category">
+            <div class="job-category-icon">
+              <img src="./img/brush.svg" alt="Graphics & Design icon" />
+            </div>
+            <div class="job-category-info">
+              <h3>Graphics & Design</h3>
+              <p>357 Open position</p>
+            </div>
+          </div>
+          <div class="job-category">
+            <div class="job-category-icon">
+              <img src="./img/code.svg" alt="Code & Programming icon" />
+            </div>
+            <div class="job-category-info">
+              <h3>Code & Programming</h3>
+              <p>312 Open position</p>
+            </div>
+          </div>
+          <div class="job-category">
+            <div class="job-category-icon">
+              <img src="./img/campaign.svg" alt="Digital Marketing icon" />
+            </div>
+            <div class="job-category-info">
+              <h3>Digital Marketing</h3>
+              <p>297 Open position</p>
+            </div>
+          </div>
+          <div class="job-category">
+            <div class="job-category-icon">
+              <img src="./img/tv.svg" alt="Video & Animation icon" />
+            </div>
+            <div class="job-category-info">
+              <h3>Video & Animation</h3>
+              <p>247 Open position</p>
+            </div>
+          </div>
+          <div class="job-category">
+            <div class="job-category-icon">
+              <img src="./img/music_note.svg" alt="Music & Audio icon" />
+            </div>
+            <div class="job-category-info">
+              <h3>Music & Audio</h3>
+              <p>204 Open position</p>
+            </div>
+          </div>
+          <div class="job-category">
+            <div class="job-category-icon">
+              <img
+                src="./img/account_balance.svg"
+                alt="Account & Finance icon"
+              />
+            </div>
+            <div class="job-category-info">
+              <h3>Account & Finance</h3>
+              <p>167 Open position</p>
+            </div>
+          </div>
+          <div class="job-category">
+            <div class="job-category-icon">
+              <img src="./img/health_care.svg" alt="Health & Care icon" />
+            </div>
+            <div class="job-category-info">
+              <h3>Health & Care</h3>
+              <p>125 Open position</p>
+            </div>
+          </div>
+          <div class="job-category">
+            <div class="job-category-icon">
+              <img src="./img/database.svg" alt="Data & Science icon" />
+            </div>
+            <div class="job-category-info">
+              <h3>Data & Science</h3>
+              <p>57 Open position</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="job-featured">
+        <div class="job-header">
+          <h2>Featured job</h2>
+          <a href="#" class="view-all">View All →</a>
+        </div>
+        <div data-aos="zoom-out" class="jobs-grid">
+          <div class="job-card">
+            <div class="job-title">Technical Support Specialist</div>
+            <div class="job-details">
+              <span class="job-types">PART-TIME</span>
+              <span class="job-salary">Salary: $20,000 - $25,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/google-icon.svg"
+                  alt="Google Inc. logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Google Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+          <div class="job-card featured">
+            <div class="job-title">Front-end Devloper</div>
+            <div class="job-details">
+              <span class="job-types">FULL-TIME</span>
+              <span class="job-salary">Salary: $90,000 - $125,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/google-icon.svg"
+                  alt="Google Inc. logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Google Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+          <div class="job-card">
+            <div class="job-title">Marketing Intern</div>
+            <div class="job-details">
+              <span class="job-types">INTERNSHIP</span>
+              <span class="job-salary">Salary: $1000 - $5000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/google-icon.svg"
+                  alt="Google Inc. logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Google Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+
+          <div class="job-card">
+            <div class="job-title">Junior Graphics Designer</div>
+            <div class="job-details">
+              <span class="job-types">PART TIME</span>
+              <span class="job-salary">Salary: $20,000 - $25,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/google-icon.svg"
+                  alt="Google Inc. logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Google Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+
+          <div class="job-card featured">
+            <div class="job-title">Project Manager</div>
+            <div class="job-details">
+              <span class="job-types">FULL-TIME</span>
+              <span class="job-salary">Salary: $70,000 - $85,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/google-icon.svg"
+                  alt="Google Inc. logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Google Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+
+          <div class="job-card">
+            <div class="job-title">Reciptionist</div>
+            <div class="job-details">
+              <span class="job-types">INTERNSHIP</span>
+              <span class="job-salary">Salary: $1000 - $2000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/revoult-logo.png"
+                  alt="Revoult logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Revoult</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+
+          <div class="job-card featured">
+            <div class="job-title">
+              <a href="job-detail.html">Senior UX Designer</a>
+            </div>
+            <div class="job-details">
+              <span class="job-types">FULL-TIME</span>
+              <span class="job-salary">Salary: $100,000 - $120,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/google-icon.svg"
+                  alt="Google Inc. logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Google Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+
+          <div class="job-card">
+            <div class="job-title">Data Encoder</div>
+            <div class="job-details">
+              <span class="job-types">INTERNSHIP</span>
+              <span class="job-salary">Salary: $1000 - $5000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/google-icon.svg"
+                  alt="Google Inc. logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Google Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+          <div class="job-card featured">
+            <div class="job-title">
+              <a href="job-detail.html">Visual Designer</a>
+            </div>
+            <div class="job-details">
+              <span class="job-types">FULL-TIME</span>
+              <span class="job-salary">Salary: $50,000 - $60,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/revoult-logo.png"
+                  alt="Revoult logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Revoult Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+          <div class="job-card">
+            <div class="job-title">Acountant</div>
+            <div class="job-details">
+              <span class="job-types">PART-TIME</span>
+              <span class="job-salary">Salary: $40,000 - $45,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/dropbox.png"
+                  alt="Dropbox logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Dropbox.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+
+          <div class="job-card featured">
+            <div class="job-title">
+              <a href="job-detail.html">Senior Electrical Engineer</a>
+            </div>
+            <div class="job-details">
+              <span class="job-types">FULL-TIME</span>
+              <span class="job-salary">Salary: $100,000 - $120,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/revoult-logo.png"
+                  alt="Revoult logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Revoult Inc.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+          <div class="job-card">
+            <div class="job-title">Transport Manager</div>
+            <div class="job-details">
+              <span class="job-types">PART-TIME</span>
+              <span class="job-salary">Salary: $50,000 - $85,000</span>
+            </div>
+            <div class="company-info">
+              <div class="company-details">
+                <img
+                  src="./img/dropbox.png"
+                  alt="Dropbox logo"
+                  class="company-logo"
+                />
+                <div>
+                  <div class="company-name">Dropbox.</div>
+                  <div class="company-location">Addis Ababa, Ethiopia</div>
+                </div>
+              </div>
+              <span class="bookmark-icon">☆</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-section">
+        <h2 class="heading-secondary">Top Companies</h2>
+        <div class="company-grid">
+          <!-- Company Card -->
+          <div class="company-card">
+            <div class="company-header">
+              <img
+                src="./img/revoult-logo.png"
+                alt="Company Logo"
+                class="company-logo"
+              />
+              <div class="company-info-card">
+                <h3>Dribbble</h3>
+              </div>
+            </div>
+            <p class="location">
+              <span class="location-icon">📍</span>Addis Ababa, Ethiopia
+            </p>
+            <a href="#" class="open-position-btn">Open Position (3)</a>
+          </div>
+
+          <!-- Duplicate the card to create the layout -->
+          <div class="company-card">
+            <div class="company-header">
+              <img
+                src="./img/dropbox.png"
+                alt="Company Logo"
+                class="company-logo"
+              />
+              <div class="company-info-card">
+                <h3>Dribbble</h3>
+              </div>
+            </div>
+            <p class="location">
+              <span class="location-icon">📍</span>Addis Ababa, Ethiopia
+            </p>
+            <a href="#" class="open-position-btn">Open Position (12)</a>
+          </div>
+
+          <div class="company-card">
+            <div class="company-header">
+              <img
+                src="./img/google-icon.svg"
+                alt="Company Logo"
+                class="company-logo"
+              />
+              <div class="company-info-card">
+                <h3>Dribbble</h3>
+              </div>
+            </div>
+            <p class="location">
+              <span class="location-icon">📍</span>Addis Ababa, Ethiopia
+            </p>
+            <a href="#" class="open-position-btn">Open Position (9)</a>
+          </div>
+
+          <div class="company-card">
+            <div class="company-header">
+              <img
+                src="./img/google-icon.svg"
+                alt="Company Logo"
+                class="company-logo"
+              />
+              <div class="company-info-card">
+                <h3>Dribbble</h3>
+              </div>
+            </div>
+            <p class="location">
+              <span class="location-icon">📍</span>Addis Ababa, Ethiopia
+            </p>
+            <a href="#" class="open-position-btn">Open Position (5)</a>
+          </div>
+
+          <div class="company-card">
+            <div class="company-header">
+              <img
+                src="./img/dropbox.png"
+                alt="Company Logo"
+                class="company-logo"
+              />
+              <div class="company-info-card">
+                <h3>Dribbble</h3>
+              </div>
+            </div>
+            <p class="location">
+              <span class="location-icon">📍</span>Addis Ababa, Ethiopia
+            </p>
+            <a href="#" class="open-position-btn">Open Position (12)</a>
+          </div>
+
+          <div class="company-card">
+            <div class="company-header">
+              <img
+                src="./img/revoult-logo.png"
+                alt="Company Logo"
+                class="company-logo"
+              />
+              <div class="company-info-card">
+                <h3>Dribbble</h3>
+              </div>
+            </div>
+            <p class="location">
+              <span class="location-icon">📍</span>Addis Ababa, Ethiopia
+            </p>
+            <a href="#" class="open-position-btn">Open Position (8)</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer data-aos="flip-down" class="section-footer">
+      <div class="container grid--5-cols">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              src="./img/logo-mella-removebg-preview.png"
+              class="logo"
+              alt="mella logo"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><img src="./img/Social.png" alt="" class="footer-link"
+              /></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; <span class="year">2024</span> by Mella Inc. All
+            rights reserved
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+
+          <address class="contact">
+            <p>
+              Address: Megenaga behind Admas University, Addis Ababa, Ethiopia
+            </p>
+            <p>
+              <a href="tel:+251935344627" class="footer-link">+251935344627</a>
+              <br />
+              <a href="mailto:spacetechet@gmail.com" class="footer-link"
+                >spacetechet@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li>
+              <a href="signup.html" class="footer-link">Create account</a>
+            </li>
+            <li><a href="login.html" class="footer-link">Sign in</a></li>
+            <li><a href="#" class="footer-link">IOS app</a></li>
+            <li><a href="#" class="footer-link">Androind app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li>
+              <a href="e-commerce.html" class="footer-link">E-commerce</a>
+            </li>
+            <li>
+              <a href="job-portal.html" class="footer-link">Job portal</a>
+            </li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li>
+              <a href="emergency.html" class="footer-link"
+                >Emergency Services</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">About us</a></li>
+            <li><a href="#" class="footer-link">Help center</a></li>
+            <li><a href="#" class="footer-link">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
