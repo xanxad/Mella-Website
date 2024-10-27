@@ -248,6 +248,15 @@
   .join-section p {
     font-size: 1.2rem;
   }
+
+  /*help-center*/
+  .help-form-section h2 {
+    font-size: 2.8rem;
+  }
+
+  .help-form-section p {
+    font-size: 1.2rem;
+  }
 }
 
 /* tablets, below 884px*/
@@ -450,6 +459,25 @@
     display: grid;
 
     gap: 18rem;
+  }
+
+  .contact-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 3rem;
+    gap: 3.6rem;
+  }
+
+  /*help-center*/
+
+  .contact-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 3rem;
+    gap: 3.6rem;
+  }
+  .help-form-section h2 {
+    font-size: 2.4rem;
   }
 }
 
@@ -767,6 +795,27 @@
   .join-section p {
     font-size: 2rem;
   }
+
+  /*help-support*/
+
+  .help-form-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .request-section {
+    margin-top: 2.4rem;
+  }
+
+  .help-form-section h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .help-form-section p {
+    font-size: 1rem;
+    padding-left: 2.8rem;
+  }
 }
 
 /* phones, below 544px*/
@@ -1064,5 +1113,42 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  /*help-center*/
+
+  .help-button-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact-options {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .help-form-section {
+    padding-left: 3rem;
+  }
+
+  .form-width {
+    width: 24rem;
+  }
+
+  .request-section {
+    width: 75%;
+    padding-left: 2.4rem;
+  }
+
+  .help-form-section h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  .help-form-section p {
+    font-size: 1rem;
+    text-align: left;
+
+    padding-left: 1rem;
   }
 }

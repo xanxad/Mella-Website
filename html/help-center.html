@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script defer src="./js/script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-left">
+        <a href="#">
+          <img
+            src="./img/logo-mella-removebg-preview.png"
+            class="logo"
+            alt="mella logo"
+          />
+        </a>
+
+        <div class="search-input">
+          <input type="text" placeholder="Search for any service..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li><a href="homepage.html" class="main-nav-link">Home</a></li>
+
+          <li><a href="#" class="main-nav-link">account</a></li>
+        </ul>
+      </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
+    </header>
+
+    <main>
+      <section class="assistance-section">
+        <h2>Need assistance?</h2>
+        <p>What can we help you with today?</p>
+
+        <div class="product-wrapper">
+          <div class="help-button-container">
+            <button>General Questions</button>
+            <button>Billing & Payments</button>
+            <button>Profile Management</button>
+            <button>Technical Support</button>
+            <button>Functionality</button>
+            <button>Contact options</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="help-faq-section">
+        <h2>FAQs with Answers</h2>
+
+        <div class="help-faq-item">
+          <button class="help-faq-question" onclick="toggleAnswer(this)">
+            General Questions <span class="arrow">&#9662;</span>
+          </button>
+          <div class="help-faq-answer">
+            <a href="#">
+              <p>How do I create an account?</p>
+            </a>
+            <a href="#">
+              <p>What should I do if I forgot my password?</p>
+            </a>
+            <a href="#">
+              <p>How can I update my account information?</p>
+            </a>
+            <a href="#">
+              <p>Can I use the website on mobile devices?</p>
+            </a>
+            <a href="#">
+              <p>How do I unsubscribe from emails and notifications?</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="help-faq-item">
+          <button class="help-faq-question" onclick="toggleAnswer(this)">
+            Billing and Payment <span class="arrow">&#9662;</span>
+          </button>
+          <div class="help-faq-answer">
+            <a href="#">
+              <p>What Payment options are accepted?</p>
+            </a>
+            <a href="#">
+              <p>How do i update my payment details?</p>
+            </a>
+            <a href="#">
+              <p>Can i get a refund?</p>
+            </a>
+            <a href="#">
+              <p>Is my payment information secure?</p>
+            </a>
+            <a href="#">
+              <p>What should i do if my payment declined?</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="help-faq-item">
+          <button class="help-faq-question" onclick="toggleAnswer(this)">
+            Account and Profile Management <span class="arrow">&#9662;</span>
+          </button>
+          <div class="help-faq-answer">
+            <a href="#">
+              <p>How do i delete or deactivate my account?</p>
+            </a>
+            <a href="#">
+              <p>How can i change my email or password?</p>
+            </a>
+            <a href="#">
+              <p>Why do i get a notification about unusual login activity?</p>
+            </a>
+            <a href="#">
+              <p>How do i update my profile picture or bio?</p>
+            </a>
+            <a href="#">
+              <p>Can i recover my account if it was hacked?</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="help-faq-item">
+          <button class="help-faq-question" onclick="toggleAnswer(this)">
+            Technical Support and Troubleshooting
+            <span class="arrow">&#9662;</span>
+          </button>
+          <div class="help-faq-answer">
+            <a href="#">
+              <p>What Payment options are accepted?</p>
+            </a>
+            <a href="#">
+              <p>How do i update my payment details?</p>
+            </a>
+            <a href="#">
+              <p>Can i get a refund?</p>
+            </a>
+            <a href="#">
+              <p>Is my payment information secure?</p>
+            </a>
+            <a href="#">What should i do if my payment declined</a>
+          </div>
+        </div>
+
+        <div class="help-faq-item">
+          <button class="help-faq-question" onclick="toggleAnswer(this)">
+            Features and Functionality <span class="arrow">&#9662;</span>
+          </button>
+          <div class="help-faq-answer">
+            <a href="#">
+              <p>What are the key features of the website?</p>
+            </a>
+            <a href="#">
+              <p>How can i customize my settings and preferences?</p>
+            </a>
+            <a href="#">
+              <p>Is there a way to track my progress on the platfrom?</p>
+            </a>
+            <a href="#">
+              <p>Can i integrate this platform with other tools or apps?</p>
+            </a>
+            <a href="#">
+              <p>How can i unsubscribe from emails and notifications?</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="help-faq-item">
+          <button class="help-faq-question" onclick="toggleAnswer(this)">
+            Support and Contact Options <span class="arrow">&#9662;</span>
+          </button>
+          <div class="help-faq-answer">
+            <a href="#">
+              <p>How can i contact customer support?</p>
+            </a>
+            <a href="#">
+              <p>What is the expected response time for support inquiries?</p>
+            </a>
+            <a href="#">
+              <p>Is there a live chat support available?</p>
+            </a>
+            <a href="#">
+              <p>Where can i submit feedback or report a problem?</p>
+            </a>
+            <a href="#">
+              <p>Can i support without logging to my account?</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="help-container container">
+        <h2>Get in Touch</h2>
+        <p>Send us your questions, Our team will be happy to help</p>
+
+        <div class="contact-options">
+          <div class="help-option">
+            <span><img src="./img/message.png" alt="message icon" /></span>
+            <h3>Chat to support</h3>
+            <p>Speak to our friendly team</p>
+          </div>
+          <div class="help-option">
+            <span><img src="./img/call.png" alt="call icon" /></span>
+            <h3>Call Us</h3>
+            <p>Mon-Fri from 8am-5pm</p>
+          </div>
+          <div class="help-option">
+            <span
+              ><img src="./img/location-pin.png" alt="location-pin icon"
+            /></span>
+            <h3>Visit Us</h3>
+            <p>Visit our office</p>
+          </div>
+          <div class="help-option">
+            <span><img src="./img/mail.png" alt="mail icon" /></span>
+            <h3>Via Email</h3>
+            <p>Just an email away</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="help-form-section">
+        <div class="request-section">
+          <h2>Submit a request</h2>
+          <p>Fill out the form below and our team will reach you promptly.</p>
+        </div>
+
+        <form action="#" method="post">
+          <div class="form-group form-width">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+            <small>As per official records</small>
+          </div>
+
+          <div class="form-group form-width">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <small>We’ll respond to this address</small>
+          </div>
+
+          <div class="form-group form-width">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Type your message here"
+              required
+            ></textarea>
+            <small>Please provide details</small>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer data-aos="flip-down" class="section-footer">
+      <div class="container grid--5-cols">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img
+              src="./img/logo-mella-removebg-preview.png"
+              class="logo"
+              alt="mella logo"
+            />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a href="#"
+                ><img src="./img/Social.png" alt="" class="footer-link"
+              /></a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; <span class="year">2024</span> by Mella Inc. All
+            rights reserved
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact us</p>
+
+          <address class="contact">
+            <p>
+              Address: Megenaga behind Admas University, Addis Ababa, Ethiopia
+            </p>
+            <p>
+              <a href="tel:+251935344627" class="footer-link">+251935344627</a>
+              <br />
+              <a href="mailto:spacetechet@gmail.com" class="footer-link"
+                >spacetechet@gmail.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li>
+              <a href="signup.html" class="footer-link">Create account</a>
+            </li>
+            <li><a href="login.html" class="footer-link">Sign in</a></li>
+            <li><a href="#" class="footer-link">IOS app</a></li>
+            <li><a href="#" class="footer-link">Androind app</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Company</p>
+          <ul class="footer-nav">
+            <li>
+              <a href="e-commerce.html" class="footer-link">E-commerce</a>
+            </li>
+            <li>
+              <a href="job-portal.html" class="footer-link">Job portal</a>
+            </li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li>
+              <a href="emergency.html" class="footer-link"
+                >Emergency Services</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a href="#" class="footer-link">About us</a></li>
+            <li><a href="#" class="footer-link">Help center</a></li>
+            <li><a href="#" class="footer-link">Privacy & terms</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      function toggleAnswer(element) {
+        const faqItem = element.parentElement;
+        faqItem.classList.toggle("open");
+        console.log("Toggled:", faqItem.classList.contains("open")); // This should log "true" or "false"
+      }
+    </script>
+  </body>
+</html>
