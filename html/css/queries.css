@@ -661,6 +661,7 @@
   .jobs-details {
     display: flex;
     flex-direction: column;
+    gap: 5rem;
   }
 
   .overview-item-p1 {
@@ -717,11 +718,6 @@
 
   .incident-form h3 {
     font-size: 1.5rem;
-  }
-
-  #incident-type,
-  #incident-description {
-    font-size: 0.95rem;
   }
 
   #report-form button {
@@ -1091,6 +1087,14 @@
 
   .list-testimonial {
     grid-template-columns: 1fr;
+  }
+
+  .job-header-detail {
+    display: flex;
+
+    flex-direction: column;
+    margin-bottom: 4.8rem;
+    align-items: center;
   }
 
   /*bowse-jobs*/

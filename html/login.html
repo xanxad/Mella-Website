@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo-mella-removebg-preview.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,20 +17,21 @@
   </head>
   <body>
     <section class="login-img-box">
-      <img src="./img/logo-mella.jpg" alt="" />
+      <img src="./img/logo-mella.jpg" alt="mella-logo" />
     </section>
     <section class="form-box">
       <h1 class="login-primary-heading">Login</h1>
       <h2 class="login-secondary-heading">Enter your credentials below</h2>
     </section>
 
-    <form action="">
+    <form action="" netlify>
       <label for="username">Username:</label>
       <input
         type="text"
         id="username"
         name="username"
         placeholder="Enter your username"
+        required
       />
       <label for="password">Password:</label>
       <input
@@ -37,6 +39,7 @@
         id="password"
         name="password"
         placeholder="Enter your password"
+        required
       />
       <div class="button-container">
         <button type="button" class="forget-password-button">

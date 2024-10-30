@@ -1166,7 +1166,7 @@ button > .right-arrow {
 .job-type {
   background-color: #0e9b4b;
   color: white;
-  padding: 0.6rem 0.6rem;
+  padding: 1.6rem 0.6rem;
   border-radius: 0.4rem;
   display: inline-block;
 
@@ -2600,6 +2600,8 @@ button > .right-arrow {
 
 .company-logo-details {
   display: flex;
+  padding-left: 4rem;
+  padding-top: 1.8rem;
 
   gap: 2.4rem;
 }
@@ -2634,7 +2636,7 @@ button > .right-arrow {
 .jobs-details {
   display: flex;
   gap: 10rem;
-  padding: 4.8rem;
+  padding: 1rem 4.8rem;
 }
 .left-column {
   flex: 2;
@@ -2658,9 +2660,9 @@ button > .right-arrow {
 }
 
 .overview-item-p1 {
-  font-size: 1.2;
+  font-size: 1.4rem;
   font-weight: 600;
-  color: #666666;
+  padding-bottom: 1rem;
 }
 
 .overview-item-p2 {
@@ -3261,21 +3263,21 @@ textarea {
   display: none;
 }
 
-.hospital-list,
+.hospital-list h3,
 .station-list h3 {
   color: #333;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 
-.hospital-list,
+.hospital-list ul,
 .station-list ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.hospital-list,
+.hospital-list li,
 .station-list li {
   display: flex;
   justify-content: space-between;
@@ -3290,6 +3292,7 @@ textarea {
   border-bottom: none;
 }
 
+/*
 .hospital-list,
 .station-list button {
   background-color: #b93012;
@@ -3305,7 +3308,7 @@ textarea {
 .hospital-list,
 .station-list button:hover {
   background-color: #d03615;
-}
+} */
 
 /* Map Container */
 #map {
@@ -3365,7 +3368,7 @@ textarea {
   padding: 1.2rem;
   border: 0.1rem solid #e0e0e0;
   border-radius: 0.6rem;
-  font-size: 1rem;
+  font-size: 1.4rem;
   background-color: #f8f9fa;
   color: #333;
   transition: border-color 0.3s, box-shadow 0.3s;
@@ -3383,8 +3386,8 @@ textarea {
   padding: 1.2rem;
   border: 0.1rem solid #e0e0e0;
   border-radius: 0.6rem;
-  font-size: 1rem;
-  font-family: inherit;
+  font-size: 1.2rem;
+
   resize: vertical;
   background-color: #f8f9fa;
   color: #333;

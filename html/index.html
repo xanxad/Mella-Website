@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta
+      name="description"
+      content="Mela is your go-to platform that effortlessly connects you with job
+      opportunities, emergency services, and online shopping, all in one
+      seamless experience."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo-mella-removebg-preview.png" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,7 +23,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="./js/script.js"></script>
 
-    <title>Mella</title>
+    <title>Mella &mdash;All in One</title>
   </head>
   <body>
     <header class="header">
@@ -60,9 +68,9 @@
           <div class="hero-img-box">
             <img
               data-aos="zoom-in"
-              src="./img/hero-img-removebg.png"
+              data-src="./img/hero-img-removebg.png"
               alt="a person with a laptop navigating the internet"
-              class="hero-img index-img"
+              class="hero-img index-img lazyload"
             />
           </div>
         </div>
@@ -91,9 +99,9 @@
             <div class="feature-img-box">
               <img
                 data-aos="zoom-out-left"
-                src="./img/mella-1.jpg"
+                data-src="./img/mella-1.jpg"
                 alt=""
-                class="mella-img"
+                class="mella-img lazyload"
               />
             </div>
           </div>
@@ -104,9 +112,9 @@
             <div class="feature-img-box">
               <img
                 data-aos="zoom-out-right"
-                src="./img/mella-2.jpg"
+                data-src="./img/mella-2.jpg"
                 alt=""
-                class="mella-img"
+                class="mella-img lazyload"
               />
             </div>
 
@@ -151,9 +159,9 @@
             <div class="feature-img-box">
               <img
                 data-aos="zoom-out-left"
-                src="./img/mella-3.jpg"
+                data-src="./img/mella-3.jpg"
                 alt=""
-                class="mella-img"
+                class="mella-img lazyload"
               />
             </div>
           </div>
@@ -183,9 +191,9 @@
         <div class="opp-img-box">
           <img
             data-aos="zoom-out-down"
-            src="./img/mella-info.jpg"
+            data-src="./img/mella-info.jpg"
             alt=""
-            class="opp-img"
+            class="opp-img lazyload"
           />
         </div>
       </section>
@@ -306,7 +314,7 @@
         <nav class="nav-col">
           <p class="footer-heading">Resources</p>
           <ul class="footer-nav">
-            <li><a href="#" class="footer-link">About us</a></li>
+            <li><a href="about-us.html" class="footer-link">About us</a></li>
             <li>
               <a href="help-center.html" class="footer-link">Help center</a>
             </li>
@@ -315,6 +323,8 @@
         </nav>
       </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 
     <script
       type="module"

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo-mella-removebg-preview.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,7 +17,7 @@
   </head>
   <body>
     <section class="login-img-box">
-      <img src="./img/logo-mella.jpg" alt="" />
+      <img src="./img/logo-mella.jpg" alt="mella-logo" />
     </section>
     <section class="form-box">
       <h1 class="login-primary-heading">Create an account</h1>
@@ -25,7 +26,7 @@
       </h2>
     </section>
 
-    <form action="">
+    <form action="" netlify>
       <label for="first-name">First Name:</label>
       <input
         type="text"
@@ -73,7 +74,7 @@
       />
 
       <div class="second-checkbox">
-        <input type="checkbox" /><label
+        <input type="checkbox" required /><label
           >Yes, I understand and agree to the Mella Terms of Service
           <span class="break">
             including the User Agreement and Privacy Policy.
@@ -81,7 +82,9 @@
         </label>
       </div>
       <div class="button-container">
-        <button type="submit" class="submit-button">Sign up</button>
+        <a href="homepage.html"
+          ><button type="submit" class="submit-button">Sign up</button></a
+        >
       </div>
     </form>
   </body>
