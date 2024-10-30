@@ -12,9 +12,13 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/queries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="./js/script.js"></script>
-    <title>Document</title>
+    <title>Mella-Shops</title>
   </head>
   <body>
     <header class="header">
@@ -26,24 +30,17 @@
             alt="mella logo"
           />
         </a>
-        <form class="search-form" action="#" method="get">
-          <input
-            type="search"
-            name="search"
-            placeholder="Search products..."
-            class="search-input"
-          />
-          <button type="submit" class="search-button">
-            <img src="./img/search.svg" alt="Search" class="search-icon" />
-          </button>
-        </form>
+        <div class="search-input">
+          <input type="text" placeholder="Search for any product..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
       </div>
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a href="homepage.html" class="main-nav-link">Home</a></li>
           <li><a href="wishlist.html" class="main-nav-link">Wishlist</a></li>
           <li><a href="cart.html" class="main-nav-link">Cart</a></li>
-          <li><a href="#" class="main-nav-link">help</a></li>
+          <li><a href="help-center.html" class="main-nav-link">help</a></li>
           <li><a href="#" class="main-nav-link">account</a></li>
         </ul>
       </nav>
@@ -55,19 +52,19 @@
     </header>
 
     <main>
-      <section class="banner container section-hero">
+      <section data-aos="slide-down" class="banner container section-hero">
         <div class="content">
           <img src="./img/apple-logo.png" alt="Apple Logo" class="apple-logo" />
           <h2>iPhone 14 Series</h2>
           <p class="discount">Up to <span>10% off Voucher</span></p>
-          <a href="#" class="shop-now">Shop Now →</a>
+          <a href="cart.html" class="shop-now">Shop Now →</a>
         </div>
         <div class="product-image">
           <img src="./img/iphone.png" alt="iPhone 14" />
         </div>
       </section>
 
-      <section class="flash-sales">
+      <section data-aos="zoom-in" class="flash-sales">
         <div class="flash-sales-header">
           <h2>Today's <span>Flash Sales</span></h2>
           <div class="countdown">
@@ -93,6 +90,12 @@
         <div class="product-wrapper">
           <div class="products-grid">
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <span class="discount">-40%</span>
               <img src="img/gamepad.png" alt="Gamepad" />
               <h3>HAVIT HV-G92 Gamepad</h3>
@@ -100,10 +103,18 @@
                 <span class="current">$120</span>
                 <span class="original">$150</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (38)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <span class="discount">-55%</span>
               <img src="./img/keyboard.png" alt="Wired Keyboard" />
               <h3>AK-900 Wired Keyboard</h3>
@@ -111,10 +122,18 @@
                 <span class="current">$60</span>
                 <span class="original">$160</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (75)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <span class="discount">-30%</span>
               <img src="./img/gaming-monitor.png" alt="Gaming Monitor" />
               <h3>IPS LCD Gaming Monitor</h3>
@@ -122,10 +141,18 @@
                 <span class="current">$370</span>
                 <span class="original">$400</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (60)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <span class="discount">-25%</span>
               <img src="./img/gaming-laptop.png" alt="Gaming Laptop" />
               <h3>S-Series Comfort Chair</h3>
@@ -133,7 +160,9 @@
                 <span class="current">$375</span>
                 <span class="original">$400</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (89)</div>
             </div>
           </div>
@@ -142,27 +171,26 @@
         <button class="view-all-btn">View All Products</button>
       </section>
 
-      <section class="best-selling-section">
+      <section data-aos="fade-down-left" class="best-selling-section">
         <div class="section-header-market">
           <div class="category-header">
             <span class="category-icon"></span>
             <h2 class="category-title">This month</h2>
           </div>
           <h2 class="heading-secondary">Best Selling Products</h2>
-          <a href="#" class="view-all-button">View All</a>
         </div>
 
         <div class="product-wrapper">
           <div class="products-grid">
             <div class="product-item">
               <div class="product-icons">
-                <span class="heart-icon">🤍</span>
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
                 <a href="product-details.html"
                   ><span class="view-icon">👁</span></a
                 >
               </div>
               <img src="./img/north-coat.png" alt="The North Coat" />
-              <a href="#" class="product-name">The North Coat</a>
+              <a href="cart.html" class="product-name">The North Coat</a>
               <div class="price">
                 <span class="current-price">$260</span>
               </div>
@@ -173,13 +201,13 @@
             </div>
             <div class="product-item">
               <div class="product-icons">
-                <span class="heart-icon">🤍</span>
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
                 <a href="product-details.html"
                   ><span class="view-icon">👁</span></a
                 >
               </div>
               <img src="./img/gucci-bag.png" alt="Gucci Duffle Bag" />
-              <a href="#" class="product-name">Gucci Duffle Bag</a>
+              <a href="cart.html" class="product-name">Gucci Duffle Bag</a>
               <div class="price">
                 <span class="current-price">$960</span>
               </div>
@@ -190,13 +218,13 @@
             </div>
             <div class="product-item">
               <div class="product-icons">
-                <span class="heart-icon">🤍</span>
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
                 <a href="product-details.html"
                   ><span class="view-icon">👁</span></a
                 >
               </div>
               <img src="./img/cpu-cooler.png" alt="RGB Liquid CPU Cooler" />
-              <a href="#" class="product-name">Liquid CPU Cooler</a>
+              <a href="cart.html" class="product-name">Liquid CPU Cooler</a>
               <div class="price">
                 <span class="current-price">$160</span>
               </div>
@@ -207,13 +235,13 @@
             </div>
             <div class="product-item">
               <div class="product-icons">
-                <span class="heart-icon">🤍</span>
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
                 <a href="product-details.html"
                   ><span class="view-icon">👁</span></a
                 >
               </div>
               <img src="./img/bookshelf.png" alt="bookshelf" />
-              <a href="#" class="product-name">Small BookShelf</a>
+              <a href="cart.html" class="product-name">Small BookShelf</a>
               <div class="price">
                 <span class="current-price">$360</span>
               </div>
@@ -224,9 +252,12 @@
             </div>
           </div>
         </div>
+        <div class="product-wrapper">
+          <a href="#" class="view-all-button">View All</a>
+        </div>
       </section>
 
-      <section class="banner container section-hero">
+      <section data-aos="flip-left" class="banner container section-hero">
         <div class="content">
           <h1>Enhance Your Music Experience</h1>
           <div class="countdown-timer">
@@ -248,7 +279,7 @@
             </div>
           </div>
 
-          <a href="#" class="view-all-btn">buy Now →</a>
+          <a href="cart.html" class="view-all-btn">buy Now →</a>
         </div>
         <div class="product-image">
           <img src="./img/jbl-headphones.png" alt="iPhone 14" />
@@ -335,47 +366,86 @@
         </div>
       </section>
 
-      <section class="flash-sales">
+      <section data-aos="zoom-in" class="flash-sales">
         <h1 class="heading-secondary">Explore Our Products</h1>
         <div class="product-wrapper">
           <div class="products-grid">
             <div class="product-item">
               <img src="./img/dog-food.png" alt="Dog Food" />
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <h3>Breed Dry Dog Food</h3>
               <p class="price">
                 <span class="current">$120</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (38)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <img src="./img/canon-camera.png" alt="Canon Camera" />
               <h3>CANON EOS DSLR Camera</h3>
               <p class="price">
                 <span class="current">$60</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (75)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <img src="./img/gaming-laptop.png" alt="Gaming Laptop" />
               <h3>ASUS FHD Gaming Laptop</h3>
               <p class="price">
                 <span class="current">$370</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (60)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <img src="./img/curology.png" alt="Curology Product Set" />
               <h3>Curology Product Set</h3>
               <p class="price">
                 <span class="current">$375</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (89)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <span class="discount">NEW</span>
               <img
                 src="./img/kids-electric-toy-car.png"
@@ -385,35 +455,61 @@
               <p class="price">
                 <span class="current">$120</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (38)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <span class="discount">NEW</span>
               <img src="./img/soccer-cleats.png" alt="Soccer Cleats" />
               <h3>Jr. Zoom Soccer Cleats</h3>
               <p class="price">
                 <span class="current">$120</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (38)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <img src="img/gamepad.png" alt="Gamepad" />
               <h3>HAVIT HV-G92 Gamepad</h3>
               <p class="price">
                 <span class="current">$120</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (38)</div>
             </div>
             <div class="product-item">
+              <div class="product-icons">
+                <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
+                <a href="product-details.html"
+                  ><span class="view-icon">👁</span></a
+                >
+              </div>
               <img src="./img/jacket.png" alt="Quilted Satin Jacket" />
               <h3>Quilted Satin Jacket</h3>
               <p class="price">
                 <span class="current">$120</span>
               </p>
-              <a href="#"><button class="add-to-cart">Add To Cart</button></a>
+              <a href="cart.html"
+                ><button class="add-to-cart">Add To Cart</button></a
+              >
               <div class="product-rating">★★★★☆ (38)</div>
             </div>
           </div>
@@ -431,45 +527,61 @@
 
         <div class="product-grid-featured">
           <div class="product-item-featured large">
-            <img src="./img/playstation.png" alt="PlayStation 5" />
+            <img
+              data-aos="fade-down-left"
+              src="./img/playstation.png"
+              alt="PlayStation 5"
+            />
             <div class="product-info-featured">
               <h3>PlayStation 5</h3>
               <p>Black and White version of the PS5 coming out on sale.</p>
-              <a href="#" class="shop-now">Shop Now</a>
+              <a href="cart.html" class="shop-now">Shop Now</a>
             </div>
           </div>
 
           <div class="product-item-featured medium">
-            <img src="./img/women-clothes.png" alt="Women's Collections" />
+            <img
+              data-aos="fade-down-left"
+              src="./img/women-clothes.png"
+              alt="Women's Collections"
+            />
             <div class="product-info-featured">
               <h3>Women's Collections</h3>
               <p>Featured woman collections that give you another vibe.</p>
-              <a href="#" class="shop-now">Shop Now</a>
+              <a href="cart.html" class="shop-now">Shop Now</a>
             </div>
           </div>
 
           <div class="product-item-featured">
-            <img src="./img/speakers.png" alt="Speakers" />
+            <img
+              data-aos="fade-down-left"
+              src="./img/speakers.png"
+              alt="Speakers"
+            />
             <div class="product-info-featured">
               <h3>Speakers</h3>
               <p>Amazon wireless speakers</p>
-              <a href="#" class="shop-now">Shop Now</a>
+              <a href="cart.html" class="shop-now">Shop Now</a>
             </div>
           </div>
 
           <div class="product-item-featured">
-            <img src="./img/perfume.png" alt="Perfume" />
+            <img
+              data-aos="fade-down-left"
+              src="./img/perfume.png"
+              alt="Perfume"
+            />
             <div class="product-info-featured">
               <h3>Perfume</h3>
               <p>GUCCI INTENSE OUD EDP</p>
-              <a href="#" class="shop-now">Shop Now</a>
+              <a href="cart.html" class="shop-now">Shop Now</a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="section-footer">
+    <footer data-aos="flip-down" class="section-footer">
       <div class="container grid--5-cols">
         <div class="logo-col">
           <a href="#" class="footer-logo">
@@ -482,7 +594,10 @@
           <ul class="social-links">
             <li>
               <a href="#"
-                ><img src="./img/Social.png" alt="" class="footer-link"
+                ><img
+                  src="./img/Social.png"
+                  alt="social-media icons"
+                  class="footer-link"
               /></a>
             </li>
           </ul>
@@ -515,7 +630,7 @@
             </li>
             <li><a href="login.html" class="footer-link">Sign in</a></li>
             <li><a href="#" class="footer-link">IOS app</a></li>
-            <li><a href="#" class="footer-link">Androind app</a></li>
+            <li><a href="#" class="footer-link">Android app</a></li>
           </ul>
         </nav>
         <nav class="nav-col">
@@ -538,8 +653,10 @@
         <nav class="nav-col">
           <p class="footer-heading">Resources</p>
           <ul class="footer-nav">
-            <li><a href="#" class="footer-link">About us</a></li>
-            <li><a href="#" class="footer-link">Help center</a></li>
+            <li><a href="about-us.html" class="footer-link">About us</a></li>
+            <li>
+              <a href="help-center.html" class="footer-link">Help center</a>
+            </li>
             <li><a href="#" class="footer-link">Privacy & terms</a></li>
           </ul>
         </nav>

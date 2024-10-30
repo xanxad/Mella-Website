@@ -12,8 +12,12 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/queries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <script defer src="./js/script.js"></script>
-    <title>Mella</title>
+    <title>Mella-wishlist</title>
   </head>
   <body>
     <header class="header">
@@ -25,17 +29,11 @@
             alt="mella logo"
           />
         </a>
-        <form class="search-form" action="#" method="get">
-          <input
-            type="search"
-            name="search"
-            placeholder="Search products..."
-            class="search-input"
-          />
-          <button type="submit" class="search-button">
-            <img src="./img/search.svg" alt="Search" class="search-icon" />
-          </button>
-        </form>
+
+        <div class="search-input">
+          <input type="text" placeholder="Search for any product..." />
+          <button><i class="fas fa-search"></i></button>
+        </div>
       </div>
       <nav class="main-nav">
         <ul class="main-nav-list">
@@ -127,7 +125,10 @@
           <ul class="social-links">
             <li>
               <a href="#"
-                ><img src="./img/Social.png" alt="" class="footer-link"
+                ><img
+                  src="./img/Social.png"
+                  alt="social-media icons"
+                  class="footer-link"
               /></a>
             </li>
           </ul>
@@ -159,7 +160,7 @@
             </li>
             <li><a href="login.html" class="footer-link">Sign in</a></li>
             <li><a href="#" class="footer-link">IOS app</a></li>
-            <li><a href="#" class="footer-link">Androind app</a></li>
+            <li><a href="#" class="footer-link">Android app</a></li>
           </ul>
         </nav>
         <nav class="nav-col">
@@ -182,12 +183,44 @@
         <nav class="nav-col">
           <p class="footer-heading">Resources</p>
           <ul class="footer-nav">
-            <li><a href="#" class="footer-link">About us</a></li>
-            <li><a href="#" class="footer-link">Help center</a></li>
+            <li><a href="about-us.html" class="footer-link">About us</a></li>
+            <li>
+              <a href="help-center.html" class="footer-link">Help center</a>
+            </li>
             <li><a href="#" class="footer-link">Privacy & terms</a></li>
           </ul>
         </nav>
       </div>
     </footer>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      // Wait for the DOM to load before running the script
+      document.addEventListener("DOMContentLoaded", function () {
+        // Select all the remove buttons
+        const removeButtons = document.querySelectorAll(".remove-btn");
+
+        // Loop through each remove button
+        removeButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Find the parent '.wishlist-item' and remove it
+            const wishlistItem = button.closest(".wishlist-item");
+            wishlistItem.remove();
+          });
+        });
+      });
+    </script>
   </body>
 </html>

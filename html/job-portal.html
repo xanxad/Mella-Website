@@ -184,30 +184,6 @@
               >
             </p>
           </div>
-          <div class="column">
-            <p>
-              <a href="#">Gynecologists</a><br /><span>4 Open Positions</span>
-            </p>
-            <p>
-              <a href="#">Psychiatrists</a><br /><span>18 Open Positions</span>
-            </p>
-            <p>
-              <a href="#">IT Manager</a><br /><span>50 Open Positions</span>
-            </p>
-          </div>
-          <div class="column">
-            <p>
-              <a href="#">Orthodontists</a><br /><span>20 Open Positions</span>
-            </p>
-            <p>
-              <a href="#">Data Scientist</a><br /><span>28 Open Positions</span>
-            </p>
-            <p>
-              <a href="#">Research Analysis </a><br /><span
-                >18 Open Positions</span
-              >
-            </p>
-          </div>
         </div>
       </section>
 
@@ -236,7 +212,7 @@
               <polygon points="110,20 120,25 110,30" fill="#0D7A5F" />
             </svg>
           </div>
-          <div class="step active">
+          <div class="step">
             <div class="icon-circle">
               <img src="./img/upload.svg" alt="Upload CV" />
             </div>
@@ -726,7 +702,7 @@
             </li>
             <li><a href="login.html" class="footer-link">Sign in</a></li>
             <li><a href="#" class="footer-link">IOS app</a></li>
-            <li><a href="#" class="footer-link">Androind app</a></li>
+            <li><a href="#" class="footer-link">Android app</a></li>
           </ul>
         </nav>
         <nav class="nav-col">
@@ -749,8 +725,10 @@
         <nav class="nav-col">
           <p class="footer-heading">Resources</p>
           <ul class="footer-nav">
-            <li><a href="#" class="footer-link">About us</a></li>
-            <li><a href="#" class="footer-link">Help center</a></li>
+            <li><a href="about-us.html" class="footer-link">About us</a></li>
+            <li>
+              <a href="help-center.html" class="footer-link">Help center</a>
+            </li>
             <li><a href="#" class="footer-link">Privacy & terms</a></li>
           </ul>
         </nav>
@@ -781,7 +759,13 @@
         let currentIndex = 0;
 
         function getVisibleTestimonials() {
-          return window.innerWidth <= 884 ? 2 : 3;
+          if (window.innerWidth <= 544) {
+            return 1;
+          } else if (window.innerWidth <= 884) {
+            return 2;
+          } else {
+            return 3;
+          }
         }
 
         function updateTestimonials() {

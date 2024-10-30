@@ -12,6 +12,7 @@ const headerEl = document.querySelector(".header");
 
 btnNavEl.addEventListener("click", function () {
   headerEl.classList.toggle("nav-open");
+  document.body.classList.toggle("no-scroll");
 });
 
 console.log("biniam");

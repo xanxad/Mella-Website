@@ -822,18 +822,28 @@
 @media (max-width: 34em) {
   .vector-img,
   .vector-2-img {
-    height: 40%;
+    height: 35%;
   }
+
   .feature {
     display: flex;
     flex-direction: column; /* Stack text and image vertically */
     align-items: center; /* Center items for a better look */
-    gap: 2.4rem; /* Add some space between text and image */
+    gap: 2.4rem;
+    /* Add some space between text and image */
+  }
+
+  .section-feature .heading-secondary {
+    padding: 0 2.4rem;
   }
 
   /* Ensure that text always appears before the image */
   .feature-text-box {
     order: 1; /* Text should always come first */
+  }
+
+  .btn--full {
+    margin-left: 5rem;
   }
 
   .feature-img-box {
@@ -878,6 +888,11 @@
 
   .login-secondary-heading {
     font-size: 1.8rem;
+  }
+
+  .second-checkbox .break {
+    display: block; /* Forces the span to start on a new line */
+    margin-top: 0.5rem;
   }
 
   .button-link {
@@ -972,7 +987,7 @@
   }
 
   .product-card img {
-    width: 18rem;
+    width: 14rem;
   }
 
   .more-products-btn {
@@ -1011,6 +1026,20 @@
     text-align: center;
   }
 
+  .product-grid-featured {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .form-Container-checkout {
+    margin-left: 2.4rem;
+  }
+
+  .form-group-checkout {
+    max-width: 34rem;
+  }
+
   /*jobportal*/
 
   .hero {
@@ -1018,6 +1047,10 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .suggestion {
+    font-size: 1.2rem;
   }
 
   .hero-img-box {
@@ -1029,7 +1062,12 @@
   }
 
   .hero-img {
-    width: 80%;
+    width: 100%;
+  }
+
+  .index-img {
+    width: 150%;
+    padding-left: 1rem;
   }
 
   .stats-container {
@@ -1049,6 +1087,10 @@
 
   .form-description {
     font-size: 2rem;
+  }
+
+  .list-testimonial {
+    grid-template-columns: 1fr;
   }
 
   /*bowse-jobs*/
