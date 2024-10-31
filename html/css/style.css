@@ -1287,6 +1287,9 @@ button > .right-arrow {
   transition: background-color 0.3s ease;
   margin: 0 auto; /* Center the button horizontally */
   display: block; /* Ensure it takes up the available width */
+}
+
+.explore__more {
   text-decoration: none;
 }
 
