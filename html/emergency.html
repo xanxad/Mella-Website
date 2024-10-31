@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta
+      name="description"
+      content="Mela is your go-to platform that effortlessly connects you with emergency services in one
+      seamless experience."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo-mella-removebg-preview.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +24,7 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="./js/script.js"></script>
-    <title>Mella-Emergency</title>
+    <title>Mella &mdash;Emergency</title>
   </head>
   <body>
     <header class="header">
@@ -37,8 +43,7 @@
         <ul class="main-nav-list">
           <li><a href="homepage.html" class="main-nav-link">Homepage</a></li>
 
-          <li><a href="#" class="main-nav-link">services</a></li>
-          <li><a href="#" class="main-nav-link">support</a></li>
+          <li><a href="help-center.html" class="main-nav-link">support</a></li>
         </ul>
       </nav>
 
@@ -62,15 +67,15 @@
           <div class="hero-img-box">
             <img
               data-aos="zoom-in"
-              src="./img/ambulance2.png"
+              data-src="./img/ambulance2.png"
               alt="a group of ambulances"
-              class="hero-img"
+              class="hero-img lazyload"
             />
           </div>
         </div>
       </section>
 
-      <section class="how-it-works-section">
+      <section data-aos="slide-right" class="how-it-works-section">
         <div class="how-it-works">
           <h2>How it Works</h2>
           <div class="steps-container-emergency">
@@ -96,28 +101,28 @@
       <section id="emergency-contacts" class="emergency-contacts-section">
         <h2>Emergency Contacts</h2>
         <div class="contacts-grid">
-          <div class="contact-card">
+          <div data-aos="slide-left" class="contact-card">
             <h3>Medical Assistance</h3>
             <p>Call: <a href="tel:+123456789">+1 234 567 89</a></p>
           </div>
-          <div class="contact-card">
+          <div data-aos="slide-left" class="contact-card">
             <h3>Fire Services</h3>
             <p>Call: <a href="tel:+198765432">+1 987 654 32</a></p>
           </div>
-          <div class="contact-card">
+          <div data-aos="slide-left" class="contact-card">
             <h3>Police</h3>
             <p>Call: <a href="tel:+1123456789">+1 123 456 789</a></p>
           </div>
-          <div class="contact-card">
+          <div data-aos="slide-left" class="contact-card">
             <h3>Emergency Hotline</h3>
             <p>Call: <a href="tel:+1800123456">+1 800 123 456</a></p>
           </div>
 
-          <div class="contact-card">
+          <div data-aos="slide-left" class="contact-card">
             <h3>Towing</h3>
             <p>Call: <a href="tel:+1458123456">+1 800 123 456</a></p>
           </div>
-          <div class="contact-card">
+          <div data-aos="slide-left" class="contact-card">
             <h3>Legal Emergency</h3>
             <p>Call: <a href="tel:+1800123456">+1 800 123 456</a></p>
           </div>
@@ -129,37 +134,61 @@
         <div data-aos="zoom-out-down" class="solutions-grid">
           <a href="towing-emergency.html">
             <div class="solution-item">
-              <img src="./img/towing-svg.svg" alt="Towing Assistance" />
+              <img
+                data-src="./img/towing-svg.svg"
+                alt="Towing Assistance"
+                class="lazyload"
+              />
               <p>Towing Services</p>
             </div>
           </a>
           <a href="medical.emergency.html">
             <div class="solution-item">
-              <img src="./img/ambulance-svg.svg" alt="Ambulance Services" />
+              <img
+                data-src="./img/ambulance-svg.svg"
+                alt="Ambulance Services"
+                class="lazyload"
+              />
               <p>Medical Services</p>
             </div>
           </a>
           <a href="fire-emergency.html">
             <div class="solution-item">
-              <img src="./img/fire_truck-svg.svg" alt="Fire and Safety" />
+              <img
+                data-src="./img/fire_truck-svg.svg"
+                alt="Fire and Safety"
+                class="lazyload"
+              />
               <p>Fire and Safety</p>
             </div>
           </a>
           <a href="garage-emergency.html">
             <div class="solution-item">
-              <img src="./img/tire-repair-svg.svg" alt="Tire Repair" />
-              <p>Garage</p>
+              <img
+                data-src="./img/tire-repair-svg.svg"
+                alt="Tire Repair"
+                class="lazyload"
+              />
+              <p>Car Services</p>
             </div>
           </a>
           <a href="legal-emergency.html">
             <div class="solution-item">
-              <img src="./img/gavel-svg.svg" alt="Legal Help" />
+              <img
+                data-src="./img/gavel-svg.svg"
+                alt="Legal Help"
+                class="lazyload"
+              />
               <p>Legal Help</p>
             </div>
           </a>
           <a href="security-emergency.html">
             <div class="solution-item">
-              <img src="./img/police-svg.svg" alt="Security Services" />
+              <img
+                data-src="./img/police-svg.svg"
+                alt="Security Services"
+                class="lazyload"
+              />
               <p>Security Services</p>
             </div>
           </a>
@@ -173,56 +202,56 @@
         <h2>What Our Users Say</h2>
         <div class="testimonial-carousel">
           <div class="testimonial-grid-emergency">
-            <div class="testimonial-card-emergency">
+            <div data-aos="slide-right" class="testimonial-card-emergency">
               <p>
                 "I received immediate help from their ambulance service. Quick
                 and reliable!"
               </p>
               <h4>– John Doe</h4>
             </div>
-            <div class="testimonial-card-emergency">
+            <div data-aos="slide-right" class="testimonial-card-emergency">
               <p>
                 "The medical assistance I got was top-notch. I would recommend
                 their services to everyone."
               </p>
               <h4>– Jane Smith</h4>
             </div>
-            <div class="testimonial-card-emergency">
+            <div data-aos="slide-right" class="testimonial-card-emergency">
               <p>
                 "Very helpful in tracking and resolving my emergency issue in no
                 time."
               </p>
               <h4>– Alex Johnson</h4>
             </div>
-            <div class="testimonial-card-emergency">
+            <div data-aos="slide-right" class="testimonial-card-emergency">
               <p>
                 "The emergency medical team arrived at my home within minutes.
                 Their quick response saved my life."
               </p>
               <h4>– Sarah Willams</h4>
             </div>
-            <div class="testimonial-card-emergency">
+            <div data-aos="slide-right" class="testimonial-card-emergency">
               <p>
                 "Excellent service! The fire department arrived just in time to
                 prevent further damage. Highly recommend."
               </p>
               <h4>– David Brown</h4>
             </div>
-            <div class="testimonial-card-emergency">
+            <div data-aos="slide-right" class="testimonial-card-emergency">
               <p>
                 "The ambulance service was fast and reliable. I felt safe
                 knowing help was on the way immediately."
               </p>
               <h4>– Emily Johnson</h4>
             </div>
-            <div class="testimonial-card-emergency">
+            <div data-aos="slide-right" class="testimonial-card-emergency">
               <p>
                 "The support team was professional and kept me updated every
                 step of the way. Great service!"
               </p>
               <h4>– Michael Lee</h4>
             </div>
-            <div class="testimonial-card-emergency">
+            <div data-aos="slide-right" class="testimonial-card-emergency">
               <p>
                 "I had a mental health emergency, and the assistance I got was
                 compassionate and timely. I’m very grateful."
@@ -238,8 +267,8 @@
       </section>
 
       <section id="faq" class="faq-section">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
+        <h2 data-aos="slide-down">Frequently Asked Questions</h2>
+        <div data-aos="fade-right" class="faq-item">
           <h3>How can I get medical assistance?</h3>
           <p>
             You can get medical assistance by calling our hotline or booking a
@@ -276,7 +305,10 @@
           <ul class="social-links">
             <li>
               <a href="#"
-                ><img src="./img/Social.png" alt="" class="footer-link"
+                ><img
+                  src="./img/Social.png"
+                  alt="social-media icons"
+                  class="footer-link"
               /></a>
             </li>
           </ul>
@@ -316,7 +348,7 @@
           <p class="footer-heading">Company</p>
           <ul class="footer-nav">
             <li>
-              <a href="e-commerce.html" class="footer-link">E-commerce</a>
+              <a href="e-commerce.html" class="footer-link">Market</a>
             </li>
             <li>
               <a href="job-portal.html" class="footer-link">Job portal</a>
@@ -341,6 +373,7 @@
         </nav>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 
     <script
       type="module"

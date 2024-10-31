@@ -81,6 +81,7 @@ a.btn--full {
 .btn--full:visited {
   background-color: #0e9b4b;
   color: #fff;
+  text-decoration: none;
 }
 
 .btn--outine:link,
@@ -1286,6 +1287,7 @@ button > .right-arrow {
   transition: background-color 0.3s ease;
   margin: 0 auto; /* Center the button horizontally */
   display: block; /* Ensure it takes up the available width */
+  text-decoration: none;
 }
 
 /* Styling for the image */
@@ -1449,7 +1451,7 @@ button > .right-arrow {
   background-size: cover;
   padding: 3.6rem;
 
-  color: #f8f8fd;
+  color: #0e9b4b;
   height: 100vh;
   margin-bottom: 4.8rem;
 }
@@ -1512,7 +1514,7 @@ button > .right-arrow {
   font-size: 1rem;
   margin: 0;
   padding-top: 0.8rem;
-  color: #ff4c4c;
+  color: #0e9b4b;
 }
 
 .more-products-btn {
@@ -1584,12 +1586,6 @@ button > .right-arrow {
   margin-bottom: 2rem;
   transition: transform 0.3s ease;
   scroll-behavior: smooth;
-  /*justify-content: center;
-
-  gap: 2rem;
-  flex-wrap: wrap;
-  overflow: hidden; */
-  /*overflow-x: auto;*/
 }
 
 .card {
@@ -1608,13 +1604,6 @@ button > .right-arrow {
   background-color: #00b207;
   color: white;
 }
-/*
-.card.visible {
-  display: block;
-  opacity: 1; 
-  visibility: visible; 
-  transition: opacity 0.5s ease-in-out;
-}*/
 
 .card:hover {
   transform: scale(1.05);
@@ -1718,7 +1707,11 @@ button > .right-arrow {
   right: 1rem; /* Distance from right */
   display: flex;
   flex-direction: column;
-  gap: 0.8rem; /* Space between the icons */
+  gap: 2.4rem; /* Space between the icons */
+}
+
+.product-icons a {
+  text-decoration: none;
 }
 
 .heart-icon,
@@ -1728,7 +1721,6 @@ button > .right-arrow {
   padding: 0.8rem;
   box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  text-decoration: none;
 }
 
 .heart-icon:hover,
@@ -2407,7 +2399,7 @@ button > .right-arrow {
 }
 .job-card.featured {
   background: linear-gradient(to right, #10b981, #059669);
-  color: white;
+  color: #fff;
 }
 .job-title {
   font-size: 1.8rem;
@@ -2417,7 +2409,12 @@ button > .right-arrow {
 
 .job-title a {
   text-decoration: none;
-  color: white;
+  color: #fff;
+}
+
+.part-intern a {
+  text-decoration: none;
+  color: #000;
 }
 .job-details {
   display: flex;
@@ -3018,7 +3015,6 @@ textarea {
 
   display: inline-block;
   padding: 0 1rem;
-  border: 0.2rem solid black;
 }
 
 /* Steps container */
@@ -4188,7 +4184,7 @@ textarea {
 .assistance-section {
   text-align: center;
   padding: 2rem;
-  margin: 9.6rem 0;
+  margin: 6.4rem 0;
 }
 
 .assistance-section h2 {
@@ -4268,7 +4264,7 @@ textarea {
   align-items: center;
 }
 
-.help-faq-question .arrow {
+.help-faq-item .help-faq-question .arrow {
   transition: transform 0.3s;
 }
 
@@ -4287,8 +4283,12 @@ textarea {
 
 .help-faq-answer a {
   text-decoration: none;
+  color: #000;
 }
 
+.help-faq-answer a:hover {
+  color: #0000ff;
+}
 .help-faq-item.open {
   box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
 }

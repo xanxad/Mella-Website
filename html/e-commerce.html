@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta
+      name="description"
+      content="Mela is your go-to platform for  online shopping, Shop with us."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo-mella-removebg-preview.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,7 +23,7 @@
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="./js/script.js"></script>
-    <title>Mella</title>
+    <title>Mella &mdash;Market</title>
   </head>
   <body>
     <header class="header">
@@ -61,13 +66,21 @@
 
         <div class="right-section">
           <div data-aos="flip-down" class="product-card">
-            <img src="./img/black-sofa.png" alt="black sofa" />
-            <a href="#"><h3>Black Sofa</h3></a>
+            <img
+              data-src="./img/black-sofa.png"
+              alt="black sofa"
+              class="lazyload"
+            />
+            <a href="product-details.html"><h3>Black Sofa</h3></a>
             <p>$250</p>
           </div>
           <div data-aos="flip-down" class="product-card">
-            <img src="./img/black-chair.png" alt="black chair" />
-            <a href="#"><h3>Black Chair</h3></a>
+            <img
+              data-src="./img/black-chair.png"
+              alt="black chair"
+              class="lazyload"
+            />
+            <a href="product-details.html"><h3>Black Chair</h3></a>
             <p>$100</p>
           </div>
           <a href="shop.html"
@@ -159,11 +172,6 @@
         </div>
       </section>
 
-      <!-- Best Selling Products Section 
-      <section class="best-selling">
-        <h2 class="section-heading">Best Selling Products</h2>
-        <div class="product-grid-featured" id="best-selling-products"></div>
-      </section> -->
       <section data-aos="fade-down-left" class="best-selling-section">
         <div class="section-header-market">
           <h2 class="heading-secondary">Best Selling Products</h2>
@@ -179,10 +187,14 @@
               <div class="product-icons">
                 <a href="wishlist.html"><span class="heart-icon">🤍</span></a>
                 <a href="product-details.html"
-                  ><span class="cart-icon">👁</span></a
+                  ><span class="view-icon">👁</span></a
                 >
               </div>
-              <img src="./img/north-coat.png" alt="The North Coat" />
+              <img
+                data-src="./img/north-coat.png"
+                alt="The North Coat"
+                class="lazyload"
+              />
               <a href="cart.html" class="product-name">The North Coat</a>
               <div class="price">
                 <span class="current-price">$260</span>
@@ -199,7 +211,11 @@
                   ><span class="view-icon">👁</span></a
                 >
               </div>
-              <img src="./img/gucci-bag.png" alt="Gucci Duffle Bag" />
+              <img
+                data-src="./img/gucci-bag.png"
+                alt="Gucci Duffle Bag"
+                class="lazyload"
+              />
               <a href="cart.html" class="product-name">Gucci Duffle Bag</a>
               <div class="price">
                 <span class="current-price">$960</span>
@@ -216,7 +232,11 @@
                   ><span class="view-icon">👁</span></a
                 >
               </div>
-              <img src="./img/cpu-cooler.png" alt="RGB Liquid CPU Cooler" />
+              <img
+                data-src="./img/cpu-cooler.png"
+                alt="RGB Liquid CPU Cooler"
+                class="lazyload"
+              />
               <a href="cart.html" class="product-name">Liquid CPU Cooler</a>
               <div class="price">
                 <span class="current-price">$160</span>
@@ -233,7 +253,11 @@
                   ><span class="view-icon">👁</span></a
                 >
               </div>
-              <img src="./img/bookshelf.png" alt="bookshelf" />
+              <img
+                data-src="./img/bookshelf.png"
+                alt="bookshelf"
+                class="lazyload"
+              />
               <a href="cart.html" class="product-name">Small BookShelf</a>
               <div class="price">
                 <span class="current-price">$360</span>
@@ -266,28 +290,44 @@
         <div class="cards-section product-wrapper-commerce">
           <div data-aos="zoom-out-up" class="card-commerce">
             <div class="icon-commerce">
-              <img src="./img/shipping-truck.svg" alt="Free Delivery Icon" />
+              <img
+                data-src="./img/shipping-truck.svg"
+                alt="Free Delivery Icon"
+                class="lazyload"
+              />
             </div>
             <h3>FREE Delivery</h3>
           </div>
 
           <div data-aos="zoom-out-up" class="card-commerce black-card">
             <div class="icon-commerce">
-              <img src="./img/money.svg" alt="Refund Icon" />
+              <img
+                data-src="./img/money.svg"
+                alt="Refund Icon"
+                class="lazyload"
+              />
             </div>
             <h3>Refund</h3>
           </div>
 
           <div data-aos="zoom-out-up" class="card-commerce black-card">
             <div class="icon-commerce">
-              <img src="./img/safety.svg" alt="Safe and Reliable Icon" />
+              <img
+                data-src="./img/safety.svg"
+                alt="Safe and Reliable Icon"
+                class="lazyload"
+              />
             </div>
             <h3>Safe & Reliable</h3>
           </div>
 
           <div data-aos="zoom-out-up" class="card-commerce">
             <div class="icon-commerce">
-              <img src="./img/guarantee.svg" alt="Guaranteed Icon" />
+              <img
+                data-src="./img/guarantee.svg"
+                alt="Guaranteed Icon"
+                class="lazyload"
+              />
             </div>
             <h3>Guaranteed</h3>
           </div>
@@ -305,8 +345,9 @@
           <div class="product-item-featured large">
             <img
               data-aos="fade-down-left"
-              src="./img/playstation.png"
+              data-src="./img/playstation.png"
               alt="PlayStation 5"
+              class="lazyload"
             />
             <div class="product-info-featured">
               <h3>PlayStation 5</h3>
@@ -318,8 +359,9 @@
           <div class="product-item-featured medium">
             <img
               data-aos="fade-down-left"
-              src="./img/women-clothes.png"
+              data-src="./img/women-clothes.png"
               alt="Women's Collections"
+              class="lazyload"
             />
             <div class="product-info-featured">
               <h3>Women's Collections</h3>
@@ -331,8 +373,9 @@
           <div class="product-item-featured">
             <img
               data-aos="fade-down-left"
-              src="./img/speakers.png"
+              data-src="./img/speakers.png"
               alt="Speakers"
+              class="lazyload"
             />
             <div class="product-info-featured">
               <h3>Speakers</h3>
@@ -344,8 +387,9 @@
           <div class="product-item-featured">
             <img
               data-aos="fade-down-left"
-              src="./img/perfume.png"
+              data-src="./img/perfume.png"
               alt="Perfume"
+              class="lazyload"
             />
             <div class="product-info-featured">
               <h3>Perfume</h3>
@@ -406,14 +450,14 @@
             </li>
             <li><a href="login.html" class="footer-link">Sign in</a></li>
             <li><a href="#" class="footer-link">IOS app</a></li>
-            <li><a href="#" class="footer-link">Androind app</a></li>
+            <li><a href="#" class="footer-link">Android app</a></li>
           </ul>
         </nav>
         <nav class="nav-col">
           <p class="footer-heading">Company</p>
           <ul class="footer-nav">
             <li>
-              <a href="e-commerce.html" class="footer-link">E-commerce</a>
+              <a href="#" class="footer-link">Market</a>
             </li>
             <li>
               <a href="job-portal.html" class="footer-link">Job portal</a>
@@ -438,6 +482,8 @@
         </nav>
       </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 
     <script
       type="module"
@@ -496,87 +542,22 @@
 
         // Initial update
         updateCarousel();
-      });
 
-      /*
+        // Add click event for each card
+        cards.forEach((card) => {
+          card.addEventListener("click", () => {
+            // Remove the active class from all cards
+            cards.forEach((c) => {
+              c.classList.remove("active");
+              c.querySelector("img").style.filter = "none"; // Reset icon color
+            });
 
-      document.addEventListener("DOMContentLoaded", () => {
-        // Select DOM elements
-        const bestSellingProductsContainer = document.getElementById(
-          "best-selling-products"
-        );
-        const searchForm = document.querySelector(".search-form");
-        const searchInput = document.querySelector(".search-input");
-
-        // Path to your products.json in the 'data' folder
-        const productsAPI = "./data/products.json"; // Updated path
-
-        // Function to fetch product data
-        const fetchProducts = async () => {
-          try {
-            const response = await fetch(productsAPI);
-            if (!response.ok) throw new Error("Network response was not ok");
-            const products = await response.json();
-
-            // Verify the data structure is an array
-            if (!Array.isArray(products)) {
-              throw new Error("Product data is not an array");
-            }
-
-            return products;
-          } catch (error) {
-            console.error("Error fetching product data:", error);
-            return [];
-          }
-        };
-
-        // Function to display products
-        const displayProducts = (products) => {
-          bestSellingProductsContainer.innerHTML = ""; // Clear existing products
-
-          if (products.length === 0) {
-            bestSellingProductsContainer.innerHTML =
-              "<p>No products found.</p>";
-            return;
-          }
-
-          products.forEach((product) => {
-            const productCard = document.createElement("div");
-            productCard.classList.add("product-card");
-            productCard.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" />
-        <h3>${product.name}</h3>
-        <p>$${product.price}</p>
-      `;
-            bestSellingProductsContainer.appendChild(productCard);
+            // Add the active class to the clicked card
+            card.classList.add("active");
+            card.querySelector("img").style.filter = "brightness(0) invert(1)"; // Change icon color to white
           });
-        };
-
-        // Function to filter products based on search query
-        const filterProducts = (products, query) => {
-          return products.filter((product) =>
-            product.name.toLowerCase().includes(query.toLowerCase())
-          );
-        };
-
-        // Event listener for search form
-        searchForm.addEventListener("submit", async (event) => {
-          event.preventDefault();
-          const searchQuery = searchInput.value.trim().toLowerCase();
-
-          if (!searchQuery) {
-            displayProducts(await fetchProducts()); // Display all products if search is empty
-          } else {
-            const products = await fetchProducts();
-            const filteredProducts = filterProducts(products, searchQuery);
-            displayProducts(filteredProducts);
-          }
         });
-
-        // Initial product display
-        fetchProducts().then(displayProducts);
       });
-      */
     </script>
   </body>
 </html>

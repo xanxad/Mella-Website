@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta
+      name="description"
+      content="Mela is your go-to platform that effortlessly connects you  with service providers."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo-mella-removebg-preview.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +19,7 @@
     <link rel="stylesheet" href="./css/queries.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="./js/script.js"></script>
-    <title>Mella</title>
+    <title>Mella &mdash;Services</title>
   </head>
   <body>
     <header class="header">
@@ -66,9 +71,9 @@
           <div class="hero-img-box">
             <img
               data-aos="zoom-in"
-              src="./img/moving.jpg"
+              data-src="./img/moving.jpg"
               alt="Moving"
-              class="hero-img"
+              class="hero-img lazyload"
             />
           </div>
         </div>
@@ -83,7 +88,11 @@
           </div>
 
           <div class="image-section-card">
-            <img src="./img/img-service.png" alt="House Furniture" />
+            <img
+              data-src="./img/img-service.png"
+              alt="House Furniture"
+              class="lazyload"
+            />
           </div>
         </div>
       </section>
@@ -94,8 +103,9 @@
           <div data-aos="zoom-in-left" class="project-grid">
             <div class="project-card">
               <img
-                src="./img/furniture-assembly.jpg"
+                data-src="./img/furniture-assembly.jpg"
                 alt="Furniture Assembly"
+                class="lazyload"
               />
               <div class="project-info">
                 <h3>Furniture Assembly</h3>
@@ -104,8 +114,9 @@
             </div>
             <div class="project-card">
               <img
-                src="./img/Hang_Pictures.jpeg.png"
+                data-src="./img/Hang_Pictures.jpeg.png"
                 alt="Mount Art or Shelves"
+                class="lazyload"
               />
               <div class="project-info">
                 <h3>Mount Art or Shelves</h3>
@@ -113,14 +124,22 @@
               </div>
             </div>
             <div class="project-card">
-              <img src="./img/Mount_TV.jpg.png" alt="Mount a TV" />
+              <img
+                data-src="./img/Mount_TV.jpg.png"
+                alt="Mount a TV"
+                class="lazyload"
+              />
               <div class="project-info">
                 <h3>Mount a TV</h3>
                 <p>Projects starting at $80</p>
               </div>
             </div>
             <div class="project-card">
-              <img src="./img/Help_Moving.jpg.png" alt="Help Moving" />
+              <img
+                data-src="./img/Help_Moving.jpg.png"
+                alt="Help Moving"
+                class="lazyload"
+              />
               <div class="project-info">
                 <h3>Help Moving</h3>
                 <p>Projects starting at $67</p>
@@ -128,8 +147,9 @@
             </div>
             <div class="project-card">
               <img
-                src="./img/Home_Apartment_Cleaning.jpg.png"
+                data-src="./img/Home_Apartment_Cleaning.jpg.png"
                 alt="Home & Apartment Cleaning"
+                class="lazyload"
               />
               <div class="project-info">
                 <h3>Home & Apartment Cleaning</h3>
@@ -138,8 +158,9 @@
             </div>
             <div class="project-card">
               <img
-                src="./img/Plumbing_Help.jpeg.png"
+                data-src="./img/Plumbing_Help.jpeg.png"
                 alt="Minor Plumbing Repairs"
+                class="lazyload"
               />
               <div class="project-info">
                 <h3>Minor Plumbing Repairs</h3>
@@ -147,7 +168,11 @@
               </div>
             </div>
             <div class="project-card">
-              <img src="./img/Electrical_Help.jpg.png" alt="Electrical Help" />
+              <img
+                data-src="./img/Electrical_Help.jpg.png"
+                alt="Electrical Help"
+                class="lazyload"
+              />
               <div class="project-info">
                 <h3>Electrical Help</h3>
                 <p>Projects starting at $69</p>
@@ -155,8 +180,9 @@
             </div>
             <div class="project-card">
               <img
-                src="./img/Furniture_Removal__1_.jpg.png"
+                data-src="./img/Furniture_Removal__1_.jpg.png"
                 alt="Heavy Lifting"
+                class="lazyload"
               />
               <div class="project-info">
                 <h3>Heavy Lifting</h3>
@@ -325,7 +351,7 @@
           <p class="footer-heading">Company</p>
           <ul class="footer-nav">
             <li>
-              <a href="e-commerce.html" class="footer-link">E-commerce</a>
+              <a href="e-commerce.html" class="footer-link">Market</a>
             </li>
             <li>
               <a href="job-portal.html" class="footer-link">Job portal</a>
@@ -350,6 +376,7 @@
         </nav>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 
     <script
       type="module"

@@ -3,7 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta
+      name="description"
+      content="Mela is your go-to platform that effortlessly connects you with job
+      opportunities."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./img/logo-mella-removebg-preview.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,7 +20,7 @@
     <link rel="stylesheet" href="./css/queries.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="./js/script.js"></script>
-    <title>Document</title>
+    <title>Mella &mdash;Jobs</title>
   </head>
   <body>
     <header class="header">
@@ -29,16 +35,16 @@
       </div>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a href="homepage.html" class="main-nav-link">Home</a></li>
+          <li><a href="job-portal.html" class="main-nav-link">Home</a></li>
 
           <li>
             <a href="job-posting.html" class="main-nav-link">Post Jobs</a>
           </li>
-          <li><a href="" class="main-nav-link">My Profile</a></li>
+          <li><a href="#" class="main-nav-link">My Profile</a></li>
           <li>
             <a href="profile.html" class="main-nav-link">beome a candidate</a>
           </li>
-          <li><a href="#" class="main-nav-link">Support</a></li>
+          <li><a href="help-center.html" class="main-nav-link">Support</a></li>
         </ul>
       </nav>
 
@@ -124,7 +130,11 @@
         <div data-aos="slide-up" class="job-categories">
           <div class="job-category">
             <div class="job-category-icon">
-              <img src="./img/brush.svg" alt="Graphics & Design icon" />
+              <img
+                data-src="./img/brush.svg"
+                alt="Graphics & Design icon"
+                class="lazyload"
+              />
             </div>
             <div class="job-category-info">
               <h3>Graphics & Design</h3>
@@ -133,7 +143,11 @@
           </div>
           <div class="job-category">
             <div class="job-category-icon">
-              <img src="./img/code.svg" alt="Code & Programming icon" />
+              <img
+                data-src="./img/code.svg"
+                alt="Code & Programming icon"
+                class="lazyload"
+              />
             </div>
             <div class="job-category-info">
               <h3>Code & Programming</h3>
@@ -142,7 +156,11 @@
           </div>
           <div class="job-category">
             <div class="job-category-icon">
-              <img src="./img/campaign.svg" alt="Digital Marketing icon" />
+              <img
+                data-src="./img/campaign.svg"
+                alt="Digital Marketing icon"
+                class="lazyload"
+              />
             </div>
             <div class="job-category-info">
               <h3>Digital Marketing</h3>
@@ -151,7 +169,11 @@
           </div>
           <div class="job-category">
             <div class="job-category-icon">
-              <img src="./img/tv.svg" alt="Video & Animation icon" />
+              <img
+                data-src="./img/tv.svg"
+                alt="Video & Animation icon"
+                class="lazyload"
+              />
             </div>
             <div class="job-category-info">
               <h3>Video & Animation</h3>
@@ -160,7 +182,11 @@
           </div>
           <div class="job-category">
             <div class="job-category-icon">
-              <img src="./img/music_note.svg" alt="Music & Audio icon" />
+              <img
+                data-src="./img/music_note.svg"
+                alt="Music & Audio icon"
+                class="lazyload"
+              />
             </div>
             <div class="job-category-info">
               <h3>Music & Audio</h3>
@@ -170,8 +196,9 @@
           <div class="job-category">
             <div class="job-category-icon">
               <img
-                src="./img/account_balance.svg"
+                data-src="./img/account_balance.svg"
                 alt="Account & Finance icon"
+                class="lazyload"
               />
             </div>
             <div class="job-category-info">
@@ -181,7 +208,11 @@
           </div>
           <div class="job-category">
             <div class="job-category-icon">
-              <img src="./img/health_care.svg" alt="Health & Care icon" />
+              <img
+                data-src="./img/health_care.svg"
+                alt="Health & Care icon"
+                class="lazyload"
+              />
             </div>
             <div class="job-category-info">
               <h3>Health & Care</h3>
@@ -190,7 +221,11 @@
           </div>
           <div class="job-category">
             <div class="job-category-icon">
-              <img src="./img/database.svg" alt="Data & Science icon" />
+              <img
+                data-src="./img/database.svg"
+                alt="Data & Science icon"
+                class="lazyload"
+              />
             </div>
             <div class="job-category-info">
               <h3>Data & Science</h3>
@@ -207,7 +242,9 @@
         </div>
         <div data-aos="zoom-out" class="jobs-grid">
           <div class="job-card">
-            <div class="job-title">Technical Support Specialist</div>
+            <div class="job-title part-intern">
+              <a href="job-detail.html">Technical Support Specialist</a>
+            </div>
             <div class="job-details">
               <span class="job-types">PART-TIME</span>
               <span class="job-salary">Salary: $20,000 - $25,000</span>
@@ -228,7 +265,9 @@
             </div>
           </div>
           <div class="job-card featured">
-            <div class="job-title">Front-end Devloper</div>
+            <div class="job-title">
+              <a href="job-detail.html">Front-end Devloper</a>
+            </div>
             <div class="job-details">
               <span class="job-types">FULL-TIME</span>
               <span class="job-salary">Salary: $90,000 - $125,000</span>
@@ -249,7 +288,9 @@
             </div>
           </div>
           <div class="job-card">
-            <div class="job-title">Marketing Intern</div>
+            <div class="job-title part-intern">
+              <a href="job-detail.html">Marketing Intern</a>
+            </div>
             <div class="job-details">
               <span class="job-types">INTERNSHIP</span>
               <span class="job-salary">Salary: $1000 - $5000</span>
@@ -271,7 +312,9 @@
           </div>
 
           <div class="job-card">
-            <div class="job-title">Junior Graphics Designer</div>
+            <div class="job-title part-intern">
+              <a href="job-detail.html">Junior Graphics Designer</a>
+            </div>
             <div class="job-details">
               <span class="job-types">PART TIME</span>
               <span class="job-salary">Salary: $20,000 - $25,000</span>
@@ -293,7 +336,9 @@
           </div>
 
           <div class="job-card featured">
-            <div class="job-title">Project Manager</div>
+            <div class="job-title">
+              <a href="job-detail.html">Project Manager</a>
+            </div>
             <div class="job-details">
               <span class="job-types">FULL-TIME</span>
               <span class="job-salary">Salary: $70,000 - $85,000</span>
@@ -315,7 +360,9 @@
           </div>
 
           <div class="job-card">
-            <div class="job-title">Reciptionist</div>
+            <div class="job-title part-intern">
+              <a href="job-detail.html">Reciptionist</a>
+            </div>
             <div class="job-details">
               <span class="job-types">INTERNSHIP</span>
               <span class="job-salary">Salary: $1000 - $2000</span>
@@ -338,7 +385,9 @@
 
           <div class="job-card featured">
             <div class="job-title">
-              <a href="job-detail.html">Senior UX Designer</a>
+              <a href="job-detail.html"
+                ><a href="job-detail.html">Senior UX Designer</a></a
+              >
             </div>
             <div class="job-details">
               <span class="job-types">FULL-TIME</span>
@@ -361,7 +410,9 @@
           </div>
 
           <div class="job-card">
-            <div class="job-title">Data Encoder</div>
+            <div class="job-title part-intern">
+              <a href="job-detail.html">Data Encoder</a>
+            </div>
             <div class="job-details">
               <span class="job-types">INTERNSHIP</span>
               <span class="job-salary">Salary: $1000 - $5000</span>
@@ -383,7 +434,9 @@
           </div>
           <div class="job-card featured">
             <div class="job-title">
-              <a href="job-detail.html">Visual Designer</a>
+              <a href="job-detail.html"
+                ><a href="job-detail.html">Visual Designer</a></a
+              >
             </div>
             <div class="job-details">
               <span class="job-types">FULL-TIME</span>
@@ -405,7 +458,9 @@
             </div>
           </div>
           <div class="job-card">
-            <div class="job-title">Acountant</div>
+            <div class="job-title part-intern">
+              <a href="job-detail.html">Acountant</a>
+            </div>
             <div class="job-details">
               <span class="job-types">PART-TIME</span>
               <span class="job-salary">Salary: $40,000 - $45,000</span>
@@ -428,7 +483,9 @@
 
           <div class="job-card featured">
             <div class="job-title">
-              <a href="job-detail.html">Senior Electrical Engineer</a>
+              <a href="job-detail.html"
+                ><a href="job-detail.html">Senior Electrical Engineer</a></a
+              >
             </div>
             <div class="job-details">
               <span class="job-types">FULL-TIME</span>
@@ -450,7 +507,9 @@
             </div>
           </div>
           <div class="job-card">
-            <div class="job-title">Transport Manager</div>
+            <div class="job-title part-intern">
+              <a href="job-detail.html">Transport Manager</a>
+            </div>
             <div class="job-details">
               <span class="job-types">PART-TIME</span>
               <span class="job-salary">Salary: $50,000 - $85,000</span>
@@ -480,9 +539,9 @@
           <div class="company-card">
             <div class="company-header">
               <img
-                src="./img/revoult-logo.png"
+                data-src="./img/revoult-logo.png"
                 alt="Company Logo"
-                class="company-logo"
+                class="company-logo lazyload"
               />
               <div class="company-info-card">
                 <h3>Revoult</h3>
@@ -497,9 +556,9 @@
           <div class="company-card">
             <div class="company-header">
               <img
-                src="./img/dropbox.png"
+                data-src="./img/dropbox.png"
                 alt="Company Logo"
-                class="company-logo"
+                class="company-logo lazyload"
               />
               <div class="company-info-card">
                 <h3>Dropbox</h3>
@@ -514,9 +573,9 @@
           <div class="company-card">
             <div class="company-header">
               <img
-                src="./img/google-icon.svg"
+                data-src="./img/google-icon.svg"
                 alt="Company Logo"
-                class="company-logo"
+                class="company-logo lazyload"
               />
               <div class="company-info-card">
                 <h3>Google</h3>
@@ -531,9 +590,9 @@
           <div class="company-card">
             <div class="company-header">
               <img
-                src="./img/google-icon.svg"
+                data-src="./img/google-icon.svg"
                 alt="Company Logo"
-                class="company-logo"
+                class="company-logo lazyload"
               />
               <div class="company-info-card">
                 <h3>Google</h3>
@@ -548,9 +607,9 @@
           <div class="company-card">
             <div class="company-header">
               <img
-                src="./img/dropbox.png"
+                data-src="./img/dropbox.png"
                 alt="Company Logo"
-                class="company-logo"
+                class="company-logo lazyload"
               />
               <div class="company-info-card">
                 <h3>Dropbox</h3>
@@ -565,9 +624,9 @@
           <div class="company-card">
             <div class="company-header">
               <img
-                src="./img/revoult-logo.png"
+                data-src="./img/revoult-logo.png"
                 alt="Company Logo"
-                class="company-logo"
+                class="company-logo lazyload"
               />
               <div class="company-info-card">
                 <h3>Revoult</h3>
@@ -635,7 +694,7 @@
           <p class="footer-heading">Company</p>
           <ul class="footer-nav">
             <li>
-              <a href="e-commerce.html" class="footer-link">E-commerce</a>
+              <a href="e-commerce.html" class="footer-link">Market</a>
             </li>
             <li>
               <a href="job-portal.html" class="footer-link">Job portal</a>
@@ -660,6 +719,7 @@
         </nav>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js"></script>
 
     <script
       type="module"
